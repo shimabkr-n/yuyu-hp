@@ -1,0 +1,6 @@
+- name: Create .env from GitHub Secrets
+  run: |
+    echo "GMAIL_CLIENT_ID=${{ secrets.GMAIL_CLIENT_ID }}" >> .env
+    echo "GMAIL_CLIENT_SECRET=${{ secrets.GMAIL_CLIENT_SECRET }}" >> .env
+    echo "GMAIL_REFRESH_TOKEN=${{ secrets.GMAIL_REFRESH_TOKEN }}" >> .env
+    echo "GOOGLE_CALENDAR_ID=${{ secrets.GOOGLE_CALENDAR_ID }}" >> .env
