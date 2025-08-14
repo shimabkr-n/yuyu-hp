@@ -4,7 +4,7 @@ const menuData = [
       name: "悠愉そば",
       image: "images/yuyu-soba.jpg",
       desc: "軟骨ソーキ・三枚肉・かまぼこをのせたイチオシの沖縄そば。",
-      price: 準備中,
+      price: "準備中",
       category: "soba",
       badge: "NEW"
     },
@@ -12,14 +12,14 @@ const menuData = [
       name: "軟骨ソーキそば",
       image: "images/nankotsu-t1.jpg",
       desc: "とろける軟骨ソーキとあっさりスープにこだわった一杯。",
-      price: 準備中,
+      price: "準備中",
       category: "soba"
     },
     {
       name: "テビチそば",
       image: "images/tebichi-soba.jpg",
       desc: "下処理を徹底した、ぷるぷるの豚足を贅沢に使った一杯",
-      price: 準備中,
+      price: "準備中",
       category: "soba",
       badge: "数量限定"
     },
@@ -27,35 +27,35 @@ const menuData = [
       name: "悠愉御膳",
       image: "images/soba-set.jpg",
       desc: "とろける軟骨ソーキ＋ジューシー＋小鉢など、イチオシのセットメニュー",
-      price: 準備中,
+      price: "準備中",
       category: "set"
     },
     {
       name: "ゆし豆腐定食",
       image: "images/yushi-set.jpg",
       desc: "ニラたっぷりの自家製味噌で仕上げたゆし豆腐＋ジューシー＋小鉢",
-      price: 準備中,
+      price: "準備中",
       category: "set"
     },
     {
       name: "イナムドゥチセット",
       image: "images/inamu-set.jpg",
       desc: "自家製イナムドゥチ＋小鉢",
-      price: 準備中,
+      price: "準備中",
       category: "set"
     },
     {
       name: "コーヒー＆ケーキ",
       image: "images/cofee-set.jpg",
       desc: "甘さ控えめ。食後におすすめのデザート。",
-      price: 準備中,
+      price: "準備中",
       category: "sweet"
     },
     {
       name: "自家製アイス",
       image: "images/jamoka.png",
       desc: "甘さ控えめ。食後におすすめのデザート。",
-      price: 準備中,
+      price: "準備中",
       category: "sweet"
     }
 ];
