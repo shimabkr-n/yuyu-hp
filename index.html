@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>沖縄そば 悠愉樹庵｜公式サイト</title>
+  <title>沖縄そば悠愉樹庵（ゆうゆじゅあん）</title>
 
   <!-- SEO・OGP -->
   <meta name="description" content="沖縄県中城村の沖縄そば専門店『悠愉樹庵（ゆうゆじゅあん）』公式サイト。自然に囲まれた癒しの空間で、伝統の味と心を込めたおもてなしをお楽しみください。">
@@ -112,13 +112,6 @@
 
 </head>
 <body class="bg-gray-100 text-gray-800 min-h-screen" style="background-image: url('images/bingata-strong.png'); background-repeat: repeat; background-position: center; background-size: 100% auto;">
-  <!-- Skip Link: フォーカス時のみ可視化 -->
-  <a href="#main"
-    class="sr-only focus:not-sr-only focus:outline-none focus:ring focus:ring-blue-500
-    fixed top-2 left-2 z-[10000] bg-white text-blue-700 px-3 py-2 rounded shadow">
-    本文へスキップ
-  </a>
-
   <style>
     @media (max-width: 768px) {
       body {
@@ -166,44 +159,41 @@
   </div>
 </header>
 
-<!-- 主コンテンツ開始 -->
-<main id="main" tabindex="-1">
-  <!-- Hero -->
-  <section id="hp-top" class="h-screen ...">
-    <div id="heroSlider" class="absolute inset-0 w-full h-full z-0">
-        <img src="images/exterior1.jpg" alt="" class="w-full h-full object-cover scale-100 absolute transition-opacity duration-1000 opacity-100 transition-transform ease-in-out duration-[5000ms]" style="z-index: -1;" />
-        <img src="images/exterior2.jpg" alt="" class="w-full h-full object-cover scale-100 absolute transition-opacity duration-1000 opacity-0 transition-transform ease-in-out duration-[5000ms]" style="z-index: -1;" />
-        <img src="images/exterior3.jpg" alt="" class="w-full h-full object-cover scale-100 absolute transition-opacity duration-1000 opacity-0 transition-transform ease-in-out duration-[5000ms]" style="z-index: -1;" />
+<!-- Hero -->
+<section id="hp-top" class="h-screen ...">
+  <div id="heroSlider" class="absolute inset-0 w-full h-full z-0">
+      <img src="images/exterior1.jpg" alt="" class="w-full h-full object-cover scale-100 absolute transition-opacity duration-1000 opacity-100 transition-transform ease-in-out duration-[5000ms]" style="z-index: -1;" />
+      <img src="images/exterior2.jpg" alt="" class="w-full h-full object-cover scale-100 absolute transition-opacity duration-1000 opacity-0 transition-transform ease-in-out duration-[5000ms]" style="z-index: -1;" />
+      <img src="images/exterior3.jpg" alt="" class="w-full h-full object-cover scale-100 absolute transition-opacity duration-1000 opacity-0 transition-transform ease-in-out duration-[5000ms]" style="z-index: -1;" />
+  </div>
+  <div class="bg-black bg-opacity-40 absolute inset-0"></div>
+    <div class="z-10 px-4">
+      <a href="#hp-top">
+        <img src="images/yuyu-logo.png" alt="悠愉樹庵 ロゴ" class="fixed bottom-4 left-4 w-[100px] md:w-[200px] z-[9999] cursor-pointer rounded-lg">
+      </a>
+      <h2 class="text-2xl md:text-4xl mb-4 font-semibold">
+      <p class="text-lg leading-relaxed">
+      木々に囲まれたどこか懐かしい古民家で、県産食材で織りなす心あたまる沖縄そばを。
+      </p>
+      <p style="color: #F00;"><strong>現在、店舗の改装工事に伴い臨時休業中です。<br>2025年9月中旬ごろにリニューアルオープン予定です。</strong></p>
     </div>
-    <div class="bg-black bg-opacity-40 absolute inset-0"></div>
-      <div class="z-10 px-4">
-        <a href="#hp-top">
-          <img src="images/yuyu-logo.png" alt="悠愉樹庵 ロゴ" class="fixed bottom-4 left-4 w-[100px] md:w-[200px] z-[9999] cursor-pointer rounded-lg">
-        </a>
-        <h2 class="text-2xl md:text-4xl mb-4 font-semibold">
-        <p class="text-lg leading-relaxed">
-        木々に囲まれたどこか懐かしい古民家で、県産食材で織りなす心あたまる沖縄そばを。
-        </p>
-        <p style="color: #F00;"><strong>現在、店舗の改装工事に伴い臨時休業中です。<br>2025年9月中旬ごろにリニューアルオープン予定です。</strong></p>
-      </div>
-  </section>
-  
-  <!-- Menu -->
-  <section id="menu" class="bg-blue-50/90 py-16 px-4 text-center">
-    <div class="max-w-6xl mx-auto">
-      <h2 class="text-3xl font-bold text-center mb-8">お品書き</h2>
-      <!-- Filters -->
-      <div class="flex flex-wrap justify-center mb-6 gap-2">
-        <button class="filter-btn bg-gray-300 px-4 py-2 rounded" data-category="all">すべて</button>
-        <button class="filter-btn bg-gray-300 px-4 py-2 rounded" data-category="soba">沖縄そば</button>
-        <button class="filter-btn bg-gray-300 px-4 py-2 rounded" data-category="just">単品</button>
-        <button class="filter-btn bg-gray-300 px-4 py-2 rounded" data-category="set">セットメニュー</button>
-        <button class="filter-btn bg-gray-300 px-4 py-2 rounded" data-category="sweet">デザート</button>
-      </div>
-      <div id="menu-container" class="grid grid-cols-1 sm:grid-cols-2 gap-6"></div>
+</section>
+
+<!-- Menu -->
+<section id="menu" class="bg-blue-50/90 py-16 px-4 text-center">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-8">お品書き</h2>
+    <!-- Filters -->
+    <div class="flex flex-wrap justify-center mb-6 gap-2">
+      <button class="filter-btn bg-gray-300 px-4 py-2 rounded" data-category="all">すべて</button>
+      <button class="filter-btn bg-gray-300 px-4 py-2 rounded" data-category="soba">沖縄そば</button>
+      <button class="filter-btn bg-gray-300 px-4 py-2 rounded" data-category="just">単品</button>
+      <button class="filter-btn bg-gray-300 px-4 py-2 rounded" data-category="set">セットメニュー</button>
+      <button class="filter-btn bg-gray-300 px-4 py-2 rounded" data-category="sweet">デザート</button>
     </div>
-  </section>
-</main>
+    <div id="menu-container" class="grid grid-cols-1 sm:grid-cols-2 gap-6"></div>
+  </div>
+</section>
 
 <!-- Concept -->
 <section id="concept" class="bg-gray-700/95 py-12 text-white">
