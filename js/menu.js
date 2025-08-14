@@ -33,7 +33,7 @@ const menuData = [
     {
       name: "【仮】ゆし豆腐定食",
       image: "images/yushi-set.jpg",
-      desc: "ニラたっぷりの自家製味噌で仕上げたゆし豆腐＋ジューシー＋小鉢",
+      desc: "たっぷりのニラと自家製味噌で仕上げたゆし豆腐＋ジューシー＋小鉢",
       price: "準備中",
       category: "set"
     },
@@ -54,7 +54,7 @@ const menuData = [
     {
       name: "【仮】じゅーしー",
       image: "images/jyushii.png",
-      desc: "自家製じゅーしー",
+      desc: "しょうがをたっぷり使ったフーチバー（よもぎ）じゅーしー",
       price: "準備中",
       category: "just"
     },
