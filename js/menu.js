@@ -45,6 +45,13 @@ const menuData = [
       category: "set"
     },
     {
+      name: "【仮】ジーマミ豆腐",
+      image: "images/jimamitoufu.png",
+      desc: "自家製ジーマミ豆腐（ピーナッツ豆腐）",
+      price: "準備中",
+      category: "set"
+    },
+    {
       name: "【仮】コーヒー＆ケーキ",
       image: "images/cofee-set.jpg",
       desc: "甘さ控えめ。食後におすすめのデザート。",
