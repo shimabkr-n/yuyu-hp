@@ -299,21 +299,6 @@
 </div>
 
 <script src="/js/menu.js" defer></script>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  let currentHero = 0;
-  const heroImages = document.querySelectorAll("#heroSlider img");
-  setInterval(() => {
-    heroImages[currentHero].classList.remove("opacity-100");
-    heroImages[currentHero].classList.add("opacity-0");
-    heroImages[currentHero].classList.remove("scale-105");
-    currentHero = (currentHero + 1) % heroImages.length;
-    heroImages[currentHero].classList.remove("opacity-0");
-    heroImages[currentHero].classList.add("opacity-100");
-    heroImages[currentHero].classList.add("scale-105");
-  }, 5000);
-});
-</script>
 
 <script>
 function toggleMenu() {
