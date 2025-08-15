@@ -84,6 +84,9 @@ const renderMenu = (category = 'all') => {
   container.innerHTML = '';
   menuData.filter(item => category === 'all' || item.category === category)
     .forEach(item => {
+      // item.desc内の改行コード \n を <br> タグに置換します。
+      const formattedDesc = item.desc.replace(/\n/g, '<br>');
+
       container.innerHTML += `
         <div class="bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative">
           ${item.badge ? `<div class="badge">${item.badge}</div>` : ''}
@@ -91,8 +94,7 @@ const renderMenu = (category = 'all') => {
           <div class="p-4 flex flex-col justify-between">
             <div>
               <h3 class="text-xl font-bold text-red-700 mb-2">${item.name}</h3>
-              <p class="text-sm text-gray-600 mb-2">${item.desc}</p>
-            </div>
+              <p class="text-sm text-gray-600 mb-2">${formattedDesc}</p> </div>
             <div class="mt-4 text-right font-semibold text-gray-800">${item.price.toLocaleString()}円（税込）</div>
           </div>
         </div>
