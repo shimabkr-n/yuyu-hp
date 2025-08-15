@@ -162,9 +162,12 @@
 <!-- Hero -->
 <section id="hp-top" class="h-screen flex items-center justify-center relative text-white text-center pt-20 overflow-hidden">
   <div id="heroSlider" class="absolute inset-0 w-full h-full z-0">
-      <img src="images/exterior1.jpg" alt="" class="w-full h-full object-cover scale-100 absolute transition-opacity duration-1000 opacity-100 transition-transform ease-in-out duration-[5000ms]" style="z-index: -1;" />
-      <img src="images/exterior2.jpg" alt="" class="w-full h-full object-cover scale-100 absolute transition-opacity duration-1000 opacity-0 transition-transform ease-in-out duration-[5000ms]" style="z-index: -1;" />
-      <img src="images/exterior3.jpg" alt="" class="w-full h-full object-cover scale-100 absolute transition-opacity duration-1000 opacity-0 transition-transform ease-in-out duration-[5000ms]" style="z-index: -1;" />
+     <img src="images/exterior1.jpg" alt="" width="1920" height="1080"
+      class="w-full h-full object-cover scale-100 absolute transition-opacity duration-1000 opacity-100 transition-transform ease-in-out duration-[5000ms]" style="z-index:-1;" />
+    <img src="images/exterior2.jpg" alt="" width="1920" height="1080"
+      class="w-full h-full object-cover scale-100 absolute transition-opacity duration-1000 opacity-0 transition-transform ease-in-out duration-[5000ms]" style="z-index:-1;" />
+    <img src="images/exterior3.jpg" alt="" width="1920" height="1080"
+      class="w-full h-full object-cover scale-100 absolute transition-opacity duration-1000 opacity-0 transition-transform ease-in-out duration-[5000ms]" style="z-index:-1;" />
   </div>
   <div class="bg-black bg-opacity-40 absolute inset-0"></div>
     <div class="z-10 px-4">
@@ -219,9 +222,10 @@
 <section id="interior" class="bg-blue-50/90 py-16 px-4 text-center">
   <div class="max-w-4xl mx-auto text-center">
     <h2 class="text-2xl font-bold mb-6">店舗の内観（客席）</h2>
-    <div class="relative w-full h-64 overflow-hidden rounded shadow">
+    <div class="relative w-full overflow-hidden rounded shadow aspect-[16/9]">
       <button onclick="prevInteriorSlide()" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 px-2" aria-label="前へ">← </button>
-      <img id="interiorSlide" src="images/interior1.jpg" class="w-full h-full object-cover cursor-pointer" onclick="nextInteriorSlide()">
+      <img id="interiorSlide" src="images/interior1.jpg" alt="" width="1920" height="1080"
+        class="w-full h-full object-cover cursor-pointer" onclick="nextInteriorSlide()">
       <button onclick="nextInteriorSlide()" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 px-2" aria-label="次へ">→ </button>
     </div>
   </div>
@@ -231,9 +235,10 @@
 <section id="exterior" class="bg-gray-700/95 py-12 text-white">
   <div class="max-w-4xl mx-auto text-center">
     <h2 class="text-2xl font-bold mb-6">店舗の外観</h2>
-    <div class="relative w-full h-64 overflow-hidden rounded shadow">
+    <div class="relative w-full overflow-hidden rounded shadow aspect-[16/9]">
       <button onclick="prevExteriorSlide()" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 px-2" aria-label="前へ">← </button>
-      <img id="exteriorSlide" src="images/exterior1.jpg" class="w-full h-full object-cover cursor-pointer" onclick="nextExteriorSlide()">
+      <img id="exteriorSlide" src="images/exterior1.jpg" alt="" width="1920" height="1080"
+        class="w-full h-full object-cover cursor-pointer" onclick="nextExteriorSlide()">
       <button onclick="nextExteriorSlide()" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 px-2" aria-label="次へ">→ </button>
     </div>
   </div>
