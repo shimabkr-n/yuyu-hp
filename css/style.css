@@ -1,0 +1,83 @@
+/* このファイルは通常、npm run build:css コマンドで生成されます */
+/* @tailwind base; @tailwind components; @tailwind utilities; はビルド時に展開されます */
+
+/* カスタムCSS */
+.badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background-color: #e53e3e; /* コントラスト比を意識した色調整が必要な場合あり */
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(1);
+  transition: opacity 1s ease-in-out, transform 5s linear;
+  z-index: -1;
+}
+
+.hero-slide.active {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+  outline: none; /* フォーカス時に青い枠線が表示されるのを防ぐ */
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) { /* モバイル向け調整 */
+  .modal-content {
+    width: 95%;
+  }
+}
+
+/* bodyの背景画像スタイルはindex.htmlに直接記述 */
+body {
+  background-image: url('../images/bingata-strong.png'); /* 相対パスを調整 */
+  background-repeat: repeat;
+  background-position: center;
+  background-size: 100% auto;
+}
+
+/* TailwindCSS のクラスがここに展開されます */
+/* 例: .bg-gray-100 { background-color: #f3f4f6; } など */
+/* 通常、ビルドツールが自動的に生成します */
