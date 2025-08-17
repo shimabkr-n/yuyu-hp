@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>沖縄そば 悠愉樹庵｜公式サイト</title>
+  <meta name="description" content="沖縄県中城村の沖縄そば専門店『悠愉樹庵（ゆうゆじゅあん）』公式サイト。自然に囲まれた癒しの空間で、伝統の味と心を込めたおもてなしをお楽しみください。">
+
+  <!-- OGP -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="沖縄そば 悠愉樹庵｜公式サイト">
+  <meta property="og:description" content="自然と郷土料理に囲まれた癒しの空間『悠愉樹庵（ゆうゆじゅあん）』。">
+  <meta property="og:image" content="https://jyuan.jp/ogp.jpg">
+  <meta property="og:url" content="https://jyuan.jp/">
+
+  <link rel="canonical" href="https://jyuan.jp/">
+
+  <!-- LCP最適化：ヒーロー1枚目だけ先読み（必要ならパスを実画像に） -->
+  <link rel="preload" as="image"
+        href="/images/exterior1.jpg"
+        imagesrcset="/images/exterior1.jpg 1920w"
+        imagesizes="100vw" fetchpriority="high">
+
+  <!-- TailwindCSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+
+  <style>
+    .sr-skip { position: fixed; top: .5rem; left: .5rem; z-index: 10000; }
+  </style>
+
+  <!-- JSON-LD: Restaurant -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Restaurant",
+    "name":"悠愉樹庵（ゆうゆじゅあん）",
+    "image":"https://jyuan.jp/ogp.jpg",
+    "address":{"@type":"PostalAddress","addressCountry":"JP","addressRegion":"沖縄県","addressLocality":"中城村屋宜824-1"},
+    "telephone":"098-895-2280",
+    "url":"https://jyuan.jp/",
+    "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"11:00","closes":"16:00"}],
+    "sameAs":[]
+  }
+  </script>
+
+  <!-- Google Analytics（IDは本番値に置換） -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date()); gtag('config', 'G-XXXXXXXXXX');
+  </script>
+</head>
+
+<body class="bg-gray-100 text-gray-800 min-h-screen" style="background-image:url('images/bingata-strong.png'); background-repeat:repeat; background-position:center; background-size:100% auto;">
+  <!-- Skip link -->
+  <a href="#main" class="sr-only focus:not-sr-only focus:outline-none focus:ring focus:ring-blue-500 bg-white text-blue-700 px-3 py-2 rounded shadow sr-skip">
+    本文へスキップ
+  </a>
+
+  <!-- Header -->
+  <header class="bg-white/90 shadow fixed w-full z-50">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center gap-4">
+      <button id="menuToggle" class="md:hidden text-2xl" onclick="toggleMenu()" aria-controls="navMobile" aria-expanded="false">&#9776;</button>
+      <h1 class="text-2xl font-bold text-red-700">悠愉樹庵（ゆうゆじゅあん）</h1>
+      <nav id="main-nav" class="hidden md:flex gap-4 text-sm ml-auto">
+        <a href="#menu" class="hover:text-red-600" data-i18n="nav.menu">お品書き</a>
+        <a href="#concept" class="hover:text-red-600" data-i18n="nav.concept">こだわり</a>
+        <a href="#info" class="hover:text-red-600" data-i18n="nav.info">店舗案内</a>
+        <a href="#access" class="hover:text-red-600" data-i18n="nav.access">アクセス</a>
+        <a href="#publicity" class="hover:text-red-600" data-i18n="nav.news">お知らせ</a>
+        <a href="#interior" class="hover:text-red-600" data-i18n="nav.interior">店舗内観（客席）</a>
+        <a href="#exterior" class="hover:text-red-600" data-i18n="nav.exterior">店舗外観</a>
+      </nav>
+      <!-- Language Switcher (desktop) -->
+      <div class="hidden md:flex items-center gap-2">
+        <button type="button" class="px-2 py-1 rounded border" data-lang="ja" aria-pressed="true">JA</button>
+        <button type="button" class="px-2 py-1 rounded border" data-lang="en" aria-pressed="false">EN</button>
+        <button type="button" class="px-2 py-1 rounded border" data-lang="zh" aria-pressed="false">中文</button>
+      </div>
+    </div>
+    <!-- Mobile Nav -->
+    <div id="navMobile" class="sm:hidden hidden px-4 pb-4">
+      <div class="flex items-center gap-2 mb-2">
+        <!-- Language Switcher (mobile) -->
+        <button type="button" class="px-2 py-1 rounded border" data-lang="ja" aria-pressed="true">JA</button>
+        <button type="button" class="px-2 py-1 rounded border" data-lang="en" aria-pressed="false">EN</button>
+        <button type="button" class="px-2 py-1 rounded border" data-lang="zh" aria-pressed="false">中文</button>
+      </div>
+      <a href="#menu" class="block py-2 border-b" onclick="closeMobileMenu()" data-i18n="nav.menu">お品書き</a>
+      <a href="#concept" class="block py-2 border-b" onclick="closeMobileMenu()" data-i18n="nav.concept">こだわり</a>
+      <a href="#info" class="block py-2 border-b" onclick="closeMobileMenu()" data-i18n="nav.info">店舗案内</a>
+      <a href="#access" class="block py-2 border-b" onclick="closeMobileMenu()" data-i18n="nav.access">アクセス</a>
+      <a href="#publicity" class="block py-2 border-b" onclick="closeMobileMenu" data-i18n="nav.news">お知らせ</a>
+      <a href="#interior" class="block py-2 border-b" onclick="closeMobileMenu()" data-i18n="nav.interior">店舗内観（客席）</a>
+      <a href="#exterior" class="block py-2 border-b" onclick="closeMobileMenu()" data-i18n="nav.exterior">店舗外観</a>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main id="main" tabindex="-1">
+    <!-- Hero -->
+    <section id="hp-top" class="h-screen relative flex items-center justify-center text-white">
+      <div id="heroSlider" class="absolute inset-0 w-full h-full z-0">
+        <img src="images/exterior1.jpg" alt="" width="1920" height="1080"
+             class="w-full h-full object-cover scale-100 absolute transition-opacity duration-1000 opacity-100 transition-transform ease-in-out duration-[5000ms]" style="z-index:-1;">
+        <img src="images/exterior2.jpg" alt="" width="1920" height="1080"
+             class="w-full h-full object-cover scale-100 absolute transition-opacity duration-1000 opacity-0 transition-transform ease-in-out duration-[5000ms]" style="z-index:-1;">
+        <img src="images/exterior3.jpg" alt="" width="1920" height="1080"
+             class="w-full h-full object-cover scale-100 absolute transition-opacity duration-1000 opacity-0 transition-transform ease-in-out duration-[5000ms]" style="z-index:-1;">
+      </div>
+      <div class="absolute inset-0 bg-black/40"></div>
+      <div class="relative z-10 px-4 max-w-3xl text-center">
+        <p class="text-lg md:text-xl leading-relaxed" data-i18n="hero.copy">
+          木々に囲まれたどこか懐かしい古民家で、県産食材で織りなす心あたたまる沖縄そばを。
+        </p>
+        <p class="mt-4 text-base md:text-lg" style="color:#F00;" data-i18n="notice.tempClose">
+          現在、店舗の改装工事に伴い臨時休業中です。<br>2025年9月中旬ごろにリニューアルオープン予定です。
+        </p>
+      </div>
+    </section>
+
+    <!-- Menu -->
+    <section id="menu" class="bg-blue-50/90 py-16 px-4 text-center">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-8" data-i18n="menu.title">お品書き</h2>
+        <div class="flex flex-wrap justify-center mb-6 gap-2">
+          <button class="filter-btn bg-gray-300 px-4 py-2 rounded" data-category="all"  data-i18n="filter.all">すべて</button>
+          <button class="filter-btn bg-gray-300 px-4 py-2 rounded" data-category="soba" data-i18n="filter.soba">沖縄そば</button>
+          <button class="filter-btn bg-gray-300 px-4 py-2 rounded" data-category="just" data-i18n="filter.single">単品</button>
+          <button class="filter-btn bg-gray-300 px-4 py-2 rounded" data-category="set"  data-i18n="filter.set">セットメニュー</button>
+          <button class="filter-btn bg-gray-300 px-4 py-2 rounded" data-category="sweet" data-i18n="filter.sweet">デザート</button>
+        </div>
+        <div id="menu-container" class="grid grid-cols-1 sm:grid-cols-2 gap-6"></div>
+      </div>
+    </section>
+
+    <!-- Concept -->
+    <section id="concept" class="bg-gray-700/95 py-12 text-white">
+      <div class="max-w-4xl mx-auto text-center space-y-6">
+        <div>
+          <h2 class="text-3xl font-bold mb-3" data-i18n="concept.soup.h">スープのこだわり</h2>
+          <p class="text-lg leading-relaxed" data-i18n="concept.soup.p">豚だし骨、鶏ガラ、カツオ節をベースに化学調味料を一切使わずに丁寧に仕上げました。</p>
+        </div>
+        <div>
+          <h2 class="text-3xl font-bold mb-3" data-i18n="concept.meat.h">お肉のこだわり</h2>
+          <p class="text-lg leading-relaxed" data-i18n="concept.meat.p">三枚肉、テビチ、軟骨ソーキはいずれもスープとの相性にこだわった自家製タレでじっくり煮込みました。</p>
+        </div>
+        <div>
+          <h2 class="text-3xl font-bold mb-3" data-i18n="concept.shop.h">お店のこだわり</h2>
+          <p class="text-lg leading-relaxed" data-i18n="concept.shop.p">
+            新鮮な県産食材を厳選し、安心・安全な調理で、澄んだ後味の独特な風味をお届けします。緑に囲まれた古民家で、心ほどける時間を。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interior -->
+    <section id="interior" class="bg-blue-50/90 py-16 px-4 text-center">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-2xl font-bold mb-6" data-i18n="interior.title">店舗の内観（客席）</h2>
+        <div class="relative w-full overflow-hidden rounded shadow aspect-[16/9]">
+          <button onclick="prevInteriorSlide()" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 px-2" data-i18n-aria="slider.prev" aria-label="前へ">←</button>
+          <img id="interiorSlide" src="images/interior1.jpg" alt="" width="1920" height="1080"
+               class="w-full h-full object-cover cursor-pointer" onclick="nextInteriorSlide()">
+          <button onclick="nextInteriorSlide()" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 px-2" data-i18n-aria="slider.next" aria-label="次へ">→</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Exterior -->
+    <section id="exterior" class="bg-gray-700/95 py-12 text-white">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-2xl font-bold mb-6" data-i18n="exterior.title">店舗の外観</h2>
+        <div class="relative w-full overflow-hidden rounded shadow aspect-[16/9]">
+          <button onclick="prevExteriorSlide()" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 px-2" data-i18n-aria="slider.prev" aria-label="前へ">←</button>
+          <img id="exteriorSlide" src="images/exterior1.jpg" alt="" width="1920" height="1080"
+               class="w-full h-full object-cover cursor-pointer" onclick="nextExteriorSlide()">
+          <button onclick="nextExteriorSlide()" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 px-2" data-i18n-aria="slider.next" aria-label="次へ">→</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Info -->
+    <section id="info" class="bg-blue-50/90 py-16 px-4 text-center">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold mb-6" data-i18n="info.title">店舗案内</h2>
+        <div class="space-y-2">
+          <p><strong>住所：</strong>沖縄県中城村屋宜824-1</p>
+          <p><strong>電話：</strong>098-895-2280</p>
+          <p><strong>営業時間：</strong>11:00〜16:00</p>
+          <p><strong>定休日：</strong>日曜日</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Access -->
+    <section id="access" class="bg-gray-700/95 py-12 text-white">
+      <div class="max-w-5xl mx-auto space-y-10">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl font-bold mb-6" data-i18n="access.title">アクセス</h2>
+          <iframe id="mapLocation" title="悠愉樹庵の所在地（Googleマップ）"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7155.391648000203!2d127.78891810706097!3d26.271533781037977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e56d4c215e6a23%3A0x75f0d8bc425ab4b3!2z5oKg5oSJ5qi55bq1!5e0!3m2!1sja!2sjp!4v1751432270780!5m2!1sja!2sjp"
+                  class="w-full h-72 sm:h-96 md:h-[600px]" style="border:0;" allowfullscreen loading="lazy"
+                  width="1280" height="720" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="aspect-w-16 aspect-h-9 w-full">
+          <iframe id="mapStreet" title="悠愉樹庵の周辺ストリートビュー（Googleマップ）"
+                  src="https://www.google.com/maps/embed?pb=!4v1751432078744!6m8!1m7!1sX4Ri_ommBsBFJ6CJhJlrsg!2m2!1d26.26797515423022!2d127.7936794259053!3f161.40314281025584!4f-0.38539987167409606!5f2.299968626952992"
+                  class="w-full h-72 sm:h-96 md:h-[600px]" style="border:0;" allowfullscreen loading="lazy"
+                  width="1280" height="720" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- News -->
+    <section id="publicity" class="bg-blue-50/90 py-16 px-4 text-center">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-6" data-i18n="news.title">お知らせ</h2>
+        <p class="mb-4" data-i18n="news.p1">店舗の改装工事の為、臨時休業中です。</p>
+        <p class="mb-4" data-i18n="news.p2">リニューアルオープンは2025年9月中旬ごろを予定しています。</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center py-6 text-sm">
+    <p data-i18n="footer.copy">© 悠愉樹庵（ゆうゆじゅあん）. All rights reserved.</p>
+  </footer>
+
+  <!-- JS: 外部 -->
+  <script src="/js/m-lanmenu.js" defer></script>
+
+  <!-- モバイルメニュー a11y & ヒーロー切替（IIFE／重複なし） -->
+  <script>
+  function toggleMenu(){
+    const nav = document.getElementById('navMobile');
+    const btn = document.getElementById('menuToggle');
+    nav.classList.toggle('hidden');
+    const isOpen = !nav.classList.contains('hidden');
+    btn.setAttribute('aria-expanded', String(isOpen));
+    if (isOpen) document.addEventListener('click', closeMenuOnOutsideClick);
+    else document.removeEventListener('click', closeMenuOnOutsideClick);
+  }
+  function closeMenuOnOutsideClick(e){
+    const nav = document.getElementById('navMobile');
+    const btn = document.getElementById('menuToggle');
+    if (!e.target.closest('#navMobile') && !e.target.closest('#menuToggle')) {
+      nav.classList.add('hidden'); btn.setAttribute('aria-expanded','false');
+      document.removeEventListener('click', closeMenuOnOutsideClick);
+    }
+  }
+  function closeMobileMenu(){
+    const nav = document.getElementById('navMobile');
+    const btn = document.getElementById('menuToggle');
+    nav.classList.add('hidden'); btn.setAttribute('aria-expanded','false');
+    document.removeEventListener('click', closeMenuOnOutsideClick);
+  }
+
+  (function(){
+    let initialized = false;
+    function initHero(){
+      if (initialized) return; initialized = true;
+      const imgs = document.querySelectorAll("#heroSlider img"); if (!imgs.length) return;
+      let i = 0;
+      imgs.forEach((im,idx)=>{
+        im.classList.toggle("opacity-100", idx===0);
+        im.classList.toggle("opacity-0", idx!==0);
+        im.classList.toggle("scale-105", idx===0);
+      });
+      setInterval(()=>{
+        imgs[i].classList.remove("opacity-100","scale-105");
+        imgs[i].classList.add("opacity-0");
+        i = (i+1)%imgs.length;
+        imgs[i].classList.remove("opacity-0");
+        imgs[i].classList.add("opacity-100","scale-105");
+      }, 5000);
+    }
+    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", initHero, {once:true});
+    else initHero();
+  })();
+  </script>
+
+  <!-- i18n（翻訳・トーン調整済み） -->
+  <script>
+  const I18N = {
+    ja: {
+      meta: {
+        title:"沖縄そば 悠愉樹庵｜公式サイト",
+        description:"沖縄県中城村の沖縄そば専門店『悠愉樹庵（ゆうゆじゅあん）』公式サイト。自然に囲まれた癒しの空間で、伝統の味と心を込めたおもてなしをお楽しみください。",
+        ogTitle:"沖縄そば 悠愉樹庵｜公式サイト",
+        ogDesc:"自然と郷土料理に囲まれた癒しの空間『悠愉樹庵（ゆうゆじゅあん）』。"
+      },
+      nav:{ menu:"お品書き", concept:"こだわり", info:"店舗案内", access:"アクセス", news:"お知らせ", interior:"店舗の内観（客席）", exterior:"店舗の外観" },
+      hero:{ copy:"木々に囲まれたどこか懐かしい古民家で、県産食材で織りなす心あたたまる沖縄そばを。" },
+      notice:{ tempClose:"現在、店舗の改装工事に伴い臨時休業中です。<br>2025年9月中旬ごろにリニューアルオープン予定です。" },
+      menu:{ title:"お品書き" },
+      filter:{ all:"すべて", soba:"沖縄そば", single:"単品", set:"セットメニュー", sweet:"デザート" },
+      concept:{
+        soup:{ h:"スープのこだわり", p:"豚骨・鶏ガラ・カツオをじっくりと。化学調味料に頼らず、素材の旨みを丁寧に引き出しました。" },
+        meat:{ h:"お肉のこだわり", p:"三枚肉・テビチ・軟骨ソーキは、自家製の特製ダレでやわらかく、しっかり味を含ませています。" },
+        shop:{ h:"お店のこだわり", p:"新鮮な県産食材を厳選し、安心・安全な調理で、澄んだ後味の独特な風味をお届けします。緑に囲まれた古民家で、心ほどける時間を。" }
+      },
+      interior:{ title:"店舗の内観（客席）" },
+      exterior:{ title:"店舗の外観" },
+      access:{ title:"アクセス", mapLocation:"悠愉樹庵の所在地（Googleマップ）", mapStreet:"悠愉樹庵の周辺ストリートビュー（Googleマップ）" },
+      news:{ title:"お知らせ", p1:"店舗の改装工事の為、臨時休業中です。", p2:"リニューアルオープンは2025年9月中旬ごろを予定しています。" },
+      slider:{ prev:"前へ", next:"次へ" },
+      footer:{ copy:"© 悠愉樹庵（ゆうゆじゅあん）. All rights reserved." }
+    },
+    en: {
+      meta:{
+        title:"Okinawa Soba Yūyujyuan | Official Site",
+        description:"Official website of “Yūyujyuan,” an Okinawa soba restaurant in Nakagusuku, Okinawa. Enjoy heartfelt hospitality and traditional flavors in a tranquil, nature-rich setting.",
+        ogTitle:"Okinawa Soba Yūyujyuan | Official Site",
+        ogDesc:"A relaxing space embraced by nature and Okinawan home-style cuisine."
+      },
+      nav:{ menu:"Menu", concept:"Our Craft", info:"Information", access:"Access", news:"News", interior:"Interior (Seating)", exterior:"Exterior" },
+      hero:{ copy:"Savor heartwarming Okinawa soba made with local ingredients in a nostalgic traditional house surrounded by trees." },
+      notice:{ tempClose:"Temporarily closed for renovation.<br>We plan to reopen in mid-September 2025." },
+      menu:{ title:"Menu" },
+      filter:{ all:"All", soba:"Okinawa Soba", single:"A la carte", set:"Set Meals", sweet:"Dessert" },
+      concept:{
+        soup:{ h:"Our Broth", p:"Pork, chicken, and bonito simmered low and slow—no artificial seasonings; just clear, comforting depth." },
+        meat:{ h:"Our Meat", p:"Pork belly, trotters, and soft-bone ribs—gently braised in our house sauce until tender." },
+        shop:{ h:"Our Place", p:"We carefully source local ingredients and prepare them with care for clean, delicate flavors. Unwind in a cozy old house surrounded by greenery." }
+      },
+      interior:{ title:"Interior (Seating)" },
+      exterior:{ title:"Exterior" },
+      access:{ title:"Access", mapLocation:"Location — Google Maps", mapStreet:"Street View — Google Maps" },
+      news:{ title:"News", p1:"We are temporarily closed for renovation.", p2:"Grand re-opening planned for mid-September 2025." },
+      slider:{ prev:"Previous", next:"Next" },
+      footer:{ copy:"© Yūyujyuan. All rights reserved." }
+    },
+    zh: {
+      meta:{
+        title:"冲绳荞麦面 悠愉树庵｜官方网站",
+        description:"冲绳中城村的冲绳荞麦面专门店“悠愉树庵”官方网站。于绿意环绕的宁静空间，享受传统风味与真诚款待。",
+        ogTitle:"冲绳荞麦面 悠愉树庵｜官方网站",
+        ogDesc:"被自然与乡土料理环抱的治愈空间。"
+      },
+      nav:{ menu:"菜单", concept:"讲究", info:"店铺信息", access:"交通", news:"通知", interior:"店内（座位）", exterior:"店外" },
+      hero:{ copy:"在绿树环绕、带有怀旧气息的古民居中，以本地食材烹制温暖人心的冲绳荞麦面。" },
+      notice:{ tempClose:"因店铺装修暂时停业。<br>预计于2025年9月中旬重新开业。" },
+      menu:{ title:"菜单" },
+      filter:{ all:"全部", soba:"冲绳荞麦面", single:"单品", set:"套餐", sweet:"甜点" },
+      concept:{
+        soup:{ h:"汤底的讲究", p:"以猪骨、鸡架与柴鱼为基底，慢火熬制，不添加化学调味，呈现清澈醇厚的滋味。" },
+        meat:{ h:"肉类的讲究", p:"三层肉、猪蹄、软骨排，以自家特制酱汁慢炖入味，口感软糯而不腻。" },
+        shop:{ h:"店铺的讲究", p:"严选新鲜本地食材，注重安心与卫生，带来自然清爽的独特风味。欢迎于绿意盎然的古民居中悠享时光。" }
+      },
+      interior:{ title:"店内（座位）" },
+      exterior:{ title:"店外" },
+      access:{ title:"交通", mapLocation:"悠愉树庵 位置（Google 地图）", mapStreet:"悠愉树庵 周边街景（Google 地图）" },
+      news:{ title:"通知", p1:"因装修工程暂时停业。", p2:"预计于2025年9月中旬重新开业。" },
+      slider:{ prev:"上一张", next:"下一张" },
+      footer:{ copy:"© 悠愉树庵 版权所有" }
+    }
+  };
+
+  function applyI18n(lang){
+    const dict = I18N[lang] || I18N.ja;
+    document.documentElement.lang = lang;
+
+    // テキスト（innerHTML許容：改行/強調に対応）
+    document.querySelectorAll("[data-i18n]").forEach(el=>{
+      const key = el.getAttribute("data-i18n");
+      const val = key.split('.').reduce((o,k)=>o && o[k], dict);
+      if (val!=null) el.innerHTML = val;
+    });
+
+    // aria-label（スライダー等）
+    document.querySelectorAll("[data-i18n-aria]").forEach(el=>{
+      const key = el.getAttribute("data-i18n-aria");
+      const val = key.split('.').reduce((o,k)=>o && o[k], dict);
+      if (val!=null) el.setAttribute("aria-label", val);
+    });
+
+    // maps iframe の title 切替
+    const map1 = document.getElementById('mapLocation');
+    const map2 = document.getElementById('mapStreet');
+    if (map1 && dict.access?.mapLocation) map1.setAttribute("title", dict.access.mapLocation);
+    if (map2 && dict.access?.mapStreet)   map2.setAttribute("title", dict.access.mapStreet);
+
+    // <title> / meta / OGP
+    if (dict.meta){
+      if (dict.meta.title) document.title = dict.meta.title;
+      const mdesc = document.querySelector('meta[name="description"]');
+      if (mdesc && dict.meta.description) mdesc.setAttribute("content", dict.meta.description);
+      const ogt = document.querySelector('meta[property="og:title"]');
+      if (ogt && dict.meta.ogTitle) ogt.setAttribute("content", dict.meta.ogTitle);
+      const ogd = document.querySelector('meta[property="og:description"]');
+      if (ogd && dict.meta.ogDesc) ogd.setAttribute("content", dict.meta.ogDesc);
+    }
+
+    // 言語ボタンの状態
+    document.querySelectorAll('[data-lang]').forEach(btn=>{
+      btn.setAttribute('aria-pressed', String(btn.getAttribute('data-lang')===lang));
+    });
+
+    localStorage.setItem("lang", lang);
+  }
+
+  // 初期化
+  (function(){
+    const saved = localStorage.getItem("lang");
+    const initial = (saved==='ja'||saved==='en'||saved==='zh') ? saved : 'ja';
+    applyI18n(initial);
+    document.querySelectorAll('[data-lang]').forEach(btn=>{
+      btn.addEventListener('click', ()=>applyI18n(btn.getAttribute('data-lang')));
+    });
+  })();
+  </script>
+</body>
+</html>
