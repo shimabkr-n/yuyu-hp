@@ -53,7 +53,7 @@ const menuData = [
     },
     {
       name: "【仮】ゴーヤーチャンプルー定食",
-      image: "images/toufuchan-teisyoku.jpeg",
+      image: "images/goyachan-teisyoku.jpeg",
       desc: "ゴーヤーは沖縄の夏を象徴する食材です。\nビタミンC豊富なゴーヤーとたんぱく質豊富な島豆腐、ポークの旨みが絶妙に調和した栄養バランス抜群のチャンプルーです。\n食べごたえがありながら体にやさしい、健康志向なひと皿です。",
       price: "準備中",
       category: "set"
