@@ -180,7 +180,7 @@ const menuData = [
     },
     {
       name: "ケーキセット",
-      image: "images/mozuku-tan.JPG",
+      image: "images/cake_coffee.JPG",
       desc: "悠愉樹庵（ゆうゆじゅあん）の自家製チーズケーキと厳選した豆で丁寧に淹れたこだわりのコーヒー、または紅茶のセットになります。\n食後のひとときをゆったりとお過ごしください。\n ※写真は「紅芋チーズケーキ」になります。",
       price: "700",
       category: "sweet"
