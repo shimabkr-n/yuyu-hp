@@ -136,7 +136,7 @@ const menuData = [
     },
     {
       name: "ジーマミ豆腐",
-      image: "images/jimami-tan.JPG",
+      image: "images/jimami-tan.png",
       desc: "自家製のジーマミ豆腐（ピーナッツ豆腐）は、もちもちとした食感と濃厚なピーナッツの風味が特徴です。\n甘辛い特製タレと合わせることで、口の中でとろけるような絶妙なハーモニーを奏でます。\n沖縄の伝統的なおやつとしても親しまれています。",
       price: "300",
       category: "just"
@@ -172,14 +172,14 @@ const menuData = [
     },
     {
       name: "チーズケーキ",
-      image: "images/cake.JPG",
+      image: "images/cake.png",
       desc: "しっとりとした食感と、やさしい甘さが広がる悠愉樹庵（ゆうゆじゅあん）の自家製チーズケーキです。\n紅芋と里芋（ターム）を季節ごとに使い分け、旬の美味しさを大切にしています。\n ※写真は「紅芋チーズケーキ」になります。",
       price: "400",
       category: "sweet"
     },
     {
       name: "ケーキセット",
-      image: "images/cake_coffee.JPG",
+      image: "images/cake-coffee.png",
       desc: "悠愉樹庵（ゆうゆじゅあん）の自家製チーズケーキと厳選した豆で丁寧に淹れたこだわりのコーヒー、または紅茶のセットになります。\n食後のひとときをゆったりとお過ごしください。\nコーヒー or 紅茶（ホット ／ アイス）をお選びいただけます。\n ※写真は「紅芋チーズケーキ」になります。",
       price: "700",
       category: "sweet"
