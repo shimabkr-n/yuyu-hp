@@ -245,10 +245,10 @@
 <section id="exterior" class="bg-gray-700/95 py-12 text-white">
   <div class="max-w-4xl mx-auto text-center">
     <h2 class="text-2xl font-bold mb-6">店舗の外観</h2>
-    <div class="relative w-full overflow-hidden rounded shadow aspect-[16/9]">
+    <div class="relative w-full overflow-hidden rounded shadow ">
       <button onclick="prevExteriorSlide()" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 px-2" aria-label="前へ">← </button>
-      <img id="exteriorSlide" src="images/exterior1.jpg" alt="" width="1920" height="1080"
-        class="w-full h-full object-cover cursor-pointer" onclick="nextExteriorSlide()">
+      <img id="exteriorSlide" src="images/exterior1.jpg" alt="" 
+        class="w-full h-auto object-contain bg-black" loading="lazy" onclick="nextExteriorSlide()">
       <button onclick="nextExteriorSlide()" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 px-2" aria-label="次へ">→ </button>
     </div>
   </div>
