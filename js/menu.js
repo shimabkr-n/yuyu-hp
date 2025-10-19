@@ -155,7 +155,7 @@ const renderMenu = (category = 'all') => {
       const formattedDesc = item.desc.replace(/\n/g, '<br>');
 
       container.innerHTML += `
-        <div class="bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative">
+        <div class="bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full md:w-[125%]">
           ${item.badge ? `<div class="badge">${item.badge}</div>` : ''}
           <img src="${item.image}" alt="${item.name}" class="w-full md:w-[50%] h-auto object-cover cursor-pointer" onclick="openModal('${item.image}')">
           <div class="p-4 flex flex-col justify-between">
