@@ -12,7 +12,7 @@
   <meta property="og:image" content="https://jyuan.jp/ogp.jpg" />
   <meta property="og:url" content="https://jyuan.jp/" />
   <link rel="canonical" href="https://jyuan.jp/">
-  
+
   <!-- TailwindCSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Google Fonts -->
@@ -147,26 +147,26 @@
       #heroSlider img { object-fit: contain; object-position: center top; background-color: #000; }
     }
 
-    /* モーダル：中央配置（上書き） */
+    /* モーダル：中央配置 */
     .modal {
       display: none;
       position: fixed;
       z-index: 1000;
       inset: 0;
       background-color: rgba(0,0,0,0.8);
-      justify-content: center; /* 横中央 */
-      align-items: center;     /* 縦中央 */
+      justify-content: center;
+      align-items: center;
     }
     .modal.show { display: flex; }
     .modal-content {
-      margin: 0;              /* 余白を除去 */
-      max-width: 90%;
-      max-height: 80vh;
+      margin: 0;
+      max-width: 45%;
+      max-height: 40vh;
       object-fit: contain;
       border-radius: 8px;
     }
     @media (max-width: 640px) {
-      .modal-content { width: 95%; max-height: 70vh; }
+      .modal-content { width: 80%; max-height: 50vh; }
     }
   </style>
 
@@ -227,10 +227,10 @@
   <!-- 半透明オーバーレイ -->
   <div class="bg-black bg-opacity-40 absolute inset-0"></div>
 
-  <!-- テキスト（フォント2倍） -->
+  <!-- テキスト -->
   <div class="z-10 px-4">
-    <h2 class="text-4xl md:text-7xl font-semibold mb-6">悠愉樹庵（ゆうゆじゅあん）</h2>
-    <p class="text-2xl md:text-4xl leading-relaxed">
+    <h2 class="text-[1.6875rem] md:text-[3.375rem] font-semibold mb-6">悠愉樹庵（ゆうゆじゅあん）</h2>
+    <p class="text-[1.125rem] md:text-[1.6875rem] leading-relaxed">
       木々に囲まれたどこか懐かしい古民家で、県産食材で織りなす心あたたまる沖縄そばを。
     </p>
   </div>
@@ -303,13 +303,12 @@
 </section>
 
 <!-- Info -->
-<section id="info" class="bg-blue-50/90 py-16 px-4 text-center">
-  <div class="max-w-4xl mx-auto text-center">
+<section id="info" class="bg-blue-50/90 py-16 px-4 text-left">
+  <div class="max-w-4xl mx-auto text-left">
     <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
       <h2 class="text-3xl font-bold mb-6">店舗案内</h2>
       <p><strong>住所：</strong>沖縄県中城村屋宜824-1</p>
       <p><strong>営業時間：</strong>11:00〜16:00</p>
-      <p><strong>電話番号：</strong>098-895-2280</p>
       <p><strong>定休日：</strong>日曜日</p>
       <p><strong>座席：</strong>テーブル6卓（5席）30席、座敷20席、掘りごたつ15席、カウンター4席</p>
     </div>
@@ -322,7 +321,7 @@
     <div class="max-w-4xl mx-auto text-center">
       <h2 class="text-3xl font-bold mb-6">アクセス</h2>
       <iframe title="悠愉樹庵の所在地（Googleマップ）"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7155.391648000203!2d127.78891810706097!3d26.271533781037977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e56d4c215e6a23%3A0x75f0d8bc425ab4b3!2z5oKg5oSJ5qi55bq1!5e0!3m2!1sja!2sjp!4v1751432270780!5m2!1sja!2sjp" 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7155.391648000203!2d127.78891810706097!3d26.271533781037977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e56d4c215e6a23%3A0x75f0d8bc425ab4b3!2z5oKg5oSJ5qi55bq1!5e0!3m2!1sja!2sjp!4v1751432270780!5m2!1sja!2sjp"
         class="w-full h-72 sm:h-96 md:h-[600px]"
         style="border:0;" allowfullscreen loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -345,12 +344,12 @@
   </div>
 </section>
 
-<!--Publicity -->
-<section id="publicity" class="bg-blue-50/90 py-16 px-4 text-center">
-  <div class="max-w-4xl mx-auto text-center">
+<!--Publicity-->
+<section id="publicity" class="bg-blue-50/90 py-16 px-4 text-left">
+  <div class="max-w-4xl mx-auto text-left">
     <h2 class="text-3xl font-bold mb-6">お知らせ</h2>
     <p class="mb-4">2025年10月1日にリニューアルオープンしました。</p>
-      </div>
+  </div>
 </section>
 
 <!-- Contact (未使用)
@@ -361,11 +360,12 @@
 </section>
 -->
 
-<div id="imageModal" class="modal">
-  <span class="close" id="modalClose">&times;</span>
-  <img class="modal-content cursor-pointer" id="modalImage">
+<div id="imageModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+  <span class="close" id="modalClose" aria-label="Close">&times;</span>
+  <img class="modal-content cursor-pointer" id="modalImage" alt="拡大画像">
 </div>
 
+<!-- App scripts -->
 <script src="/js/menu.js" defer></script>
 
 <script>
@@ -439,7 +439,6 @@ document.querySelectorAll('section').forEach(section => {
 /* ヒーロースライダー初期化（既存） */
 (function () {
   let initialized = false;
-  let timerId = null;
 
   function initHeroSlider() {
     if (initialized) return;
@@ -456,7 +455,7 @@ document.querySelectorAll('section').forEach(section => {
       img.classList.toggle("scale-105", i === 0);
     });
 
-    timerId = window.setInterval(() => {
+    window.setInterval(() => {
       heroImages[currentHero].classList.remove("opacity-100", "scale-105");
       heroImages[currentHero].classList.add("opacity-0");
 
@@ -472,31 +471,6 @@ document.querySelectorAll('section').forEach(section => {
   } else {
     initHeroSlider();
   }
-
-  window.__YUJU_HERO_INIT__ = true;
-})();
-</script>
-
-<script>
-/* 画像モーダル：中央表示のための開閉クラス制御（任意で利用） */
-(function() {
-  const modal = document.getElementById('imageModal');
-  const modalImg = document.getElementById('modalImage');
-  const closeBtn = document.getElementById('modalClose');
-
-  // もしギャラリー画像に data-modal="image" を付与した場合のサンプル
-  document.addEventListener('click', (e) => {
-    const t = e.target;
-    if (t && t.matches('[data-modal="image"]')) {
-      modalImg.src = t.getAttribute('src');
-      modal.classList.add('show'); // CSSの .modal.show { display:flex } と連動
-    }
-  });
-
-  closeBtn?.addEventListener('click', () => modal.classList.remove('show'));
-  modal?.addEventListener('click', (e) => {
-    if (e.target === modal) modal.classList.remove('show');
-  });
 })();
 </script>
 
