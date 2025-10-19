@@ -286,9 +286,11 @@ window.onclick = function(event) {
 
 // 外観スライド
 const exteriorImages = [
-  "images/gaikan1.jpg",
-  "images/gaikan2.jpg",
-  "images/gaikan3.jpg"
+    "images/gaikan1.jpg",
+    "images/gaikan2.jpg",
+    "images/gaikan3.jpg",
+    "images/gaikan4.jpg",
+    "images/gaikan5.jpg"
 ];
 let currentExterior = 0;
 const exteriorSlide = document.getElementById("exteriorSlide");
@@ -305,8 +307,7 @@ const interiorImages = [
   "images/naikan1.jpg",
   "images/naikan2.jpg",
   "images/naikan3.jpg",
-  "images/naikan4.jpg",
-  "images/naikan5.jpg"
+  "images/naikan4.jpg"
 ];
 let currentInterior = 0;
 const interiorSlide = document.getElementById("interiorSlide");
