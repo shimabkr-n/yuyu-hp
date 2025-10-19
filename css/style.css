@@ -194,4 +194,18 @@ body {
     object-position: center center;
   }
 }
+/* 元画像が切れないようにすべて表示（PC/スマホ共通） */
+.relative.w-full.overflow-hidden.rounded.shadow img {
+  object-fit: contain;
+  object-position: center center;
+  width: 100%;
+  height: auto;
+  background-color: #000;
+}
+
+/* aspect比クラスが効いている場合、無効化して高さをautoに */
+.relative.w-full.overflow-hidden.rounded.shadow {
+  aspect-ratio: auto !important;
+}
+
 
