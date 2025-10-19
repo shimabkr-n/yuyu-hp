@@ -166,7 +166,7 @@ const menuData = [
     },
     {
       name: "イリチャー",
-      image: "images/mozuku-tan.JPG",
+      image: "images/iricha-tan.JPG",
       desc: "切り干し大根／昆布／こんにゃく／椎茸／三枚肉をじっくり炒め煮にした沖縄の家庭料理です。\n鰹と豚だしの旨みが染みた、しっとり優しい味わいです。",
       price: "400",
       category: "just"
@@ -189,13 +189,6 @@ const menuData = [
       name: "ホットぜんざい",
       image: "images/hotzenzai.png",
       desc: "自然由来の甘みがうれしい、沖縄産黒糖のホットぜんざいです。\nミネラル豊富な沖縄県産黒糖のコクと白玉のもちもち食感が重なる、心にも体にもやさしい甘味です。",
-      price: "500",
-      category: "sweet"
-    },
-    {
-      name: "黒糖ぜんざい",
-      image: "images/ice-zenzai2.png",
-      desc: " 沖縄産黒糖で仕上げたホットぜんざいを、ひんやり冷やしてかき氷にトッピングしました。\n優しい甘みと涼やかな口どけが楽しめます。\n宇治抹茶の無料トッピングもございます。\n ※練乳のトッピングもプラス¥50で可能です。",
       price: "500",
       category: "sweet"
     },
