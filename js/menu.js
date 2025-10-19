@@ -157,7 +157,7 @@ const renderMenu = (category = 'all') => {
       container.innerHTML += `
         <div class="bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative">
           ${item.badge ? `<div class="badge">${item.badge}</div>` : ''}
-          <img src="${item.image}" alt="${item.name}" class="w-full md:w-1/3 object-cover cursor-pointer" onclick="openModal('${item.image}')">
+          <img src="${item.image}" alt="${item.name}" class="object-cover w-[130%] md:w-[130%] cursor-pointer" onclick="openModal('${item.image}')">
           <div class="p-4 flex flex-col justify-between">
             <div>
               <h3 class="text-xl font-bold text-red-700 mb-2">${item.name}</h3>
