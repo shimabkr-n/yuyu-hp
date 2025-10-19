@@ -33,19 +33,23 @@
       border-radius: 0.25rem;
     }
     .modal {
+      display: none;
       position: fixed;
-      inset: 0;
-      display: flex !important;   /* 常に中央寄せを維持 */
-      justify-content: center;    /* 水平方向中央 */
-      align-items: center;        /* 垂直方向中央 */
-      background-color: rgba(0,0,0,0.8);
       z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.8);
     }
-    
+
     .modal-content {
-      margin: 0;                  /* 上寄りを防止 */
-      max-width: 45%;
-      max-height: 40vh;
+      margin: 5% auto;
+      display: block;
+      width: 90%;
+      max-width: 600px;
+      max-height: 80vh;
       object-fit: contain;
     }
     .close {
@@ -360,9 +364,9 @@
 </section>
 -->
 
-<div id="imageModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
-  <span class="close" id="modalClose" aria-label="Close">&times;</span>
-  <img class="modal-content cursor-pointer" id="modalImage" alt="拡大画像">
+<div id="imageModal" class="modal">
+  <span class="close" id="modalClose">&times;</span>
+  <img class="modal-content cursor-pointer" id="modalImage">
 </div>
 
 <!-- App scripts -->
@@ -412,12 +416,15 @@ document.querySelectorAll('section').forEach(section => {
     const body = [...section.children].find(el => el !== h2);
     if (!body) return;
 
-    if (!body.id) { body.id = `${section.id || 'sec'}-panel`; }
+    // 本文にユニークIDを付与（なければ生成）
+    if (!body.id) {
+      body.id = `${section.id || 'sec'}-panel`;
+    }
 
     h2.setAttribute('role', 'button');
     h2.setAttribute('aria-controls', body.id);
     h2.setAttribute('aria-expanded', String(!body.classList.contains('hidden')));
-    h2.setAttribute('tabindex', '0');
+    h2.setAttribute('tabindex', '0'); // キーボード操作対応
 
     const toggle = () => {
       const isHidden = body.classList.toggle('hidden');
@@ -439,6 +446,7 @@ document.querySelectorAll('section').forEach(section => {
 /* ヒーロースライダー初期化（既存） */
 (function () {
   let initialized = false;
+  let timerId = null;
 
   function initHeroSlider() {
     if (initialized) return;
@@ -449,13 +457,14 @@ document.querySelectorAll('section').forEach(section => {
 
     let currentHero = 0;
 
+    // 念のため初期状態を整える
     heroImages.forEach((img, i) => {
       img.classList.toggle("opacity-100", i === 0);
       img.classList.toggle("opacity-0", i !== 0);
       img.classList.toggle("scale-105", i === 0);
     });
 
-    window.setInterval(() => {
+    timerId = window.setInterval(() => {
       heroImages[currentHero].classList.remove("opacity-100", "scale-105");
       heroImages[currentHero].classList.add("opacity-0");
 
@@ -466,11 +475,15 @@ document.querySelectorAll('section').forEach(section => {
     }, 5000);
   }
 
+  // DOMContentLoaded 後に一度だけ初期化
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", initHeroSlider, { once: true });
   } else {
     initHeroSlider();
   }
+
+  // 他で誤って再実行されないよう、グローバルにもガード名を残しておく
+  window.__YUJU_HERO_INIT__ = true;
 })();
 </script>
 
