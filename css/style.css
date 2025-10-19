@@ -175,3 +175,23 @@ body {
     background-position: center center;
   }
 }
+/* === Hero: スマホ時は元画像が切れないように（縦軸優先） === */
+@media (max-width: 768px) {
+  /* セクション全体はそのままでもOK。必要なら高さを少し抑える場合は下を有効化
+     #hp-top { height: 80vh; }
+  */
+  #heroSlider img {
+    object-fit: contain;        /* 画像全体を収める＝切れない */
+    object-position: center top;/* 上寄せで自然に */
+    background-color: #000;     /* レターボックス部分の色 */
+  }
+}
+
+/* （任意：PC側の明示。既に cover なら省略可） */
+@media (min-width: 769px) {
+  #heroSlider img {
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+
