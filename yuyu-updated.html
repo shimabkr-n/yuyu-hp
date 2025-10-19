@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>沖縄そば悠愉樹庵（ゆうゆじゅあん）</title>
+
+  <!-- SEO・OGP -->
+  <meta name="description" content="沖縄県中城村の沖縄そば専門店『悠愉樹庵（ゆうゆじゅあん）』公式サイト。自然に囲まれた癒しの空間で、伝統の味と心を込めたおもてなしをお楽しみください。">
+  <meta property="og:title" content="沖縄そば 悠愉樹庵" />
+  <meta property="og:description" content="自然と郷土料理に囲まれた癒しの空間『悠愉樹庵（ゆうゆじゅあん）』。" />
+  <meta property="og:image" content="https://jyuan.jp/ogp.jpg" />
+  <meta property="og:url" content="https://jyuan.jp/" />
+  <link rel="canonical" href="https://jyuan.jp/">
+  
+  <!-- TailwindCSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+
+  <style>
+    .badge {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      background-color: #e53e3e;
+      color: white;
+      font-size: 0.75rem;
+      font-weight: bold;
+      padding: 0.25rem 0.5rem;
+      border-radius: 0.25rem;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.8);
+    }
+    .modal-content {
+      margin: 5% auto;
+      display: block;
+      width: 90%;
+      max-width: 600px;
+      max-height: 80vh;
+      object-fit: contain;
+    }
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 35px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    @media (max-width: 640px) {
+      .modal-content {
+        width: 95%;
+        max-width: 95%;
+      }
+    }
+  </style>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  <!-- LocalBusiness/Restaurant JSON -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "悠愉樹庵（ゆうゆじゅあん）",
+  "image": "https://jyuan.jp/ogp.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "JP",
+    "addressRegion": "沖縄県",
+    "addressLocality": "中城村屋宜824-1"
+  },
+  "telephone": "098-895-2280",
+  "url": "https://jyuan.jp/",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "11:00",
+      "closes": "16:00"
+    }
+  ],
+  "sameAs": []
+}
+</script>
+
+  <!-- === 追加：レイアウト最適化CSS（ヒーロー/モーダル中央配置） === -->
+  <style>
+    /* 背景パターンのレスポンシブ */
+    @media (max-width: 768px) { body { background-size: 100% auto; } }
+    @media (min-width: 769px) { body { background-size: 100% auto; } }
+
+    /* ヒーロースライダー共通設定 */
+    #heroSlider {
+      width: 100%;
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      z-index: 0;
+    }
+    #heroSlider img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      transition: opacity 1s ease-in-out, transform 5s ease-in-out;
+    }
+    /* PC（デスクトップ） */
+    @media (min-width: 1025px) {
+      #heroSlider { height: 100vh; }
+      #heroSlider img { object-fit: cover; object-position: center center; }
+    }
+    /* タブレット */
+    @media (min-width: 769px) and (max-width: 1024px) {
+      #heroSlider { height: 80vh; }
+      #heroSlider img { object-fit: cover; object-position: center top; }
+    }
+    /* スマホ */
+    @media (max-width: 768px) {
+      #heroSlider { height: 60vh; }
+      #heroSlider img { object-fit: contain; object-position: center top; background-color: #000; }
+    }
+
+    /* モーダル：中央配置（上書き） */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      inset: 0;
+      background-color: rgba(0,0,0,0.8);
+      justify-content: center; /* 横中央 */
+      align-items: center;     /* 縦中央 */
+    }
+    .modal.show { display: flex; }
+    .modal-content {
+      margin: 0;              /* 余白を除去 */
+      max-width: 90%;
+      max-height: 80vh;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+    @media (max-width: 640px) {
+      .modal-content { width: 95%; max-height: 70vh; }
+    }
+  </style>
+
+</head>
+<body class="bg-gray-100 text-gray-800 min-h-screen" style="background-image: url('images/bingata-strong.png'); background-repeat: repeat; background-position: center; background-size: 100% auto;">
+
+<!-- Header -->
+<header class="bg-white bg-opacity-90 shadow fixed w-full z-50">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-red-700 logo-font">悠愉樹庵（ゆうゆじゅあん）</h1>
+    <button id="menuToggle"
+        class="md:hidden text-2xl"
+        onclick="toggleMenu()"
+        aria-controls="navMobile"
+        aria-expanded="false">
+        &#9776;
+    </button>
+    <nav id="main-nav" class="hidden md:flex space-x-4 text-sm">
+      <a href="#menu" class="hover:text-red-600">お品書き</a>
+      <a href="#concept" class="hover:text-red-600">こだわり</a>
+      <a href="#info" class="hover:text-red-600">店舗案内</a>
+      <a href="#access" class="hover:text-red-600">アクセス</a>
+      <a href="#publicity" class="hover:text-red-600">お知らせ</a>
+      <a href="#interior" class="hover:text-red-600">店舗内観（客席）</a>
+      <a href="#exterior" class="hover:text-red-600">店舗外観</a>
+    </nav>
+    </div>
+    <div id="navMobile" class="sm:hidden hidden px-4 pb-4">
+      <a href="#menu" class="block py-2 border-b" onclick="closeMobileMenu()">お品書き</a>
+      <a href="#concept" class="block py-2 border-b" onclick="closeMobileMenu()">こだわり</a>
+      <a href="#info" class="block py-2 border-b" onclick="closeMobileMenu()">店舗案内</a>
+      <a href="#access" class="block py-2 border-b" onclick="closeMobileMenu()">アクセス</a>
+      <a href="#publicity" class="block py-2 border-b" onclick="closeMobileMenu()">お知らせ</a>
+      <a href="#interior" class="block py-2 border-b" onclick="closeMobileMenu()">店舗内観（客席）</a>
+      <a href="#exterior" class="block py-2 border-b" onclick="closeMobileMenu()">店舗外観</a>
+  </div>
+</header>
+
+<!-- Hero -->
+<section id="hp-top" class="h-screen flex items-center justify-center relative text-white text-center pt-20 overflow-hidden">
+  <div id="heroSlider" class="absolute inset-0 w-full h-full z-0">
+    <img src="images/exterior1.jpg" alt="" width="1920" height="1200"
+      class="w-full h-full object-cover scale-100 absolute transition-opacity duration-1000 opacity-100 transition-transform ease-in-out duration-[5000ms]" style="z-index:-1;" />
+    <img src="images/exterior2.jpg" alt="" width="1920" height="1200"
+      class="w-full h-full object-cover scale-100 absolute transition-opacity duration-1000 opacity-0 transition-transform ease-in-out duration-[5000ms]" style="z-index:-1;" />
+    <img src="images/exterior3.JPG" alt="" width="1920" height="1200"
+      class="w-full h-full object-cover scale-100 absolute transition-opacity duration-1000 opacity-0 transition-transform ease-in-out duration-[5000ms]" style="z-index:-1;" />
+    <img src="images/exterior4.JPG" alt="" width="1920" height="1200"
+      class="w-full h-full object-cover scale-100 absolute transition-opacity duration-1000 opacity-0 transition-transform ease-in-out duration-[5000ms]" style="z-index:-1;" />
+    <img src="images/exterior5.JPG" alt="" width="1920" height="1200"
+      class="w-full h-full object-cover scale-100 absolute transition-opacity duration-1000 opacity-0 transition-transform ease-in-out duration-[5000ms]" style="z-index:-1;" />
+    <img src="images/exterior6.JPG" alt="" width="1920" height="1200"
+      class="w-full h-full object-cover scale-100 absolute transition-opacity duration-1000 opacity-0 transition-transform ease-in-out duration-[5000ms]" style="z-index:-1;" />
+    <img src="images/exterior7.JPG" alt="" width="1920" height="1200"
+      class="w-full h-full object-cover scale-100 absolute transition-opacity duration-1000 opacity-0 transition-transform ease-in-out duration-[5000ms]" style="z-index:-1;" />
+  </div>
+
+  <!-- 半透明オーバーレイ -->
+  <div class="bg-black bg-opacity-40 absolute inset-0"></div>
+
+  <!-- テキスト（フォント2倍） -->
+  <div class="z-10 px-4">
+    <h2 class="text-4xl md:text-7xl font-semibold mb-6">悠愉樹庵（ゆうゆじゅあん）</h2>
+    <p class="text-2xl md:text-4xl leading-relaxed">
+      木々に囲まれたどこか懐かしい古民家で、県産食材で織りなす心あたたまる沖縄そばを。
+    </p>
+  </div>
+</section>
+
+<a href="#hp-top" class="fixed bottom-4 left-4 w-[150px] md:w-[300px] z-[9999] cursor-pointer rounded-lg">
+  <img src="images/yuyu-chara.png" alt="悠愉樹庵 ロゴ" class="w-full h-auto">
+</a>
+
+<!-- Menu -->
+<section id="menu" class="bg-blue-50/90 py-16 px-4 text-center">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-8">お品書き</h2>
+    <!-- Filters -->
+    <div class="flex flex-wrap justify-center mb-6 gap-2">
+      <button class="filter-btn bg-gray-300 px-4 py-2 rounded" data-category="all">すべて</button>
+      <button class="filter-btn bg-gray-300 px-4 py-2 rounded" data-category="soba">沖縄そば</button>
+      <button class="filter-btn bg-gray-300 px-4 py-2 rounded" data-category="topping">付け合せ</button>
+      <button class="filter-btn bg-gray-300 px-4 py-2 rounded" data-category="chanple">チャンプルー</button>
+      <button class="filter-btn bg-gray-300 px-4 py-2 rounded" data-category="set">定食</button>
+      <button class="filter-btn bg-gray-300 px-4 py-2 rounded" data-category="just">単品</button>
+      <button class="filter-btn bg-gray-300 px-4 py-2 rounded" data-category="sweet">デザート</button>
+    </div>
+    <div id="menu-container" class="grid grid-cols-1 sm:grid-cols-2 gap-6"></div>
+  </div>
+</section>
+
+<!-- Concept（左揃え） -->
+<section id="concept" class="bg-gray-700/95 py-12 text-white">
+  <div class="max-w-4xl mx-auto text-left">
+    <h2 class="text-3xl font-bold mb-6">スープのこだわり</h2>
+    <p class="text-lg leading-relaxed">
+      豚だし骨、鶏ガラ、カツオ節をベースに化学調味料を一切使わずに丁寧に心を込めて仕上げました。
+    </p>
+    <h2 class="text-3xl font-bold mb-6 mt-10">お肉のこだわり</h2>
+    <p class="text-lg leading-relaxed">
+      三枚肉、テビチ、軟骨ソーキはいずれもスープとの相性にこだわった自家製タレでじっくり煮込んで仕上げました。
+    </p>
+    <h2 class="text-3xl font-bold mb-6 mt-10">お店のこだわり</h2>
+    <p class="text-lg leading-relaxed">
+      新鮮な県産食材を厳選し、食の安全に徹底してこだわった調理法から生まれる自然であっさりとした独特の風味をお届けします。<br>
+      木々に囲まれた古民家にて心ほどける沖縄郷土料理をご用意して皆さまのお越しを心よりお待ちしております。<br>
+    </p>
+  </div>
+</section>
+
+<section id="interior" class="bg-blue-50/90 py-16 px-4 text-center">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-2xl font-bold mb-6">店舗の内観（客席）</h2>
+    <div class="relative w-full overflow-hidden rounded shadow aspect-[16/9]">
+      <button onclick="prevInteriorSlide()" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 px-2" aria-label="前へ">← </button>
+      <img id="interiorSlide" src="images/interior1.jpg" alt="" width="1920" height="1080"
+        class="w-full h-full object-cover cursor-pointer" onclick="nextInteriorSlide()">
+      <button onclick="nextInteriorSlide()" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 px-2" aria-label="次へ">→ </button>
+    </div>
+  </div>
+</section>
+
+  <!-- 外観スライダー -->
+<section id="exterior" class="bg-gray-700/95 py-12 text-white">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-2xl font-bold mb-6">店舗の外観</h2>
+    <div class="relative w-full overflow-hidden rounded shadow aspect-[16/9]">
+      <button onclick="prevExteriorSlide()" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 px-2" aria-label="前へ">← </button>
+      <img id="exteriorSlide" src="images/exterior1.jpg" alt="" width="1920" height="1080"
+        class="w-full h-full object-cover cursor-pointer" onclick="nextExteriorSlide()">
+      <button onclick="nextExteriorSlide()" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 px-2" aria-label="次へ">→ </button>
+    </div>
+  </div>
+</section>
+
+<!-- Info -->
+<section id="info" class="bg-blue-50/90 py-16 px-4 text-center">
+  <div class="max-w-4xl mx-auto text-center">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+      <h2 class="text-3xl font-bold mb-6">店舗案内</h2>
+      <p><strong>住所：</strong>沖縄県中城村屋宜824-1</p>
+      <p><strong>営業時間：</strong>11:00〜16:00</p>
+      <p><strong>電話番号：</strong>098-895-2280</p>
+      <p><strong>定休日：</strong>日曜日</p>
+      <p><strong>座席：</strong>テーブル6卓（5席）30席、座敷20席、掘りごたつ15席、カウンター4席</p>
+    </div>
+  </div>
+</section>
+
+<!-- Access  -->
+<section id="access" class="bg-gray-700/95 py-12 text-white">
+  <div class="max-w-5xl mx-auto space-y-10">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">アクセス</h2>
+      <iframe title="悠愉樹庵の所在地（Googleマップ）"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7155.391648000203!2d127.78891810706097!3d26.271533781037977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e56d4c215e6a23%3A0x75f0d8bc425ab4b3!2z5oKg5oSJ5qi55bq1!5e0!3m2!1sja!2sjp!4v1751432270780!5m2!1sja!2sjp" 
+        class="w-full h-72 sm:h-96 md:h-[600px]"
+        style="border:0;" allowfullscreen loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="aspect-w-16 aspect-h-9 w-full">
+      <iframe title="悠愉樹庵の周辺ストリートビュー（Googleマップ）"
+        src="https://www.google.com/maps/embed?pb=!4v1751432078744!6m8!1m7!1sX4Ri_ommBsBFJ6CJhJlrsg!2m2!1d26.26797515423022!2d127.7936794259053!3f161.40314281025584!4f-0.38539987167409606!5f2.299968626952992"
+        class="w-full h-72 sm:h-96 md:h-[600px]"
+        style="border:0;" allowfullscreen loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="aspect-w-16 aspect-h-9 w-full">
+      <iframe title="悠愉樹庵の店内ストリートビュー（Googleマップ）"
+        src="https://www.google.com/maps/embed?pb=!4v1757669572224!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJQzRqdUs5NUFF!2m2!1d26.26813174427315!2d127.7944657526565!3f349.47!4f-9.61!5f0.7820865974627469"
+        class="w-full h-72 sm:h-96 md:h-[600px]"
+        style="border:0;" allowfullscreen loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+  </div>
+</section>
+
+<!--Publicity -->
+<section id="publicity" class="bg-blue-50/90 py-16 px-4 text-center">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-6">お知らせ</h2>
+    <p class="mb-4">2025年10月1日にリニューアルオープンしました。</p>
+      </div>
+</section>
+
+<!-- Contact (未使用)
+<section id="contact" class="bg-gray-700/95 py-12 text-white">
+  <h2 class="text-3xl font-bold mb-4">ご予約はこちら</h2>
+  <p class="mb-6 text-lg">ご予約</p>
+  <a href="https://forms.gle/your-form-link" target="_blank" class="bg-green-600 text-white px-6 py-3 rounded hover:bg-green-500 font-medium">予約フォームへ</a>
+</section>
+-->
+
+<div id="imageModal" class="modal">
+  <span class="close" id="modalClose">&times;</span>
+  <img class="modal-content cursor-pointer" id="modalImage">
+</div>
+
+<script src="/js/menu.js" defer></script>
+
+<script>
+function toggleMenu() {
+   const nav = document.getElementById('navMobile');
+   const btn = document.getElementById('menuToggle');
+
+   nav.classList.toggle('hidden');
+   const isOpen = !nav.classList.contains('hidden');
+   btn.setAttribute('aria-expanded', String(isOpen));
+
+   if (isOpen) {
+     document.addEventListener('click', closeMenuOnOutsideClick);
+   } else {
+     document.removeEventListener('click', closeMenuOnOutsideClick);
+   }
+}
+
+function closeMenuOnOutsideClick(event) {
+   const nav = document.getElementById('navMobile');
+   const btn = document.getElementById('menuToggle');
+   const button = event.target.closest('button');
+   const insideNav = event.target.closest('#navMobile');
+   if (!insideNav && !button) {
+     nav.classList.add('hidden');
+     btn.setAttribute('aria-expanded', 'false');
+     document.removeEventListener('click', closeMenuOnOutsideClick);
+   }
+}
+
+function closeMobileMenu() {
+   const nav = document.getElementById('navMobile');
+   const btn = document.getElementById('menuToggle');
+   nav.classList.add('hidden');
+   btn.setAttribute('aria-expanded', 'false');
+   document.removeEventListener('click', closeMenuOnOutsideClick);
+}
+
+/* セクション見出しの開閉（既存） */
+document.querySelectorAll('section').forEach(section => {
+  const h2 = section.querySelector('h2');
+  if (h2) {
+    h2.classList.add('cursor-pointer');
+    const body = [...section.children].find(el => el !== h2);
+    if (!body) return;
+
+    if (!body.id) { body.id = `${section.id || 'sec'}-panel`; }
+
+    h2.setAttribute('role', 'button');
+    h2.setAttribute('aria-controls', body.id);
+    h2.setAttribute('aria-expanded', String(!body.classList.contains('hidden')));
+    h2.setAttribute('tabindex', '0');
+
+    const toggle = () => {
+      const isHidden = body.classList.toggle('hidden');
+      h2.setAttribute('aria-expanded', String(!isHidden));
+    };
+
+    h2.addEventListener('click', toggle);
+    h2.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggle();
+      }
+    });
+  }
+});
+</script>
+
+<script>
+/* ヒーロースライダー初期化（既存） */
+(function () {
+  let initialized = false;
+  let timerId = null;
+
+  function initHeroSlider() {
+    if (initialized) return;
+    initialized = true;
+
+    const heroImages = document.querySelectorAll("#heroSlider img");
+    if (!heroImages.length) return;
+
+    let currentHero = 0;
+
+    heroImages.forEach((img, i) => {
+      img.classList.toggle("opacity-100", i === 0);
+      img.classList.toggle("opacity-0", i !== 0);
+      img.classList.toggle("scale-105", i === 0);
+    });
+
+    timerId = window.setInterval(() => {
+      heroImages[currentHero].classList.remove("opacity-100", "scale-105");
+      heroImages[currentHero].classList.add("opacity-0");
+
+      currentHero = (currentHero + 1) % heroImages.length;
+
+      heroImages[currentHero].classList.remove("opacity-0");
+      heroImages[currentHero].classList.add("opacity-100", "scale-105");
+    }, 5000);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initHeroSlider, { once: true });
+  } else {
+    initHeroSlider();
+  }
+
+  window.__YUJU_HERO_INIT__ = true;
+})();
+</script>
+
+<script>
+/* 画像モーダル：中央表示のための開閉クラス制御（任意で利用） */
+(function() {
+  const modal = document.getElementById('imageModal');
+  const modalImg = document.getElementById('modalImage');
+  const closeBtn = document.getElementById('modalClose');
+
+  // もしギャラリー画像に data-modal="image" を付与した場合のサンプル
+  document.addEventListener('click', (e) => {
+    const t = e.target;
+    if (t && t.matches('[data-modal="image"]')) {
+      modalImg.src = t.getAttribute('src');
+      modal.classList.add('show'); // CSSの .modal.show { display:flex } と連動
+    }
+  });
+
+  closeBtn?.addEventListener('click', () => modal.classList.remove('show'));
+  modal?.addEventListener('click', (e) => {
+    if (e.target === modal) modal.classList.remove('show');
+  });
+})();
+</script>
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-white text-center py-6 text-sm">
+  <p>&copy; 悠愉樹庵（ゆうゆじゅあん）. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
