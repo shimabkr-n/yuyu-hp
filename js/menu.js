@@ -17,7 +17,7 @@ const menuData = [
     },
     {
       name: "テビチそば",
-      image: "images/tebichi-soba.jpg",
+      image: "images/tebichi-soba.jpeg",
       desc: "沖縄県産豚肉をひとつひとつ丁寧に処理した、ぷるぷるのテビチ（豚足）を贅沢に使った一杯です。\n時間をかけて丁寧に煮込んだテビチは、余分な脂が落ちてコラーゲンたっぷり。出汁と共に口の中でとろける食感が楽しめます。\n沖縄郷土料理の代表格でもあるテビチは、美容と健康にも嬉しい一杯です。",
       price: "1,200",
       category: "soba"
