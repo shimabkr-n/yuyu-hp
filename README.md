@@ -45,3 +45,4 @@
 - **ドメイン/DNS/公開管理**：PM（Cloudflare 管理）
 
 hogetest
+hogetest2
