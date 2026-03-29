@@ -258,22 +258,31 @@ renderMenu();
 function openModal(src) {
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   if (isMobile) return;
-  modal.style.display = "block";
+  // [Phase3] CODE-01: .show クラスで表示（フレックス中央配置、yuyu-updated.html から採用）
+  modal.classList.add('show');
   modalImg.src = src;
   modalImg.style.transform = "scale(1.5)";
 }
 
-modalClose.onclick = function () {
-  modal.style.display = "none";
+function closeModal() {
+  modal.classList.remove('show');
   modalImg.style.transform = "scale(1)";
-};
+}
+
+modalClose.onclick = closeModal;
 
 window.onclick = function(event) {
   if (event.target === modal) {
-    modal.style.display = "none";
-    modalImg.style.transform = "scale(1)";
+    closeModal();
   }
 };
+
+// [Phase3] CODE-01: ESC キーでモーダルを閉じる
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape' && modal.classList.contains('show')) {
+    closeModal();
+  }
+});
 
 // 外観スライド
 const exteriorImages = [
@@ -283,12 +292,31 @@ const exteriorImages = [
     "images/gaikan4.jpg",
     "images/gaikan5.jpg"
 ];
+// [Phase2修正] SEO-04: スライド切替時に alt テキストも連動更新
+const exteriorAlts = [
+    "悠愉樹庵の外観 - 中城村の古民家沖縄そば店",
+    "悠愉樹庵の外観 - 緑に囲まれたアプローチ",
+    "悠愉樹庵の外観 - 店舗正面",
+    "悠愉樹庵の外観 - 駐車場と敷地",
+    "悠愉樹庵の外観 - 自然豊かな店舗周辺"
+];
 let currentExterior = 0;
 const exteriorSlide = document.getElementById("exteriorSlide");
 
+function updateExteriorSlide() {
+  exteriorSlide.src = exteriorImages[currentExterior];
+  exteriorSlide.alt = exteriorAlts[currentExterior];
+}
+
 function nextExteriorSlide() {
   currentExterior = (currentExterior + 1) % exteriorImages.length;
-  exteriorSlide.src = exteriorImages[currentExterior];
+  updateExteriorSlide();
+}
+
+// [Phase1修正] BUG-02: prevExteriorSlide() を追加（←ボタン用）
+function prevExteriorSlide() {
+  currentExterior = (currentExterior - 1 + exteriorImages.length) % exteriorImages.length;
+  updateExteriorSlide();
 }
 
 setInterval(nextExteriorSlide, 3000);
@@ -300,12 +328,30 @@ const interiorImages = [
   "images/naikan3.jpg",
   "images/naikan4.jpg"
 ];
+// [Phase2修正] SEO-04: スライド切替時に alt テキストも連動更新
+const interiorAlts = [
+  "悠愉樹庵の店内 - 落ち着いた雰囲気の客席",
+  "悠愉樹庵の店内 - 座敷席",
+  "悠愉樹庵の店内 - 掘りごたつ席",
+  "悠愉樹庵の店内 - テーブル席"
+];
 let currentInterior = 0;
 const interiorSlide = document.getElementById("interiorSlide");
 
+function updateInteriorSlide() {
+  interiorSlide.src = interiorImages[currentInterior];
+  interiorSlide.alt = interiorAlts[currentInterior];
+}
+
 function nextInteriorSlide() {
   currentInterior = (currentInterior + 1) % interiorImages.length;
-  interiorSlide.src = interiorImages[currentInterior];
+  updateInteriorSlide();
+}
+
+// [Phase1修正] BUG-02: prevInteriorSlide() を追加（←ボタン用）
+function prevInteriorSlide() {
+  currentInterior = (currentInterior - 1 + interiorImages.length) % interiorImages.length;
+  updateInteriorSlide();
 }
 
 setInterval(nextInteriorSlide, 3000);
