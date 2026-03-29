@@ -1,0 +1,38 @@
+# ============================================================
+# [Phase2修正] BUG-05: Firebase 向け deploy.yml を無効化
+#
+# 悠愉樹庵の公式サイトは Cloudflare Pages でホスティングされています。
+# Cloudflare Pages は GitHub リポジトリとの連携で自動デプロイされるため、
+# GitHub Actions によるデプロイワークフローは不要です。
+#
+# このファイルは誤実行を防ぐためにトリガーを無効化しています。
+# 不要であれば安全に削除できます。
+#
+# ホスティング: Cloudflare Pages
+# ドメイン: jyuan.jp
+# デプロイ: main ブランチへの push で Cloudflare が自動ビルド・公開
+# ============================================================
+
+name: (無効) Deploy to Firebase - DO NOT USE
+
+# on: push は意図的に削除。手動実行のみ許可（安全策）
+on:
+  workflow_dispatch:
+    inputs:
+      confirm:
+        description: 'このワークフローは現在使用されていません。本当に実行しますか？'
+        required: true
+        default: 'no'
+
+jobs:
+  notice:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notice
+        run: |
+          echo "============================================"
+          echo "このワークフローは無効化されています。"
+          echo "悠愉樹庵のサイトは Cloudflare Pages で"
+          echo "自動デプロイされています。"
+          echo "============================================"
+          exit 1

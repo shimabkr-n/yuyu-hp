@@ -1,0 +1,121 @@
+/* ============================================================
+   custom.css — 悠愉樹庵 公式サイト
+   [Phase3修正] CODE-03: インラインスタイルを外部ファイルに統合
+   [Phase3修正] CODE-01: yuyu-updated.html のCSS改善をマージ
+   ============================================================ */
+
+/* === Body Background === */
+body {
+  font-family: "Sawarabi Mincho", serif;
+}
+
+/* === Menu Badge === */
+.badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background-color: #e53e3e;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+/* === Image Modal ===
+   [CODE-01] yuyu-updated.html からフレックス中央配置を採用 */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+.modal.show {
+  display: flex;
+}
+
+.modal-content {
+  margin: 0;
+  display: block;
+  width: 90%;
+  max-width: 600px;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  .modal-content {
+    width: 95%;
+    max-width: 95%;
+    max-height: 60vh;
+  }
+}
+
+/* === Hero Slider ===
+   [CODE-01] yuyu-updated.html からレスポンシブ対応を採用
+   PC: cover（全画面）/ タブレット: cover 80vh / スマホ: contain 60vh（画像切れ防止） */
+#heroSlider {
+  width: 100%;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+#heroSlider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  transition: opacity 1s ease-in-out, transform 5s ease-in-out;
+}
+
+/* PC */
+@media (min-width: 1025px) {
+  #heroSlider { height: 100vh; }
+  #heroSlider img { object-fit: cover; object-position: center center; }
+}
+
+/* タブレット */
+@media (min-width: 769px) and (max-width: 1024px) {
+  #heroSlider { height: 80vh; }
+  #heroSlider img { object-fit: cover; object-position: center top; }
+}
+
+/* スマホ */
+@media (max-width: 768px) {
+  #heroSlider { height: 60vh; }
+  #heroSlider img { object-fit: contain; object-position: center top; background-color: #000; }
+}
+
+/* === Maps Lazy Loading placeholder === */
+.map-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e5e7eb;
+  color: #6b7280;
+  font-size: 0.875rem;
+  min-height: 288px; /* h-72 */
+}
+
+@media (min-width: 640px) {
+  .map-placeholder { min-height: 384px; /* h-96 */ }
+}
+@media (min-width: 768px) {
+  .map-placeholder { min-height: 600px; }
+}
