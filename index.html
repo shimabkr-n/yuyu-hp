@@ -31,7 +31,7 @@
   <!-- [Phase3] CODE-03: インラインスタイルを外部CSSに統合 -->
   <link rel="stylesheet" href="/css/custom.css">
 
-  <!-- [Phase2] SEO-03: JSON-LD 拡充 -->
+  <!-- [Phase2] SEO-03 + [Phase4] SEO-07: JSON-LD 拡充（全カテゴリ網羅） -->
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -64,48 +64,49 @@
         "@type": "MenuSection",
         "name": "沖縄そば",
         "hasMenuItem": [
-          {
-            "@type": "MenuItem",
-            "name": "悠愉（ゆうゆ）そば",
-            "description": "軟骨ソーキ・三枚肉・かまぼこを贅沢にのせた当店イチオシの沖縄そば",
-            "offers": { "@type": "Offer", "price": "1200", "priceCurrency": "JPY" }
-          },
-          {
-            "@type": "MenuItem",
-            "name": "軟骨ソーキそば",
-            "description": "とろけるような柔らかさに煮込んだ特大ボリュームの軟骨ソーキそば",
-            "offers": { "@type": "Offer", "price": "1250", "priceCurrency": "JPY" }
-          },
-          {
-            "@type": "MenuItem",
-            "name": "三枚肉そば",
-            "description": "三枚肉とかまぼこをのせた王道の沖縄そば",
-            "offers": { "@type": "Offer", "price": "900", "priceCurrency": "JPY" }
-          }
+          { "@type": "MenuItem", "name": "悠愉（ゆうゆ）そば", "description": "軟骨ソーキ・三枚肉・かまぼこを贅沢にのせた当店イチオシの沖縄そば", "offers": { "@type": "Offer", "price": "1200", "priceCurrency": "JPY" } },
+          { "@type": "MenuItem", "name": "軟骨ソーキそば", "description": "とろけるような柔らかさに煮込んだ特大ボリュームの軟骨ソーキそば", "offers": { "@type": "Offer", "price": "1250", "priceCurrency": "JPY" } },
+          { "@type": "MenuItem", "name": "テビチそば", "description": "ぷるぷるのテビチを贅沢に使った一杯", "offers": { "@type": "Offer", "price": "1200", "priceCurrency": "JPY" } },
+          { "@type": "MenuItem", "name": "三枚肉そば", "description": "三枚肉とかまぼこをのせた王道の沖縄そば", "offers": { "@type": "Offer", "price": "900", "priceCurrency": "JPY" } },
+          { "@type": "MenuItem", "name": "お子様そば", "description": "ミニ三枚肉そばとじゅーしーのセット", "offers": { "@type": "Offer", "price": "550", "priceCurrency": "JPY" } }
         ]
       },
       {
         "@type": "MenuSection",
         "name": "定食",
         "hasMenuItem": [
-          {
-            "@type": "MenuItem",
-            "name": "テビチ定食",
-            "description": "トロトロのテビチに大根・昆布・豆腐を加えたボリューム満点の定食",
-            "offers": { "@type": "Offer", "price": "1600", "priceCurrency": "JPY" }
-          }
+          { "@type": "MenuItem", "name": "テビチ定食", "description": "トロトロのテビチに大根・昆布・豆腐を加えたボリューム満点の定食", "offers": { "@type": "Offer", "price": "1600", "priceCurrency": "JPY" } },
+          { "@type": "MenuItem", "name": "軟骨ソーキ定食", "description": "特大ボリュームの軟骨ソーキ定食", "offers": { "@type": "Offer", "price": "1600", "priceCurrency": "JPY" } },
+          { "@type": "MenuItem", "name": "イナムドゥチ定食", "description": "沖縄のお祝い料理イナムドゥチの定食", "offers": { "@type": "Offer", "price": "1600", "priceCurrency": "JPY" } },
+          { "@type": "MenuItem", "name": "ゆし豆腐定食", "description": "ニラと自家製味噌のゆし豆腐定食", "offers": { "@type": "Offer", "price": "1000", "priceCurrency": "JPY" } },
+          { "@type": "MenuItem", "name": "へちま定食", "description": "へちまを自家製味噌で煮込んだ定食", "offers": { "@type": "Offer", "price": "1200", "priceCurrency": "JPY" } }
+        ]
+      },
+      {
+        "@type": "MenuSection",
+        "name": "チャンプルー",
+        "hasMenuItem": [
+          { "@type": "MenuItem", "name": "豆腐チャンプルー", "description": "島豆腐と県産彩り野菜のチャンプルー", "offers": { "@type": "Offer", "price": "1000", "priceCurrency": "JPY" } },
+          { "@type": "MenuItem", "name": "ゴーヤーチャンプルー", "description": "ゴーヤーと島豆腐のチャンプルー", "offers": { "@type": "Offer", "price": "1000", "priceCurrency": "JPY" } },
+          { "@type": "MenuItem", "name": "フーチャンプルー", "description": "車麩と県産野菜のチャンプルー", "offers": { "@type": "Offer", "price": "1000", "priceCurrency": "JPY" } }
+        ]
+      },
+      {
+        "@type": "MenuSection",
+        "name": "単品",
+        "hasMenuItem": [
+          { "@type": "MenuItem", "name": "ジーマミ豆腐", "description": "自家製のもちもちピーナッツ豆腐", "offers": { "@type": "Offer", "price": "300", "priceCurrency": "JPY" } },
+          { "@type": "MenuItem", "name": "もずく天ぷら", "description": "沖縄産もずくの天ぷら", "offers": { "@type": "Offer", "price": "60", "priceCurrency": "JPY" } },
+          { "@type": "MenuItem", "name": "イリチャー", "description": "切り干し大根と昆布の炒め煮", "offers": { "@type": "Offer", "price": "400", "priceCurrency": "JPY" } }
         ]
       },
       {
         "@type": "MenuSection",
         "name": "デザート",
         "hasMenuItem": [
-          {
-            "@type": "MenuItem",
-            "name": "自家製チーズケーキ",
-            "description": "紅芋または里芋を使った季節の自家製チーズケーキ",
-            "offers": { "@type": "Offer", "price": "400", "priceCurrency": "JPY" }
-          }
+          { "@type": "MenuItem", "name": "自家製チーズケーキ", "description": "紅芋または里芋を使った季節の自家製チーズケーキ", "offers": { "@type": "Offer", "price": "400", "priceCurrency": "JPY" } },
+          { "@type": "MenuItem", "name": "ケーキセット", "description": "自家製チーズケーキとコーヒーまたは紅茶のセット", "offers": { "@type": "Offer", "price": "700", "priceCurrency": "JPY" } },
+          { "@type": "MenuItem", "name": "黒糖ぜんざい", "description": "沖縄産黒糖のかき氷ぜんざい", "offers": { "@type": "Offer", "price": "500", "priceCurrency": "JPY" } }
         ]
       }
     ]
@@ -270,14 +271,16 @@
 </section>
 
 <!-- Info -->
-<section id="info" class="bg-blue-50/90 py-16 px-4 text-left">
+<section id="info" class="bg-blue-50/90 py-16 px-4 text-left" data-collapsible>
   <div class="max-w-4xl mx-auto text-left">
     <h2 class="text-3xl font-bold mb-6">店舗案内</h2>
+    <div class="collapsible-body">
     <p><strong>住所：</strong>沖縄県中城村屋宜824-1</p>
     <p><strong>営業時間：</strong>11:00〜16:00</p>
     <p><strong>電話番号：</strong>098-895-2280</p>
     <p><strong>定休日：</strong>日曜日</p>
     <p><strong>座席：</strong>テーブル6卓（5席）30席、座敷20席、掘りごたつ15席、カウンター4席</p>
+    </div>
   </div>
 </section>
 
@@ -316,9 +319,10 @@
 </section>
 
 <!-- Store Origin -->
-<section id="store-origin" class="bg-blue-50/90 py-16 px-4 text-left">
+<section id="store-origin" class="bg-blue-50/90 py-16 px-4 text-left" data-collapsible>
   <div class="max-w-4xl mx-auto text-left">
     <h2 class="text-3xl font-bold mb-6">悠愉樹庵（ゆうゆじゅあん）の由来</h2>
+    <div class="collapsible-body">
     <p class="text-lg leading-relaxed">
       『悠愉』とは、ゆったり食を愉しみ癒やされるという意を込めております。<br>
       また、『樹庵』は、木々の緑に囲われた場所を表しております。<br>
@@ -327,23 +331,26 @@
       心も晴れやかにすることが出来れば・・・<br>
       との願いを込めて  『悠愉樹庵』 と命名いたしました。
     </p>
+    </div>
   </div>
 </section>
 
 <!-- Publicity -->
-<section id="publicity" class="bg-gray-700/95 py-12 text-white">
+<section id="publicity" class="bg-gray-700/95 py-12 text-white" data-collapsible>
   <div class="max-w-4xl mx-auto text-left">
     <h2 class="text-3xl font-bold mb-6">お知らせ</h2>
+    <div class="collapsible-body">
     <p class="mb-4">2025年10月1日にリニューアルオープンしました。</p>
     <p class="mb-4">2010年4月、〜 家族で受け継ぐ琉球の味 〜 をテーマにテレビ朝日系「人生の楽園」で紹介されました。</p>
     <p class="mb-4">出典：テレビ朝日『人生の楽園』</p>
     <a href="https://www.tv-asahi.co.jp/rakuen_2016/contents/past/0066/" target="_blank" rel="noopener">『人生の楽園 公式HP』</a>
+    </div>
   </div>
 </section>
 
 <!-- Image Modal -->
-<div id="imageModal" class="modal" role="dialog" aria-modal="true">
-  <span class="close" id="modalClose">&times;</span>
+<div id="imageModal" class="modal" role="dialog" aria-modal="true" aria-label="画像拡大表示">
+  <span class="close" id="modalClose" tabindex="0" role="button" aria-label="閉じる">&times;</span>
   <img class="modal-content cursor-pointer" id="modalImage" alt="拡大画像">
 </div>
 

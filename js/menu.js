@@ -238,7 +238,8 @@ const renderMenu = (category = 'all') => {
             <div>
               <h3 class="text-xl font-bold text-red-700 mb-2">${item.name}</h3>
               <p class="text-sm text-gray-600 mb-2 text-left">${formattedDesc}</p> </div>
-            <div class="mt-4 text-right font-semibold text-gray-800">${item.price.toLocaleString()}円（税込）</div>
+            <!-- [Phase4] BUG-06: toLocaleString() 除去（priceは既にカンマ付き文字列） -->
+            <div class="mt-4 text-right font-semibold text-gray-800">${item.price}円（税込）</div>
           </div>
         </div>
       `;
@@ -258,15 +259,19 @@ renderMenu();
 function openModal(src) {
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   if (isMobile) return;
-  // [Phase3] CODE-01: .show クラスで表示（フレックス中央配置、yuyu-updated.html から採用）
   modal.classList.add('show');
   modalImg.src = src;
   modalImg.style.transform = "scale(1.5)";
+  // [Phase4] BUG-07: フォーカスを閉じるボタンに移動し、背面スクロールを禁止
+  modalClose.focus();
+  document.body.style.overflow = 'hidden';
 }
 
 function closeModal() {
   modal.classList.remove('show');
   modalImg.style.transform = "scale(1)";
+  // [Phase4] BUG-07: 背面スクロールを復帰
+  document.body.style.overflow = '';
 }
 
 modalClose.onclick = closeModal;
@@ -277,10 +282,20 @@ window.onclick = function(event) {
   }
 };
 
-// [Phase3] CODE-01: ESC キーでモーダルを閉じる
+// [Phase3] ESC キーでモーダルを閉じる
+// [Phase4] BUG-07: Tab キーのフォーカストラップ追加
 document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape' && modal.classList.contains('show')) {
+  if (!modal.classList.contains('show')) return;
+
+  if (e.key === 'Escape') {
     closeModal();
+    return;
+  }
+
+  // フォーカストラップ: Tab で閉じるボタンにフォーカスを留める
+  if (e.key === 'Tab') {
+    e.preventDefault();
+    modalClose.focus();
   }
 });
 

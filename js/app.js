@@ -45,14 +45,32 @@ function closeMobileMenu() {
 /* ----------------------------------------------------------
    2. セクション見出し開閉（アコーディオン）
    ---------------------------------------------------------- */
+/* ----------------------------------------------------------
+   2. セクション見出し開閉（アコーディオン）
+   [Phase4] BUG-04: 全 section に一律適用 → data-collapsible 属性がある
+   セクションのみに限定。対象要素の特定も修正。
+   ---------------------------------------------------------- */
 function initSectionToggle() {
-  document.querySelectorAll('section').forEach(function(section) {
+  document.querySelectorAll('section[data-collapsible]').forEach(function(section) {
     var h2 = section.querySelector('h2');
     if (!h2) return;
 
-    h2.classList.add('cursor-pointer');
-    var body = Array.from(section.children).find(function(el) { return el !== h2; });
+    // セクション直下の最初の div/p 要素を本文とみなす
+    var body = section.querySelector('.collapsible-body');
+    if (!body) {
+      // data-collapsible はあるが .collapsible-body がない場合、
+      // h2 の次の兄弟要素を対象にする
+      body = h2.parentElement;
+      if (body === section) {
+        // h2 が section の直接の子の場合
+        body = Array.from(section.children).find(function(el) {
+          return el.tagName !== 'H2' && el.tagName !== 'SCRIPT';
+        });
+      }
+    }
     if (!body) return;
+
+    h2.classList.add('cursor-pointer');
 
     if (!body.id) {
       body.id = (section.id || 'sec') + '-panel';
