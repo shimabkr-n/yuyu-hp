@@ -106,7 +106,7 @@ const menuData = [
       nameEn: "Tofu Champuru (Stir-Fry)",
       image: "images/tofu-chan.JPG",
       desc: "たんぱく質豊富な島豆腐と県産の彩り野菜とともに炒め合わせた沖縄の家庭料理です。\n素材の持ち味を大切に、シンプルながら奥深い味わいに仕上げました。\n島豆腐と旬の彩り野菜が織りなす、心あたたまるひと皿です。",
-      descEn: "Island tofu stir-fried with seasonal Okinawan vegetables. A protein-rich traditional dish.",
+      descEn: "Island tofu stir-fried with egg, seasonal Okinawan vegetables, and luncheon meat. A protein-rich traditional dish.",
       price: "1,000",
       category: "chanple",
 
@@ -116,7 +116,7 @@ const menuData = [
       nameEn: "Goya Champuru (Bitter Melon Stir-Fry)",
       image: "images/goya-chan.JPG",
       desc: "ゴーヤーは沖縄の夏を象徴する食材です。\nビタミンC豊富なゴーヤーとたんぱく質豊富な島豆腐、ポークの旨みが絶妙に調和した栄養バランス抜群のチャンプルーです。\n食べごたえがありながら体にやさしい、健康志向なひと皿です。",
-      descEn: "Okinawa's iconic bitter melon stir-fried with island tofu and pork. Rich in vitamin C.",
+      descEn: "Okinawa's iconic bitter melon stir-fried with island tofu, egg, and luncheon meat. Rich in vitamin C.",
       price: "1,000",
       category: "chanple",
 
@@ -126,7 +126,7 @@ const menuData = [
       nameEn: "Fu Champuru (Wheat Gluten Stir-Fry)",
       image: "images/fu-chan.JPG",
       desc: "沖縄県産の車麩を出汁でふっくら戻し、県産の彩り野菜と一緒に炒めた沖縄の家庭料理です。\nやさしい味わいと出汁の香りが広がる、どこかほっとする一品です。",
-      descEn: "Okinawan ring-shaped wheat gluten (kuruma-fu) soaked in dashi broth, stir-fried with seasonal vegetables.",
+      descEn: "Okinawan ring-shaped wheat gluten (kuruma-fu) soaked in dashi broth, stir-fried with egg and seasonal vegetables.",
       price: "1,000",
       category: "chanple",
 
@@ -226,7 +226,7 @@ const menuData = [
       nameEn: "Mozuku Tempura (Seaweed Fritters)",
       image: "images/mozuku-tan.JPG",
       desc: "沖縄産の新鮮なもずくに、ポーク／大葉／玉ねぎを合わせてカラっと揚げた天ぷらです。\n創業者こだわりの味を受け継ぐ、悠愉樹庵（ゆうゆじゅあん）の新メニューです。",
-      descEn: "Crispy fritters with Okinawan mozuku seaweed, pork, shiso leaf, and onion.",
+      descEn: "Crispy fritters with Okinawan mozuku seaweed, luncheon meat, shiso leaf, and onion.",
       price: "60",
       category: "just",
       badge: "NEW",
