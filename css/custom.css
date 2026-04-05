@@ -98,8 +98,8 @@ body {
 
 /* スマホ */
 @media (max-width: 768px) {
-  #heroSlider { height: 60vh; }
-  #heroSlider img { object-fit: contain; object-position: center top; background-color: #000; }
+  #heroSlider { height: 100vh; }
+  #heroSlider img { object-fit: cover; object-position: center center; }
 }
 
 /* === Maps Lazy Loading placeholder === */
