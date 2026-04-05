@@ -5,11 +5,11 @@ const menuData = [
       nameEn: "Yuyu Soba (House Special)",
       image: "images/yuyu-soba.jpg",
       desc: "厳選された沖縄県産豚肉を丁寧に煮込んだ軟骨ソーキ／三枚肉／かまぼこを贅沢にのせた、当店イチオシの沖縄そばです。\nじっくりと時間をかけて仕上げた透明感のある出汁は、あっさりしながらも深いコクがあり、中城村の風土が育んだ伝統の味をぜひご賞味ください。",
-      descEn: "Our signature Okinawa soba topped with soft-bone soki ribs, pork belly, and kamaboko fish cake in a rich pork & bonito broth. No MSG.",
+      descEn: "Our signature Okinawa soba topped with soft-bone soki ribs, pork belly, and kamaboko fish cake in a light yet deeply flavorful pork & bonito broth. No MSG.",
       price: "1,200",
       category: "soba",
       badge: "NEW",
-      allergens: ["wheat", "pork", "fish"]
+
     },
     {
       name: "軟骨ソーキそば",
@@ -19,7 +19,7 @@ const menuData = [
       descEn: "Okinawa soba with melt-in-your-mouth soft-bone pork ribs, slowly simmered for hours. Generous portion.",
       price: "1,250",
       category: "soba",
-      allergens: ["wheat", "pork", "fish"]
+
     },
     {
       name: "テビチそば",
@@ -29,7 +29,7 @@ const menuData = [
       descEn: "Okinawa soba with collagen-rich braised pig's feet (tebichi). Tender and light despite its hearty appearance.",
       price: "1,200",
       category: "soba",
-      allergens: ["wheat", "pork", "fish"]
+
     },
     {
       name: "三枚肉そば",
@@ -39,7 +39,7 @@ const menuData = [
       descEn: "Classic Okinawa soba with simmered pork belly and fish cake in our signature broth.",
       price: "900",
       category: "soba",
-      allergens: ["wheat", "pork", "fish"]
+
     },
     {
       name: "お子様そば",
@@ -49,7 +49,7 @@ const menuData = [
       descEn: "Mini pork belly soba with jushii rice, juice, and jelly. For elementary school children and under.",
       price: "550",
       category: "soba",
-      allergens: ["wheat", "pork", "fish", "soy"]
+
     },
     {
       name: "テビチ定食",
@@ -59,7 +59,7 @@ const menuData = [
       descEn: "Braised pig's feet set meal with daikon, kelp, and tofu. Comes with rice and side dishes.",
       price: "1,600",
       category: "set",
-      allergens: ["pork", "soy", "wheat"]
+
     },
     {
       name: "軟骨ソーキ定食",
@@ -69,17 +69,17 @@ const menuData = [
       descEn: "Generous soft-bone pork ribs set meal with daikon, kelp, and tofu. Hearty and satisfying.",
       price: "1,600",
       category: "set",
-      allergens: ["pork", "soy", "wheat"]
+
     },
     {
       name: "イナムドゥチ定食",
       nameEn: "Inamuduchi Set Meal (Miso Pork Soup)",
       image: "images/inamu-tei.JPG",
       desc: "「イナムドゥチ」は豚肉／こんにゃく／しいたけ／かまぼこなどを入れて味噌で煮込んだ、沖縄ではお祝いの席によく出される、ちょっと特別な一品です。\n自家製のイナムドゥチは、心と体に染み渡るような優しい味わいが特徴です。\nジューシーと小鉢が付き、沖縄の家庭料理の温かさを感じられるセットです",
-      descEn: "Traditional Okinawan celebration soup: pork, konjac, shiitake, and kamaboko simmered in white miso. With jushii rice.",
+      descEn: "Traditional Okinawan celebration soup: pork, konjac, shiitake, and kamaboko (fish cake) simmered in white miso. With jushii rice.",
       price: "1,600",
       category: "set",
-      allergens: ["pork", "soy", "wheat", "fish"]
+
     },
     {
       name: "ゆし豆腐定食",
@@ -89,7 +89,7 @@ const menuData = [
       descEn: "Fluffy soft tofu with chives in homemade miso broth. A light and healthy Okinawan comfort food. With jushii rice.",
       price: "1,000",
       category: "set",
-      allergens: ["soy", "wheat"]
+
     },
     {
       name: "へちま定食",
@@ -99,7 +99,7 @@ const menuData = [
       descEn: "Loofah gourd simmered in homemade miso with a poached egg. A classic Okinawan home-style dish.",
       price: "1,200",
       category: "set",
-      allergens: ["soy", "egg", "wheat"]
+
     },
     {
       name: "豆腐チャンプルー",
@@ -109,7 +109,7 @@ const menuData = [
       descEn: "Island tofu stir-fried with seasonal Okinawan vegetables. A protein-rich traditional dish.",
       price: "1,000",
       category: "chanple",
-      allergens: ["soy", "pork", "egg", "wheat"]
+
     },
     {
       name: "ゴーヤーチャンプルー",
@@ -119,17 +119,17 @@ const menuData = [
       descEn: "Okinawa's iconic bitter melon stir-fried with island tofu and pork. Rich in vitamin C.",
       price: "1,000",
       category: "chanple",
-      allergens: ["soy", "pork", "egg", "wheat"]
+
     },
     {
       name: "フーチャンプルー",
       nameEn: "Fu Champuru (Wheat Gluten Stir-Fry)",
       image: "images/fu-chan.JPG",
       desc: "沖縄県産の車麩を出汁でふっくら戻し、県産の彩り野菜と一緒に炒めた沖縄の家庭料理です。\nやさしい味わいと出汁の香りが広がる、どこかほっとする一品です。",
-      descEn: "Okinawan wheat gluten (fu) soaked in dashi, stir-fried with seasonal vegetables.",
+      descEn: "Okinawan ring-shaped wheat gluten (kuruma-fu) soaked in dashi broth, stir-fried with seasonal vegetables.",
       price: "1,000",
       category: "chanple",
-      allergens: ["wheat", "soy", "egg", "pork"]
+
     },
     {
       name: "Aセット",
@@ -139,7 +139,7 @@ const menuData = [
       descEn: "Rice (white/jushii/brown) + jimami tofu + mozuku seaweed vinegar. Add-on only.",
       price: "300",
       category: "topping",
-      allergens: ["peanut", "soy"]
+
     },
     {
       name: "Bセット",
@@ -149,27 +149,27 @@ const menuData = [
       descEn: "Rice + mozuku tempura + jimami tofu + mozuku seaweed vinegar. Add-on only.",
       price: "400",
       category: "topping",
-      allergens: ["peanut", "wheat", "soy"]
+
     },
     {
       name: "Cセット",
       nameEn: "Side Set C",
       image: "images/C-set.jpg",
       desc: "お得な付け合せセットです。\n 白米、じゅーしー、玄米のいずれかと、いりちゃー／もずく天ぷら／ジーマミ豆腐（中）／もずく酢をお付けしたセットになります。\n※付け合せセットのみのご注文はできません。",
-      descEn: "Rice + iricha stir-fry + mozuku tempura + jimami tofu + mozuku seaweed vinegar. Add-on only.",
+      descEn: "Rice + iricha braised vegetables + mozuku tempura + jimami tofu + mozuku seaweed vinegar. Add-on only.",
       price: "500",
       category: "topping",
-      allergens: ["peanut", "wheat", "soy", "pork"]
+
     },
     {
       name: "じゅーしー",
       nameEn: "Jushii (Okinawan Mixed Rice)",
       image: "images/jyushi-tanpin.jpeg",
       desc: "国産生姜をたっぷり使ったフーチバー（よもぎ）じゅーしーです。\nよもぎの爽やかな香りと生姜のアクセントが食欲をそそる、沖縄の炊き込みご飯です。\n沖縄そばとの相性も抜群で、セットで召し上がっていただくのがおすすめです。\n単品よりお得な付け合せもございます。（Aセット、Bセット、Cセット）",
-      descEn: "Okinawan seasoned rice with mugwort (fuchiba) and ginger. Perfect with soba.",
+      descEn: "Okinawan mixed rice cooked with mugwort (fuchiba) and ginger. Perfect with soba.",
       price: "250",
       category: "just",
-      allergens: ["soy", "wheat"]
+
     },
     {
       name: "白米",
@@ -179,7 +179,7 @@ const menuData = [
       descEn: "Fluffy steamed Japanese white rice.",
       price: "200",
       category: "just",
-      allergens: []
+
     },
     {
       name: "玄米",
@@ -189,7 +189,7 @@ const menuData = [
       descEn: "Brown rice with black beans. Nutty flavor and rich aroma.",
       price: "250",
       category: "just",
-      allergens: ["soy"]
+
     },
     {
       name: "ジーマミ豆腐",
@@ -199,7 +199,7 @@ const menuData = [
       descEn: "Homemade peanut tofu with sweet soy sauce. Chewy, creamy, and rich in peanut flavor.",
       price: "300",
       category: "just",
-      allergens: ["peanut", "soy"]
+
     },
     {
       name: "テビチ（豚足）",
@@ -209,7 +209,7 @@ const menuData = [
       descEn: "Braised pig's feet simmered for hours. Collagen-rich, lighter than it looks.",
       price: "400",
       category: "just",
-      allergens: ["pork"]
+
     },
     {
       name: "軟骨ソーキ",
@@ -219,7 +219,7 @@ const menuData = [
       descEn: "Slow-braised soft-bone pork spare ribs. So tender they fall apart with chopsticks.",
       price: "400",
       category: "just",
-      allergens: ["pork"]
+
     },
     {
       name: "もずく天ぷら",
@@ -230,7 +230,7 @@ const menuData = [
       price: "60",
       category: "just",
       badge: "NEW",
-      allergens: ["wheat", "pork"]
+
     },
     {
       name: "イリチャー",
@@ -240,7 +240,7 @@ const menuData = [
       descEn: "Dried daikon, kelp, konjac, shiitake, and pork belly braised in bonito & pork broth.",
       price: "400",
       category: "just",
-      allergens: ["pork", "soy", "wheat", "fish"]
+
     },
     {
       name: "チーズケーキ",
@@ -250,7 +250,7 @@ const menuData = [
       descEn: "Homemade cheesecake with seasonal Okinawan sweet potato (beni-imo) or taro.",
       price: "400",
       category: "sweet",
-      allergens: ["egg", "milk", "wheat"]
+
     },
     {
       name: "ケーキセット",
@@ -260,7 +260,7 @@ const menuData = [
       descEn: "Homemade cheesecake with coffee or tea (hot/iced).",
       price: "700",
       category: "sweet",
-      allergens: ["egg", "milk", "wheat"]
+
     },
     {
       name: "ホットぜんざい",
@@ -270,7 +270,7 @@ const menuData = [
       descEn: "Warm sweet bean soup with Okinawan brown sugar and chewy rice dumplings.",
       price: "500",
       category: "sweet",
-      allergens: []
+
     },
     {
       name: "黒糖ぜんざい",
@@ -280,7 +280,7 @@ const menuData = [
       descEn: "Shaved ice with brown sugar zenzai. Free matcha topping. Condensed milk +\u00a550.",
       price: "500",
       category: "sweet",
-      allergens: ["milk"]
+
     },
     {
       name: "かき氷",
@@ -290,7 +290,7 @@ const menuData = [
       descEn: "Shaved ice: strawberry / melon / grape / blue Hawaii / matcha. Condensed milk +\u00a550.",
       price: "250",
       category: "sweet",
-      allergens: ["milk"]
+
     }
     /*
     {
@@ -303,30 +303,6 @@ const menuData = [
     },
     */
 ];
-
-/* アレルゲンアイコン定義 */
-var allergenLabels = {
-  wheat: { ja: "小麦", en: "Wheat" },
-  pork: { ja: "豚肉", en: "Pork" },
-  fish: { ja: "魚介", en: "Fish" },
-  soy: { ja: "大豆", en: "Soy" },
-  egg: { ja: "卵", en: "Egg" },
-  milk: { ja: "乳", en: "Milk" },
-  peanut: { ja: "落花生", en: "Peanut" }
-};
-
-function renderAllergenBadges(allergens, lang) {
-  if (!allergens || allergens.length === 0) return '';
-  var labels = allergens.map(function(a) {
-    var label = allergenLabels[a];
-    if (!label) return '';
-    var text = lang === 'en' ? label.en : label.ja;
-    var cls = a === 'peanut' ? 'bg-red-600 text-white' : 'bg-yellow-100 text-yellow-800';
-    return '<span class="inline-block text-xs px-1.5 py-0.5 rounded ' + cls + '">' + text + '</span>';
-  });
-  return '<div class="flex flex-wrap gap-1 mt-2">' + labels.join('') + '</div>';
-}
-
 
 const container = document.getElementById('menu-container');
 const modal = document.getElementById('imageModal');
@@ -348,7 +324,6 @@ const renderMenu = (category = 'all') => {
             <div>
               <h3 class="text-xl font-bold text-red-700 mb-2">${item.name}</h3>
               <p class="text-sm text-gray-600 mb-2 text-left">${formattedDesc}</p>
-              ${renderAllergenBadges(item.allergens, 'ja')}
             </div>
             <!-- [Phase4] BUG-06: toLocaleString() 除去（priceは既にカンマ付き文字列） -->
             <div class="mt-4 text-right font-semibold text-gray-800">${item.price}円（税込）</div>
