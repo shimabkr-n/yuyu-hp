@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yuyu-Juan | Okinawa Soba Restaurant in Nakagusuku Village</title>
+
+  <meta name="description" content="Traditional Okinawa soba restaurant in a historic Okinawan kominka, 5 min from Nakagusuku Castle Ruins. MSG-free broth, local pork. 69 seats, parking for 15 cars. As seen on TV Asahi.">
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Yuyu-Juan | Okinawa Soba in Nakagusuku" />
+  <meta property="og:description" content="Okinawa soba in a historic kominka, 5 min from Nakagusuku Castle. No MSG, local ingredients. 69 seats." />
+  <meta property="og:image" content="https://jyuan.jp/ogp.jpg" />
+  <meta property="og:url" content="https://jyuan.jp/en/" />
+  <link rel="canonical" href="https://jyuan.jp/en/">
+  <link rel="alternate" hreflang="ja" href="https://jyuan.jp/">
+  <link rel="alternate" hreflang="en" href="https://jyuan.jp/en/">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/custom.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Yuyu-Juan",
+    "image": "https://jyuan.jp/ogp.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "JP",
+      "addressRegion": "Okinawa",
+      "addressLocality": "Nakagusuku Village",
+      "streetAddress": "824-1 Yagi",
+      "postalCode": "901-2402"
+    },
+    "telephone": "098-895-2280",
+    "url": "https://jyuan.jp/en/",
+    "servesCuisine": ["Okinawa Soba", "Okinawan Cuisine"],
+    "priceRange": "900-1600 JPY"
+  }
+  </script>
+</head>
+
+<body class="bg-gray-100 text-gray-800 min-h-screen" style="font-family: 'Sawarabi Mincho', serif;">
+
+<!-- Header -->
+<header class="bg-white bg-opacity-90 shadow fixed w-full z-50">
+  <div class="max-w-5xl mx-auto px-4 py-3 flex justify-between items-center">
+    <h1 class="text-xl md:text-2xl font-bold text-red-700">Yuyu-Juan</h1>
+    <div class="flex items-center gap-4 text-sm">
+      <nav class="hidden md:flex gap-4">
+        <a href="#menu" class="hover:text-red-600">Menu</a>
+        <a href="#about" class="hover:text-red-600">About</a>
+        <a href="#access" class="hover:text-red-600">Access</a>
+      </nav>
+      <a href="/" class="bg-red-700 text-white px-3 py-1 rounded text-sm hover:bg-red-800">日本語</a>
+    </div>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="relative h-[60vh] flex items-center justify-center text-white text-center pt-16">
+  <img src="/images/exterior1.jpg" alt="Yuyu-Juan exterior - traditional Okinawan house restaurant" class="absolute inset-0 w-full h-full object-cover" />
+  <div class="bg-black bg-opacity-40 absolute inset-0"></div>
+  <div class="z-10 px-4">
+    <h2 class="text-3xl md:text-5xl font-semibold mb-4">Yuyu-Juan</h2>
+    <p class="text-lg md:text-xl">Traditional Okinawa Soba in a Historic Okinawan Kominka</p>
+    <p class="text-sm mt-2 opacity-80">5 min drive from Nakagusuku Castle Ruins</p>
+  </div>
+</section>
+
+<!-- Menu -->
+<section id="menu" class="bg-blue-50/90 py-16 px-4 text-center">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-4">Menu</h2>
+    <p class="text-center text-sm text-gray-500 mb-6">All prices include tax. No MSG used in our broth.</p>
+    <div class="flex flex-wrap justify-center mb-6 gap-2">
+      <button class="en-filter-btn bg-gray-300 px-4 py-2 rounded" data-category="all">All</button>
+      <button class="en-filter-btn bg-gray-300 px-4 py-2 rounded" data-category="soba">Okinawa Soba</button>
+      <button class="en-filter-btn bg-gray-300 px-4 py-2 rounded" data-category="topping">Side Sets</button>
+      <button class="en-filter-btn bg-gray-300 px-4 py-2 rounded" data-category="chanple">Champuru</button>
+      <button class="en-filter-btn bg-gray-300 px-4 py-2 rounded" data-category="set">Set Meals</button>
+      <button class="en-filter-btn bg-gray-300 px-4 py-2 rounded" data-category="just">A La Carte</button>
+      <button class="en-filter-btn bg-gray-300 px-4 py-2 rounded" data-category="sweet">Desserts</button>
+    </div>
+    <div id="en-menu-container" class="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full md:w-[1350px] mx-auto"></div>
+  </div>
+</section>
+
+<!-- Image Modal -->
+<div id="enImageModal" class="modal" role="dialog" aria-modal="true" aria-label="Enlarged image">
+  <span class="close" id="enModalClose" tabindex="0" role="button" aria-label="Close">&times;</span>
+  <img class="modal-content cursor-pointer" id="enModalImage" alt="Enlarged image">
+</div>
+
+<!-- About -->
+<section id="about" class="bg-gray-700 text-white py-12 px-4">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold mb-6">About Yuyu-Juan</h2>
+    <div class="space-y-4 text-lg leading-relaxed">
+      <p>Yuyu-Juan is an Okinawa soba restaurant set in a traditional Okinawan kominka (historic wooden house) surrounded by lush greenery in Nakagusuku Village.</p>
+      <p>Our broth is made from pork bones, chicken, and bonito flakes with <strong>absolutely no MSG or artificial seasonings</strong>. All meats are simmered in our homemade sauce for hours.</p>
+      <p>We were featured on TV Asahi's "Jinsei no Rakuen" (Paradise of Life) in 2010.</p>
+    </div>
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+      <div class="bg-gray-600 rounded p-4">
+        <p class="text-2xl font-bold">69</p>
+        <p class="text-sm">Seats</p>
+      </div>
+      <div class="bg-gray-600 rounded p-4">
+        <p class="text-2xl font-bold">15</p>
+        <p class="text-sm">Parking Spaces</p>
+      </div>
+      <div class="bg-gray-600 rounded p-4">
+        <p class="text-2xl font-bold">5 min</p>
+        <p class="text-sm">from Nakagusuku Castle</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Access -->
+<section id="access" class="bg-blue-50 py-12 px-4">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold mb-6 text-center">Access</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="space-y-3">
+        <p><strong>Address:</strong> 824-1 Yagi, Nakagusuku Village, Okinawa 901-2402, Japan</p>
+        <p><strong>Phone:</strong> <a href="tel:098-895-2280" class="underline text-red-700" data-track="tel">098-895-2280</a></p>
+        <p><strong>Hours:</strong> 11:00 - 16:00 (Last order 15:30)</p>
+        <p><strong>Closed:</strong> Sundays</p>
+        <p><strong>Parking:</strong> Available (approx. 15 cars)</p>
+        <p><strong>Seating:</strong> Tables (30), Tatami floor seating (20), Sunken table / Horigotatsu (15), Counter (4)</p>
+        <p><strong>Payment:</strong> Cash only</p>
+        <p class="mt-4"><strong>From Nakagusuku Castle Ruins:</strong> 5 min by car heading south on Route 146.</p>
+        <p><strong>From Naha Airport:</strong> Approx. 40 min via expressway (Kitanakagusuku IC).</p>
+      </div>
+      <div>
+        <iframe title="Yuyu-Juan location on Google Maps"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7155.391648000203!2d127.78891810706097!3d26.271533781037977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e56d4c215e6a23%3A0x75f0d8bc425ab4b3!2z5oKg5oSJ5qi55bq1!5e0!3m2!1sen!2sjp!4v1751432270780!5m2!1sen!2sjp"
+          class="w-full h-72 md:h-96 rounded shadow"
+          style="border:0;" allowfullscreen loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Mobile CTA Bar -->
+<div class="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-white border-t shadow-lg">
+  <div class="flex">
+    <a href="tel:098-895-2280" data-track="tel" class="flex-1 flex items-center justify-center gap-1 py-3 text-sm font-bold text-white bg-red-700 hover:bg-red-800">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+      Call
+    </a>
+    <a href="https://maps.app.goo.gl/viwUGsYm7mVw3dFz6" target="_blank" rel="noopener" class="flex-1 flex items-center justify-center gap-1 py-3 text-sm font-bold text-white bg-blue-600 hover:bg-blue-700">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+      Map
+    </a>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-white py-8 text-sm mb-14 md:mb-0">
+  <div class="max-w-4xl mx-auto px-4 space-y-4">
+    <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
+      <div>
+        <p class="font-bold text-base mb-1">Yuyu-Juan</p>
+        <p>824-1 Yagi, Nakagusuku, Okinawa 901-2402</p>
+        <p>TEL: <a href="tel:098-895-2280" class="underline hover:text-red-400" data-track="tel">098-895-2280</a></p>
+      </div>
+      <div>
+        <p><strong>Hours:</strong> 11:00 - 16:00 (L.O. 15:30)</p>
+        <p><strong>Closed:</strong> Sundays</p>
+        <p><strong>Parking:</strong> 15 cars</p>
+      </div>
+    </div>
+    <p class="text-center text-gray-400 pt-2 border-t border-gray-600">&copy; Yuyu-Juan. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- English Menu Rendering -->
+<script src="/js/menu.js"></script>
+<script>
+(function() {
+  var container = document.getElementById('en-menu-container');
+  var modal = document.getElementById('enImageModal');
+  var modalImg = document.getElementById('enModalImage');
+  var modalClose = document.getElementById('enModalClose');
+
+  function renderEnMenu(category) {
+    container.innerHTML = '';
+    menuData.filter(function(item) {
+      return category === 'all' || item.category === category;
+    }).forEach(function(item) {
+      var descHtml = (item.descEn || '').replace(/\n/g, '<br>');
+      container.innerHTML +=
+        '<div class="bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full md:w-[620px]">' +
+          (item.badge ? '<div class="badge">' + item.badge + '</div>' : '') +
+          '<img src="/' + item.image + '" alt="' + (item.nameEn || item.name) + '" class="w-full md:w-[53%] h-auto object-cover cursor-pointer" loading="lazy" onclick="openEnModal(\'/' + item.image + '\')">' +
+          '<div class="p-4 flex flex-col justify-between w-auto md:w-[400px]">' +
+            '<div>' +
+              '<h3 class="text-xl font-bold text-red-700 mb-1">' + (item.nameEn || item.name) + '</h3>' +
+              '<p class="text-xs text-gray-400 mb-2">' + item.name + '</p>' +
+              '<p class="text-sm text-gray-600 mb-2 text-left">' + descHtml + '</p>' +
+            '</div>' +
+            '<div class="mt-4 text-right font-semibold text-gray-800">&yen;' + item.price + '</div>' +
+          '</div>' +
+        '</div>';
+    });
+  }
+
+  // Filter buttons
+  document.querySelectorAll('.en-filter-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.en-filter-btn').forEach(function(b) { b.classList.remove('bg-red-300'); });
+      btn.classList.add('bg-red-300');
+      renderEnMenu(btn.getAttribute('data-category'));
+    });
+  });
+
+  // Initial render
+  renderEnMenu('all');
+
+  // Modal functions
+  window.openEnModal = function(src) {
+    var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    if (isMobile) return;
+    modal.classList.add('show');
+    modalImg.src = src;
+    modalImg.style.transform = 'scale(1.5)';
+    modalClose.focus();
+    document.body.style.overflow = 'hidden';
+  };
+
+  function closeEnModal() {
+    modal.classList.remove('show');
+    modalImg.style.transform = 'scale(1)';
+    document.body.style.overflow = '';
+  }
+
+  modalClose.onclick = closeEnModal;
+
+  window.addEventListener('click', function(e) {
+    if (e.target === modal) closeEnModal();
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (!modal.classList.contains('show')) return;
+    if (e.key === 'Escape') { closeEnModal(); return; }
+    if (e.key === 'Tab') { e.preventDefault(); modalClose.focus(); }
+  });
+})();
+</script>
+
+</body>
+</html>
