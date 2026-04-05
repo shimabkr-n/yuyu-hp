@@ -243,10 +243,10 @@ function initNoticeModal() {
   var html = '';
   noticeData.notices.forEach(function(n) {
     var title = isEn ? (n.titleEn || n.title) : n.title;
-    var body = isEn ? (n.bodyEn || n.body) : n.body;
+    var body = (isEn ? (n.bodyEn || n.body) : n.body).replace(/\n/g, '<br>');
     html += '<div class="mb-4 last:mb-0">';
     html += '<h3 class="font-bold text-red-700 text-base mb-2">' + title + '</h3>';
-    html += '<p class="text-sm text-gray-700 leading-relaxed whitespace-pre-line">' + body + '</p>';
+    html += '<p class="text-sm text-gray-700 leading-relaxed">' + body + '</p>';
     html += '</div>';
   });
 
