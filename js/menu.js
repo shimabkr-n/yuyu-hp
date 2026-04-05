@@ -2,208 +2,295 @@
 const menuData = [
     {
       name: "悠愉（ゆうゆ）そば",
+      nameEn: "Yuyu Soba (House Special)",
       image: "images/yuyu-soba.jpg",
       desc: "厳選された沖縄県産豚肉を丁寧に煮込んだ軟骨ソーキ／三枚肉／かまぼこを贅沢にのせた、当店イチオシの沖縄そばです。\nじっくりと時間をかけて仕上げた透明感のある出汁は、あっさりしながらも深いコクがあり、中城村の風土が育んだ伝統の味をぜひご賞味ください。",
+      descEn: "Our signature Okinawa soba topped with soft-bone soki ribs, pork belly, and kamaboko fish cake in a rich pork & bonito broth. No MSG.",
       price: "1,200",
       category: "soba",
-      badge: "NEW"
+      badge: "NEW",
+      allergens: ["wheat", "pork", "fish"]
     },
     {
       name: "軟骨ソーキそば",
+      nameEn: "Soft-Bone Soki Soba",
       image: "images/nankotsu-soba.jpg",
       desc: "沖縄県産の軟骨ソーキをとろけるような柔らかさに煮込んだ絶妙な一杯です。\n自家製出汁と絡み合い、口の中でとろける食感が特徴です。\n余すことなく食べられる程に柔らかく煮込んだ特大ボリュームの軟骨ソーキを乗せた、当店ならではの一杯をぜひご賞味ください。",
+      descEn: "Okinawa soba with melt-in-your-mouth soft-bone pork ribs, slowly simmered for hours. Generous portion.",
       price: "1,250",
-      category: "soba"
+      category: "soba",
+      allergens: ["wheat", "pork", "fish"]
     },
     {
       name: "テビチそば",
+      nameEn: "Tebichi Soba (Pig's Feet)",
       image: "images/tebichi-soba.jpeg",
       desc: "沖縄県産豚肉をひとつひとつ丁寧に処理した、ぷるぷるのテビチ（豚足）を贅沢に使った一杯です。\n時間をかけて丁寧に煮込んだテビチは、余分な脂が落ちてコラーゲンたっぷり。出汁と共に口の中でとろける食感が楽しめます。\n沖縄郷土料理の代表格でもあるテビチは、美容と健康にも嬉しい一杯です。",
+      descEn: "Okinawa soba with collagen-rich braised pig's feet (tebichi). Tender and light despite its hearty appearance.",
       price: "1,200",
-      category: "soba"
+      category: "soba",
+      allergens: ["wheat", "pork", "fish"]
     },
     {
       name: "三枚肉そば",
+      nameEn: "Pork Belly Soba",
       image: "images/sanmai-soba.jpg",
       desc: "厳選された沖縄県産豚肉を丁寧に煮込んだ三枚肉とかまぼこをのせた王道の沖縄そばです。\nじっくりと時間をかけて仕上げたあっさりしながらも深いコクの出汁と三枚肉の旨味が溶け込んだ一杯をぜひご賞味ください。",
+      descEn: "Classic Okinawa soba with simmered pork belly and fish cake in our signature broth.",
       price: "900",
-      category: "soba"
-    }, 
+      category: "soba",
+      allergens: ["wheat", "pork", "fish"]
+    },
     {
       name: "お子様そば",
+      nameEn: "Kids' Soba Set",
       image: "images/okosama-soba.JPG",
       desc: "小さなお子様も安心して楽しめる、ミニサイズの三枚肉そばとじゅーしーのセットです。\nミニジュースとミニゼリー付きです。\n※ 小学生までご注文可能です。",
+      descEn: "Mini pork belly soba with jushii rice, juice, and jelly. For elementary school children and under.",
       price: "550",
-      category: "soba"
+      category: "soba",
+      allergens: ["wheat", "pork", "fish", "soy"]
     },
     {
       name: "テビチ定食",
+      nameEn: "Tebichi Set Meal (Pig's Feet)",
       image: "images/tebichi-tei.JPG",
       desc: "お箸で切れる程トロトロの柔らかさに煮込んだテビチ（豚足）に、大根と昆布、豆腐などを加え、優しい味わいに仕上げました。\nプルプルのテビチと野菜も楽しめるバランスの良いボリューム満点の定食です。",
+      descEn: "Braised pig's feet set meal with daikon, kelp, and tofu. Comes with rice and side dishes.",
       price: "1,600",
-      category: "set"
+      category: "set",
+      allergens: ["pork", "soy", "wheat"]
     },
     {
       name: "軟骨ソーキ定食",
+      nameEn: "Soft-Bone Soki Set Meal",
       image: "images/nankotsu-tei.JPG",
       desc: "余すことなく食べられる程に柔らかく煮込んだ特大ボリュームの軟骨ソーキに、大根と昆布、豆腐などを加え、優しい味わいに仕上げました。\nスタミナと滋養を兼ね備えたボリューム満点の定食です。",
+      descEn: "Generous soft-bone pork ribs set meal with daikon, kelp, and tofu. Hearty and satisfying.",
       price: "1,600",
-      category: "set"
+      category: "set",
+      allergens: ["pork", "soy", "wheat"]
     },
     {
       name: "イナムドゥチ定食",
+      nameEn: "Inamuduchi Set Meal (Miso Pork Soup)",
       image: "images/inamu-tei.JPG",
       desc: "「イナムドゥチ」は豚肉／こんにゃく／しいたけ／かまぼこなどを入れて味噌で煮込んだ、沖縄ではお祝いの席によく出される、ちょっと特別な一品です。\n自家製のイナムドゥチは、心と体に染み渡るような優しい味わいが特徴です。\nジューシーと小鉢が付き、沖縄の家庭料理の温かさを感じられるセットです",
+      descEn: "Traditional Okinawan celebration soup: pork, konjac, shiitake, and kamaboko simmered in white miso. With jushii rice.",
       price: "1,600",
-      category: "set"
+      category: "set",
+      allergens: ["pork", "soy", "wheat", "fish"]
     },
     {
       name: "ゆし豆腐定食",
+      nameEn: "Yushi Tofu Set Meal (Soft Tofu)",
       image: "images/yushi-tei.JPG",
       desc: "たっぷりのニラと自家製味噌で仕上げた、優しい味わいのゆし豆腐です。\nふわふわとした食感のゆし豆腐は、消化にも優しく、健康的な一品です。\n沖縄のソウルフードであるジューシーと季節の小鉢が付き、バランスの取れた定食です。沖縄県産大豆の旨味が詰まった、心と体に染み渡る味わいです。",
+      descEn: "Fluffy soft tofu with chives in homemade miso broth. A light and healthy Okinawan comfort food. With jushii rice.",
       price: "1,000",
-      category: "set"
+      category: "set",
+      allergens: ["soy", "wheat"]
     },
     {
       name: "へちま定食",
+      nameEn: "Hechima Set Meal (Loofah Gourd)",
       image: "images/hechima-tei.JPG",
       desc: "沖縄の島野菜、へちま（なーべーらー）が主役の一品です。\nたっぷりのへちまを自家製味噌でシンプルに優しく丁寧に煮込んだ、沖縄の家庭料理の代表格です。\n落とし玉子で仕上げたまろやかな出汁は最後まで飲み干せる美味しさです。",
+      descEn: "Loofah gourd simmered in homemade miso with a poached egg. A classic Okinawan home-style dish.",
       price: "1,200",
-      category: "set"
+      category: "set",
+      allergens: ["soy", "egg", "wheat"]
     },
     {
       name: "豆腐チャンプルー",
+      nameEn: "Tofu Champuru (Stir-Fry)",
       image: "images/tofu-chan.JPG",
       desc: "たんぱく質豊富な島豆腐と県産の彩り野菜とともに炒め合わせた沖縄の家庭料理です。\n素材の持ち味を大切に、シンプルながら奥深い味わいに仕上げました。\n島豆腐と旬の彩り野菜が織りなす、心あたたまるひと皿です。",
+      descEn: "Island tofu stir-fried with seasonal Okinawan vegetables. A protein-rich traditional dish.",
       price: "1,000",
-      category: "chanple"
+      category: "chanple",
+      allergens: ["soy", "pork", "egg", "wheat"]
     },
     {
       name: "ゴーヤーチャンプルー",
+      nameEn: "Goya Champuru (Bitter Melon Stir-Fry)",
       image: "images/goya-chan.JPG",
       desc: "ゴーヤーは沖縄の夏を象徴する食材です。\nビタミンC豊富なゴーヤーとたんぱく質豊富な島豆腐、ポークの旨みが絶妙に調和した栄養バランス抜群のチャンプルーです。\n食べごたえがありながら体にやさしい、健康志向なひと皿です。",
+      descEn: "Okinawa's iconic bitter melon stir-fried with island tofu and pork. Rich in vitamin C.",
       price: "1,000",
-      category: "chanple"
+      category: "chanple",
+      allergens: ["soy", "pork", "egg", "wheat"]
     },
     {
       name: "フーチャンプルー",
+      nameEn: "Fu Champuru (Wheat Gluten Stir-Fry)",
       image: "images/fu-chan.JPG",
       desc: "沖縄県産の車麩を出汁でふっくら戻し、県産の彩り野菜と一緒に炒めた沖縄の家庭料理です。\nやさしい味わいと出汁の香りが広がる、どこかほっとする一品です。",
+      descEn: "Okinawan wheat gluten (fu) soaked in dashi, stir-fried with seasonal vegetables.",
       price: "1,000",
-      category: "chanple"
+      category: "chanple",
+      allergens: ["wheat", "soy", "egg", "pork"]
     },
     {
       name: "Aセット",
+      nameEn: "Side Set A",
       image: "images/A-set.jpg",
       desc: "お得な付け合せセットです。\n 白米、じゅーしー、玄米のいずれかと、ジーマミ豆腐（中）／もずく酢をお付けしたセットになります。\n※付け合せセットのみのご注文はできません。",
+      descEn: "Rice (white/jushii/brown) + jimami tofu + mozuku seaweed vinegar. Add-on only.",
       price: "300",
-      category: "topping"
+      category: "topping",
+      allergens: ["peanut", "soy"]
     },
     {
       name: "Bセット",
+      nameEn: "Side Set B",
       image: "images/B-set.jpg",
       desc: "お得な付け合せセットです。\n 白米、じゅーしー、玄米のいずれかと、もずく天ぷら／ジーマミ豆腐（中）／もずく酢をお付けしたセットになります。\n※付け合せセットのみのご注文はできません。",
+      descEn: "Rice + mozuku tempura + jimami tofu + mozuku seaweed vinegar. Add-on only.",
       price: "400",
-      category: "topping"
+      category: "topping",
+      allergens: ["peanut", "wheat", "soy"]
     },
     {
       name: "Cセット",
+      nameEn: "Side Set C",
       image: "images/C-set.jpg",
       desc: "お得な付け合せセットです。\n 白米、じゅーしー、玄米のいずれかと、いりちゃー／もずく天ぷら／ジーマミ豆腐（中）／もずく酢をお付けしたセットになります。\n※付け合せセットのみのご注文はできません。",
+      descEn: "Rice + iricha stir-fry + mozuku tempura + jimami tofu + mozuku seaweed vinegar. Add-on only.",
       price: "500",
-      category: "topping"
+      category: "topping",
+      allergens: ["peanut", "wheat", "soy", "pork"]
     },
     {
       name: "じゅーしー",
+      nameEn: "Jushii (Okinawan Mixed Rice)",
       image: "images/jyushi-tanpin.jpeg",
       desc: "国産生姜をたっぷり使ったフーチバー（よもぎ）じゅーしーです。\nよもぎの爽やかな香りと生姜のアクセントが食欲をそそる、沖縄の炊き込みご飯です。\n沖縄そばとの相性も抜群で、セットで召し上がっていただくのがおすすめです。\n単品よりお得な付け合せもございます。（Aセット、Bセット、Cセット）",
+      descEn: "Okinawan seasoned rice with mugwort (fuchiba) and ginger. Perfect with soba.",
       price: "250",
-      category: "just"
+      category: "just",
+      allergens: ["soy", "wheat"]
     },
     {
       name: "白米",
+      nameEn: "White Rice",
       image: "images/hakumai-tan.png",
       desc: "国産米をふっくら炊き上げました。\n おかずの味を引き立てるやさしい甘みと香りの白米です。",
+      descEn: "Fluffy steamed Japanese white rice.",
       price: "200",
-      category: "just"
+      category: "just",
+      allergens: []
     },
     {
       name: "玄米",
+      nameEn: "Brown Rice with Black Beans",
       image: "images/genmai-tan.JPG",
       desc: "黒豆入り玄米ごはんをふっくら炊き上げました。\n やさしい香りと豊かな風味が、どこか懐かしい味わいを感じさせます。",
+      descEn: "Brown rice with black beans. Nutty flavor and rich aroma.",
       price: "250",
-      category: "just"
+      category: "just",
+      allergens: ["soy"]
     },
     {
       name: "ジーマミ豆腐",
+      nameEn: "Jimami Tofu (PEANUT Tofu)",
       image: "images/jimami-tan.png",
       desc: "自家製のジーマミ豆腐（ピーナッツ豆腐）は、もちもちとした食感と濃厚なピーナッツの風味が特徴です。\n甘辛い特製タレと合わせることで、口の中でとろけるような絶妙なハーモニーを奏でます。\n沖縄の伝統的なおやつとしても親しまれています。",
+      descEn: "Homemade peanut tofu with sweet soy sauce. Chewy, creamy, and rich in peanut flavor.",
       price: "300",
-      category: "just"
+      category: "just",
+      allergens: ["peanut", "soy"]
     },
     {
       name: "テビチ（豚足）",
+      nameEn: "Tebichi (Braised Pig's Feet)",
       image: "images/tebichi-tan.JPG",
       desc: "ひとつひとつ丁寧に下処理を施したテビチ（豚足）を、数時間かけてじっくり煮込みました。\n見た目よりあっさりしていて、ぷるぷる食感の中にコラーゲンがたっぷり含まれ、美容と健康にも嬉しい一皿です。",
+      descEn: "Braised pig's feet simmered for hours. Collagen-rich, lighter than it looks.",
       price: "400",
-      category: "just"
+      category: "just",
+      allergens: ["pork"]
     },
     {
       name: "軟骨ソーキ",
+      nameEn: "Soft-Bone Soki (Pork Ribs)",
       image: "images/nankotsu-tan.JPG",
       desc: "沖縄県産の軟骨ソーキを丁寧に下処理し、余分な脂を落としてからじっくり煮込みました。\nお箸で持ち上げるのが難しいほど、とろとろに仕上げた当店自慢の一品です。",
+      descEn: "Slow-braised soft-bone pork spare ribs. So tender they fall apart with chopsticks.",
       price: "400",
-      category: "just"
+      category: "just",
+      allergens: ["pork"]
     },
     {
       name: "もずく天ぷら",
+      nameEn: "Mozuku Tempura (Seaweed Fritters)",
       image: "images/mozuku-tan.JPG",
       desc: "沖縄産の新鮮なもずくに、ポーク／大葉／玉ねぎを合わせてカラっと揚げた天ぷらです。\n創業者こだわりの味を受け継ぐ、悠愉樹庵（ゆうゆじゅあん）の新メニューです。",
+      descEn: "Crispy fritters with Okinawan mozuku seaweed, pork, shiso leaf, and onion.",
       price: "60",
       category: "just",
-      badge: "NEW"
+      badge: "NEW",
+      allergens: ["wheat", "pork"]
     },
     {
       name: "イリチャー",
+      nameEn: "Iricha (Braised Vegetables)",
       image: "images/iricha-tan.JPG",
       desc: "切り干し大根／昆布／こんにゃく／椎茸／三枚肉をじっくり炒め煮にした沖縄の家庭料理です。\n鰹と豚だしの旨みが染みた、しっとり優しい味わいです。",
+      descEn: "Dried daikon, kelp, konjac, shiitake, and pork belly braised in bonito & pork broth.",
       price: "400",
-      category: "just"
+      category: "just",
+      allergens: ["pork", "soy", "wheat", "fish"]
     },
     {
       name: "チーズケーキ",
+      nameEn: "Homemade Cheesecake",
       image: "images/cake.png",
       desc: "しっとりとした食感と、やさしい甘さが広がる悠愉樹庵（ゆうゆじゅあん）の自家製チーズケーキです。\n紅芋と里芋（ターム）を季節ごとに使い分け、旬の美味しさを大切にしています。\n ※写真は「紅芋チーズケーキ」になります。",
+      descEn: "Homemade cheesecake with seasonal Okinawan sweet potato (beni-imo) or taro.",
       price: "400",
-      category: "sweet"
+      category: "sweet",
+      allergens: ["egg", "milk", "wheat"]
     },
     {
       name: "ケーキセット",
+      nameEn: "Cake & Drink Set",
       image: "images/cake-coffee.png",
       desc: "悠愉樹庵（ゆうゆじゅあん）の自家製チーズケーキと厳選した豆で丁寧に淹れたこだわりのコーヒー、または紅茶のセットになります。\n食後のひとときをゆったりとお過ごしください。\nコーヒー or 紅茶（ホット ／ アイス）をお選びいただけます。\n ※写真は「紅芋チーズケーキ」になります。",
+      descEn: "Homemade cheesecake with coffee or tea (hot/iced).",
       price: "700",
-      category: "sweet"
+      category: "sweet",
+      allergens: ["egg", "milk", "wheat"]
     },
     {
       name: "ホットぜんざい",
+      nameEn: "Hot Zenzai (Brown Sugar Dessert Soup)",
       image: "images/hotzenzai.png",
       desc: "自然由来の甘みがうれしい、沖縄産黒糖のホットぜんざいです。\nミネラル豊富な沖縄県産黒糖のコクと白玉のもちもち食感が重なる、心にも体にもやさしい甘味です。",
+      descEn: "Warm sweet bean soup with Okinawan brown sugar and chewy rice dumplings.",
       price: "500",
-      category: "sweet"
+      category: "sweet",
+      allergens: []
     },
     {
       name: "黒糖ぜんざい",
+      nameEn: "Brown Sugar Shaved Ice Zenzai",
       image: "images/ice-zenzai2.png",
       desc: " 沖縄産黒糖で仕上げたホットぜんざいを、ひんやり冷やしてかき氷にトッピングしました。\n優しい甘みと涼やかな口どけが楽しめます。\n宇治抹茶の無料トッピングもございます。\n ※練乳のトッピングもプラス¥50で可能です。",
+      descEn: "Shaved ice with brown sugar zenzai. Free matcha topping. Condensed milk +\u00a550.",
       price: "500",
-      category: "sweet"
+      category: "sweet",
+      allergens: ["milk"]
     },
     {
       name: "かき氷",
+      nameEn: "Shaved Ice (Kakigori)",
       image: "images/ice-ichigo.png",
       desc: " 夏の定番、ひんやり甘いかき氷です。いちご／メロン／ぶどう／ブルーハワイ／宇治抹茶の5種類からお選びいただけます。\n※練乳のトッピングもプラス¥50で可能です。",
+      descEn: "Shaved ice: strawberry / melon / grape / blue Hawaii / matcha. Condensed milk +\u00a550.",
       price: "250",
-      category: "sweet"
+      category: "sweet",
+      allergens: ["milk"]
     }
     /*
     {
@@ -216,6 +303,29 @@ const menuData = [
     },
     */
 ];
+
+/* アレルゲンアイコン定義 */
+var allergenLabels = {
+  wheat: { ja: "小麦", en: "Wheat" },
+  pork: { ja: "豚肉", en: "Pork" },
+  fish: { ja: "魚介", en: "Fish" },
+  soy: { ja: "大豆", en: "Soy" },
+  egg: { ja: "卵", en: "Egg" },
+  milk: { ja: "乳", en: "Milk" },
+  peanut: { ja: "落花生", en: "Peanut" }
+};
+
+function renderAllergenBadges(allergens, lang) {
+  if (!allergens || allergens.length === 0) return '';
+  var labels = allergens.map(function(a) {
+    var label = allergenLabels[a];
+    if (!label) return '';
+    var text = lang === 'en' ? label.en : label.ja;
+    var cls = a === 'peanut' ? 'bg-red-600 text-white' : 'bg-yellow-100 text-yellow-800';
+    return '<span class="inline-block text-xs px-1.5 py-0.5 rounded ' + cls + '">' + text + '</span>';
+  });
+  return '<div class="flex flex-wrap gap-1 mt-2">' + labels.join('') + '</div>';
+}
 
 
 const container = document.getElementById('menu-container');
@@ -237,7 +347,9 @@ const renderMenu = (category = 'all') => {
           <div class="p-4 flex flex-col justify-between w-auto md:w-[400px]">
             <div>
               <h3 class="text-xl font-bold text-red-700 mb-2">${item.name}</h3>
-              <p class="text-sm text-gray-600 mb-2 text-left">${formattedDesc}</p> </div>
+              <p class="text-sm text-gray-600 mb-2 text-left">${formattedDesc}</p>
+              ${renderAllergenBadges(item.allergens, 'ja')}
+            </div>
             <!-- [Phase4] BUG-06: toLocaleString() 除去（priceは既にカンマ付き文字列） -->
             <div class="mt-4 text-right font-semibold text-gray-800">${item.price}円（税込）</div>
           </div>
