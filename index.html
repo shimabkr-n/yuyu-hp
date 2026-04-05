@@ -21,17 +21,13 @@
   <!-- [Phase1] PERF-01: LCP画像プリロード -->
   <link rel="preload" as="image" href="images/exterior1.jpg" fetchpriority="high">
 
-  <!-- TailwindCSS -->
-  <!-- [Phase3] CODE-02: 本番運用時は Tailwind CLI ビルド版 css/style.css に差し替え -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- TailwindCSS (ビルド版) -->
+  <link rel="stylesheet" href="/css/style.css">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
-
-  <!-- [Phase3] CODE-03: インラインスタイルを外部CSSに統合 -->
-  <link rel="stylesheet" href="/css/custom.css">
 
   <!-- [Phase2] SEO-03 + [Phase4] SEO-07: JSON-LD 拡充（全カテゴリ網羅） -->
   <script type="application/ld+json">
