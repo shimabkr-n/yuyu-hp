@@ -54,7 +54,7 @@
         <a href="#about" class="hover:text-red-600">About</a>
         <a href="#access" class="hover:text-red-600">Access</a>
       </nav>
-      <a href="/" class="bg-red-700 text-white px-3 py-1 rounded text-sm hover:bg-red-800">日本語</a>
+      <a href="/" class="text-white px-3 py-1 rounded text-sm hover:opacity-90" style="background-color: #2f3591;">日本語</a>
     </div>
   </div>
 </header>
@@ -87,6 +87,21 @@
     <div id="en-menu-container" class="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full md:w-[1350px] mx-auto"></div>
   </div>
 </section>
+
+<!-- Notice Modal -->
+<div id="noticeModal" class="hidden fixed inset-0 z-[10000] flex items-center justify-center" role="dialog" aria-modal="true" aria-label="Notice">
+  <div class="absolute inset-0 bg-black bg-opacity-50" id="noticeOverlay"></div>
+  <div class="relative bg-white rounded-lg shadow-xl mx-4 max-w-lg w-full max-h-[80vh] overflow-y-auto z-10">
+    <div class="text-white px-6 py-3 rounded-t-lg flex justify-between items-center" style="background-color: #f295f5;">
+      <h2 class="text-lg font-bold" id="noticeModalTitle">Notice</h2>
+      <button id="noticeClose" class="text-white text-2xl leading-none hover:opacity-70" aria-label="Close">&times;</button>
+    </div>
+    <div class="px-6 py-5" id="noticeModalBody"></div>
+    <div class="px-6 pb-5 text-center">
+      <button id="noticeCloseBtn" class="text-white px-8 py-2 rounded text-sm font-bold hover:opacity-90" style="background-color: #f295f5;">Close</button>
+    </div>
+  </div>
+</div>
 
 <!-- Image Modal -->
 <div id="enImageModal" class="modal" role="dialog" aria-modal="true" aria-label="Enlarged image">
@@ -180,7 +195,8 @@
   </div>
 </footer>
 
-<!-- English Menu Rendering -->
+<!-- Notice & Menu -->
+<script src="/js/notice.js"></script>
 <script src="/js/menu.js"></script>
 <script>
 (function() {
@@ -222,6 +238,29 @@
 
   // Initial render
   renderEnMenu('all');
+
+  // Notice modal (reuse initNoticeModal from app.js pattern)
+  if (typeof noticeData !== 'undefined' && noticeData.notices && noticeData.notices.length > 0) {
+    var nModal = document.getElementById('noticeModal');
+    var nTitle = document.getElementById('noticeModalTitle');
+    var nBody = document.getElementById('noticeModalBody');
+    var html = '';
+    noticeData.notices.forEach(function(n) {
+      html += '<div class="mb-4 last:mb-0">';
+      html += '<h3 class="font-bold text-red-700 text-base mb-2">' + (n.titleEn || n.title) + '</h3>';
+      html += '<p class="text-sm text-gray-700 leading-relaxed whitespace-pre-line">' + (n.bodyEn || n.body) + '</p>';
+      html += '</div>';
+    });
+    nTitle.textContent = 'Notice';
+    nBody.innerHTML = html;
+    nModal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+    function closeNotice() { nModal.classList.add('hidden'); document.body.style.overflow = ''; }
+    document.getElementById('noticeClose').addEventListener('click', closeNotice);
+    document.getElementById('noticeCloseBtn').addEventListener('click', closeNotice);
+    document.getElementById('noticeOverlay').addEventListener('click', closeNotice);
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && !nModal.classList.contains('hidden')) closeNotice(); });
+  }
 
   // Modal functions
   window.openEnModal = function(src) {

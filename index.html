@@ -159,7 +159,7 @@
       <a href="#exterior" class="hover:text-red-600">店舗外観</a>
       <a href="#publicity" class="hover:text-red-600">お知らせ</a>
       <a href="#store-origin" class="hover:text-red-600">店名の由来</a>
-      <a href="/en/" class="bg-red-700 text-white px-3 py-1 rounded hover:bg-red-800">English</a>
+      <a href="/en/" class="text-white px-3 py-1 rounded hover:opacity-90" style="background-color: #2f3591;">English</a>
     </nav>
   </div>
   <div id="navMobile" class="sm:hidden hidden px-4 pb-4">
@@ -171,7 +171,7 @@
     <a href="#interior" class="block py-2 border-b" onclick="closeMobileMenu()">店舗内観（客席）</a>
     <a href="#exterior" class="block py-2 border-b" onclick="closeMobileMenu()">店舗外観</a>
     <a href="#store-origin" class="block py-2 border-b" onclick="closeMobileMenu()">店名の由来</a>
-    <a href="/en/" class="block py-2 text-red-700 font-bold" onclick="closeMobileMenu()">English Menu</a>
+    <a href="/en/" class="block py-2 font-bold" style="color: #2f3591;" onclick="closeMobileMenu()">English Menu</a>
   </div>
 </header>
 
@@ -360,7 +360,23 @@
   <img class="modal-content cursor-pointer" id="modalImage" alt="拡大画像">
 </div>
 
+<!-- お知らせモーダル -->
+<div id="noticeModal" class="hidden fixed inset-0 z-[10000] flex items-center justify-center" role="dialog" aria-modal="true" aria-label="お知らせ">
+  <div class="absolute inset-0 bg-black bg-opacity-50" id="noticeOverlay"></div>
+  <div class="relative bg-white rounded-lg shadow-xl mx-4 max-w-lg w-full max-h-[80vh] overflow-y-auto z-10">
+    <div class="text-white px-6 py-3 rounded-t-lg flex justify-between items-center" style="background-color: #f295f5;">
+      <h2 class="text-lg font-bold" id="noticeModalTitle">お知らせ</h2>
+      <button id="noticeClose" class="text-white text-2xl leading-none hover:opacity-70" aria-label="閉じる">&times;</button>
+    </div>
+    <div class="px-6 py-5" id="noticeModalBody"></div>
+    <div class="px-6 pb-5 text-center">
+      <button id="noticeCloseBtn" class="text-white px-8 py-2 rounded text-sm font-bold hover:opacity-90" style="background-color: #f295f5;">閉じる</button>
+    </div>
+  </div>
+</div>
+
 <!-- [Phase3] CODE-03: 全スクリプトを外部ファイルに統合 -->
+<script src="/js/notice.js"></script>
 <script src="/js/menu.js" defer></script>
 <script src="/js/app.js" defer></script>
 
