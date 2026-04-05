@@ -90,7 +90,7 @@
 
 <!-- Notice Modal -->
 <div id="noticeModal" class="hidden fixed inset-0 z-[10000] flex items-center justify-center" role="dialog" aria-modal="true" aria-label="Notice">
-  <div class="absolute inset-0 bg-black bg-opacity-50" id="noticeOverlay"></div>
+  <div class="absolute inset-0 bg-black bg-opacity-30" id="noticeOverlay"></div>
   <div class="relative bg-white rounded-lg shadow-xl mx-4 max-w-lg w-full max-h-[80vh] overflow-y-auto z-10">
     <div class="text-white px-6 py-3 rounded-t-lg flex justify-between items-center" style="background-color: #f295f5;">
       <h2 class="text-lg font-bold" id="noticeModalTitle">Notice</h2>
@@ -246,9 +246,10 @@
     var nBody = document.getElementById('noticeModalBody');
     var html = '';
     noticeData.notices.forEach(function(n) {
+      var body = (n.bodyEn || n.body).replace(/\n/g, '<br>');
       html += '<div class="mb-4 last:mb-0">';
       html += '<h3 class="font-bold text-red-700 text-base mb-2">' + (n.titleEn || n.title) + '</h3>';
-      html += '<p class="text-sm text-gray-700 leading-relaxed whitespace-pre-line">' + (n.bodyEn || n.body) + '</p>';
+      html += '<p class="text-sm text-gray-700 leading-relaxed">' + body + '</p>';
       html += '</div>';
     });
     nTitle.textContent = 'Notice';
