@@ -7,11 +7,11 @@
   <title>沖縄そば 悠愉樹庵（ゆうゆじゅあん）｜中城村の古民家沖縄そば専門店</title>
 
   <!-- SEO・OGP -->
-  <meta name="description" content="沖縄県中城村の沖縄そば専門店『悠愉樹庵（ゆうゆじゅあん）』公式サイト。自然に囲まれた癒しの空間で、伝統の味と心を込めたおもてなしをお楽しみください。">
+  <meta name="description" content="中城城跡から車5分。沖縄古民家で味わう自家製沖縄そば専門店『悠愉樹庵』。化学調味料不使用の出汁と県産豚肉のソーキ・テビチが自慢。駐車場15台・全69席。テレビ朝日『人生の楽園』紹介店。">
   <!-- [Phase1] SEO-02: og:type 追加 -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="沖縄そば 悠愉樹庵" />
-  <meta property="og:description" content="自然と郷土料理に囲まれた癒しの空間『悠愉樹庵（ゆうゆじゅあん）』。" />
+  <meta property="og:description" content="中城城跡から車5分。沖縄古民家で味わう化学調味料不使用の沖縄そば。駐車場15台・全69席。" />
   <meta property="og:image" content="https://jyuan.jp/ogp.jpg" />
   <meta property="og:url" content="https://jyuan.jp/" />
   <link rel="canonical" href="https://jyuan.jp/">
@@ -119,7 +119,11 @@
       "closes": "16:00"
     }
   ],
-  "sameAs": []
+  "sameAs": [
+    "https://maps.app.goo.gl/viwUGsYm7mVw3dFz6",
+    "https://www.instagram.com/yuyu_jyuan/",
+    "https://tabelog.com/okinawa/A4704/A470405/47005254/"
+  ]
 }
 </script>
 
@@ -132,10 +136,7 @@
     gtag('config', 'G-B07XFP4Y65');
     gtag('config', 'AW-17680654611');
   </script>
-  <!-- ページビュー conversion -->
-  <script>
-    gtag('event', 'conversion', {'send_to': 'AW-17680654611/DPdnCK-p07QbEJPC5e5B'});
-  </script>
+  <!-- conversion はユーザー行動（電話タップ・地図クリック）で発火。app.js の initActionConversionTracking() で管理 -->
 </head>
 
 <body class="bg-gray-100 text-gray-800 min-h-screen" style="background-image: url('images/bingata-strong.png'); background-repeat: repeat; background-position: center; background-size: 100% auto;">
@@ -183,7 +184,11 @@
       class="w-full h-full object-cover scale-100 absolute transition-opacity duration-1000 opacity-100 transition-transform ease-in-out duration-[5000ms]" style="z-index:-1;" />
     <img src="images/exterior2.jpg" alt="悠愉樹庵の入口 - 木々に囲まれた石畳のアプローチ" width="1920" height="1200" loading="lazy"
       class="w-full h-full object-cover scale-100 absolute transition-opacity duration-1000 opacity-0 transition-transform ease-in-out duration-[5000ms]" style="z-index:-1;" />
+    <img src="images/yuyu-soba.jpg" alt="悠愉（ゆうゆ）そば - 軟骨ソーキ・三枚肉・かまぼこを贅沢にのせた当店イチオシの沖縄そば" width="1920" height="1200" loading="lazy"
+      class="w-full h-full object-cover scale-100 absolute transition-opacity duration-1000 opacity-0 transition-transform ease-in-out duration-[5000ms]" style="z-index:-1;" />
     <img src="images/exterior3.JPG" alt="悠愉樹庵の庭 - 自然豊かな中城村の風景" width="1920" height="1200" loading="lazy"
+      class="w-full h-full object-cover scale-100 absolute transition-opacity duration-1000 opacity-0 transition-transform ease-in-out duration-[5000ms]" style="z-index:-1;" />
+    <img src="images/nankotsu-soba.jpg" alt="軟骨ソーキそば - とろけるような柔らかさの特大軟骨ソーキ" width="1920" height="1200" loading="lazy"
       class="w-full h-full object-cover scale-100 absolute transition-opacity duration-1000 opacity-0 transition-transform ease-in-out duration-[5000ms]" style="z-index:-1;" />
     <img src="images/exterior4.JPG" alt="悠愉樹庵の外観 - 赤瓦屋根の伝統的な沖縄古民家" width="1920" height="1200" loading="lazy"
       class="w-full h-full object-cover scale-100 absolute transition-opacity duration-1000 opacity-0 transition-transform ease-in-out duration-[5000ms]" style="z-index:-1;" />
@@ -277,7 +282,7 @@
     <div class="collapsible-body">
     <p><strong>住所：</strong>沖縄県中城村屋宜824-1</p>
     <p><strong>営業時間：</strong>11:00〜16:00（ラストオーダー 15:30）</p>
-    <p><strong>電話番号：</strong><a href="tel:098-895-2280" class="underline hover:text-red-600">098-895-2280</a></p>
+    <p><strong>電話番号：</strong><a href="tel:098-895-2280" class="underline hover:text-red-600" data-track="tel">098-895-2280</a></p>
     <p><strong>定休日：</strong>日曜日</p>
     <p><strong>座席：</strong>テーブル6卓（5席）30席、座敷20席、掘りごたつ15席、カウンター4席</p>
     <p><strong>駐車場：</strong>あり（約15台）</p>
@@ -366,7 +371,7 @@
       <div>
         <p class="font-bold text-base mb-1">悠愉樹庵（ゆうゆじゅあん）</p>
         <p>〒901-2402 沖縄県中城村屋宜824-1</p>
-        <p>TEL：<a href="tel:098-895-2280" class="underline hover:text-red-400">098-895-2280</a></p>
+        <p>TEL：<a href="tel:098-895-2280" class="underline hover:text-red-400" data-track="tel">098-895-2280</a></p>
       </div>
       <div>
         <p><strong>営業時間：</strong>11:00〜16:00（L.O. 15:30）</p>
