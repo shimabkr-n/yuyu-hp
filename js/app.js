@@ -225,7 +225,57 @@ function initActionConversionTracking() {
 }
 
 /* ----------------------------------------------------------
-   7. 初期化
+   7. お知らせモーダル
+   notice.js の noticeData.notices が空でなければ初期表示
+   ---------------------------------------------------------- */
+function initNoticeModal() {
+  if (typeof noticeData === 'undefined') return;
+  if (!noticeData.notices || noticeData.notices.length === 0) return;
+
+  var modal = document.getElementById('noticeModal');
+  if (!modal) return;
+
+  var titleEl = document.getElementById('noticeModalTitle');
+  var bodyEl = document.getElementById('noticeModalBody');
+  var isEn = document.documentElement.lang === 'en';
+
+  // お知らせ内容を組み立て
+  var html = '';
+  noticeData.notices.forEach(function(n) {
+    var title = isEn ? (n.titleEn || n.title) : n.title;
+    var body = isEn ? (n.bodyEn || n.body) : n.body;
+    html += '<div class="mb-4 last:mb-0">';
+    html += '<h3 class="font-bold text-red-700 text-base mb-2">' + title + '</h3>';
+    html += '<p class="text-sm text-gray-700 leading-relaxed whitespace-pre-line">' + body + '</p>';
+    html += '</div>';
+  });
+
+  titleEl.textContent = isEn ? 'Notice' : 'お知らせ';
+  bodyEl.innerHTML = html;
+
+  // モーダルを表示
+  modal.classList.remove('hidden');
+  document.body.style.overflow = 'hidden';
+
+  // 閉じる処理
+  function closeNotice() {
+    modal.classList.add('hidden');
+    document.body.style.overflow = '';
+  }
+
+  document.getElementById('noticeClose').addEventListener('click', closeNotice);
+  document.getElementById('noticeCloseBtn').addEventListener('click', closeNotice);
+  document.getElementById('noticeOverlay').addEventListener('click', closeNotice);
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+      closeNotice();
+    }
+  });
+}
+
+/* ----------------------------------------------------------
+   8. 初期化
    ---------------------------------------------------------- */
 (function() {
   function init() {
@@ -234,6 +284,7 @@ function initActionConversionTracking() {
     initConversionTracking();
     initActionConversionTracking();
     initLazyMaps();
+    initNoticeModal();
   }
 
   if (document.readyState === 'loading') {
