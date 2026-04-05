@@ -72,39 +72,28 @@
 </section>
 
 <!-- Menu -->
-<section id="menu" class="py-12 px-4">
-  <div class="max-w-5xl mx-auto">
-    <h2 class="text-3xl font-bold text-center mb-8">Menu</h2>
-    <p class="text-center text-sm text-gray-500 mb-8">All prices include tax. No MSG used in our broth.</p>
-
-    <!-- Okinawa Soba -->
-    <h3 class="text-2xl font-bold text-red-700 mb-4 border-b-2 border-red-700 pb-2">Okinawa Soba</h3>
-    <div id="en-menu-soba" class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10"></div>
-
-    <!-- Set Meals -->
-    <h3 class="text-2xl font-bold text-red-700 mb-4 border-b-2 border-red-700 pb-2">Set Meals (Teishoku)</h3>
-    <p class="text-sm text-gray-500 mb-4">Served with rice (jushii), side dishes, and pickles.</p>
-    <div id="en-menu-set" class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10"></div>
-
-    <!-- Champuru -->
-    <h3 class="text-2xl font-bold text-red-700 mb-4 border-b-2 border-red-700 pb-2">Champuru (Stir-Fry)</h3>
-    <p class="text-sm text-gray-500 mb-4">Served with rice and miso soup.</p>
-    <div id="en-menu-chanple" class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10"></div>
-
-    <!-- Side Sets -->
-    <h3 class="text-2xl font-bold text-red-700 mb-4 border-b-2 border-red-700 pb-2">Side Sets</h3>
-    <p class="text-sm text-gray-500 mb-4">Add-on sets to pair with soba or champuru. Cannot be ordered alone.</p>
-    <div id="en-menu-topping" class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10"></div>
-
-    <!-- A La Carte -->
-    <h3 class="text-2xl font-bold text-red-700 mb-4 border-b-2 border-red-700 pb-2">A La Carte</h3>
-    <div id="en-menu-just" class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10"></div>
-
-    <!-- Desserts -->
-    <h3 class="text-2xl font-bold text-red-700 mb-4 border-b-2 border-red-700 pb-2">Desserts</h3>
-    <div id="en-menu-sweet" class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10"></div>
+<section id="menu" class="bg-blue-50/90 py-16 px-4 text-center">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-4">Menu</h2>
+    <p class="text-center text-sm text-gray-500 mb-6">All prices include tax. No MSG used in our broth.</p>
+    <div class="flex flex-wrap justify-center mb-6 gap-2">
+      <button class="en-filter-btn bg-gray-300 px-4 py-2 rounded" data-category="all">All</button>
+      <button class="en-filter-btn bg-gray-300 px-4 py-2 rounded" data-category="soba">Okinawa Soba</button>
+      <button class="en-filter-btn bg-gray-300 px-4 py-2 rounded" data-category="topping">Side Sets</button>
+      <button class="en-filter-btn bg-gray-300 px-4 py-2 rounded" data-category="chanple">Champuru</button>
+      <button class="en-filter-btn bg-gray-300 px-4 py-2 rounded" data-category="set">Set Meals</button>
+      <button class="en-filter-btn bg-gray-300 px-4 py-2 rounded" data-category="just">A La Carte</button>
+      <button class="en-filter-btn bg-gray-300 px-4 py-2 rounded" data-category="sweet">Desserts</button>
+    </div>
+    <div id="en-menu-container" class="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full md:w-[1350px] mx-auto"></div>
   </div>
 </section>
+
+<!-- Image Modal -->
+<div id="enImageModal" class="modal" role="dialog" aria-modal="true" aria-label="Enlarged image">
+  <span class="close" id="enModalClose" tabindex="0" role="button" aria-label="Close">&times;</span>
+  <img class="modal-content cursor-pointer" id="enModalImage" alt="Enlarged image">
+</div>
 
 <!-- About -->
 <section id="about" class="bg-gray-700 text-white py-12 px-4">
@@ -196,23 +185,72 @@
 <script src="/js/menu.js"></script>
 <script>
 (function() {
-  var categories = ['soba', 'set', 'chanple', 'topping', 'just', 'sweet'];
-  categories.forEach(function(cat) {
-    var container = document.getElementById('en-menu-' + cat);
-    if (!container) return;
-    menuData.filter(function(item) { return item.category === cat; }).forEach(function(item) {
-      container.innerHTML += '<div class="bg-white shadow rounded-lg overflow-hidden flex flex-col sm:flex-row">' +
-        '<img src="/' + item.image + '" alt="' + (item.nameEn || item.name) + '" class="w-full sm:w-40 h-32 sm:h-auto object-cover" loading="lazy">' +
-        '<div class="p-3 flex flex-col justify-between flex-1">' +
-          '<div>' +
-            '<h4 class="font-bold text-red-700">' + (item.nameEn || item.name) + '</h4>' +
-            '<p class="text-xs text-gray-400 mb-1">' + item.name + '</p>' +
-            '<p class="text-sm text-gray-600">' + (item.descEn || '') + '</p>' +
+  var container = document.getElementById('en-menu-container');
+  var modal = document.getElementById('enImageModal');
+  var modalImg = document.getElementById('enModalImage');
+  var modalClose = document.getElementById('enModalClose');
+
+  function renderEnMenu(category) {
+    container.innerHTML = '';
+    menuData.filter(function(item) {
+      return category === 'all' || item.category === category;
+    }).forEach(function(item) {
+      var descHtml = (item.descEn || '').replace(/\n/g, '<br>');
+      container.innerHTML +=
+        '<div class="bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full md:w-[620px]">' +
+          (item.badge ? '<div class="badge">' + item.badge + '</div>' : '') +
+          '<img src="/' + item.image + '" alt="' + (item.nameEn || item.name) + '" class="w-full md:w-[53%] h-auto object-cover cursor-pointer" loading="lazy" onclick="openEnModal(\'/' + item.image + '\')">' +
+          '<div class="p-4 flex flex-col justify-between w-auto md:w-[400px]">' +
+            '<div>' +
+              '<h3 class="text-xl font-bold text-red-700 mb-1">' + (item.nameEn || item.name) + '</h3>' +
+              '<p class="text-xs text-gray-400 mb-2">' + item.name + '</p>' +
+              '<p class="text-sm text-gray-600 mb-2 text-left">' + descHtml + '</p>' +
+            '</div>' +
+            '<div class="mt-4 text-right font-semibold text-gray-800">&yen;' + item.price + '</div>' +
           '</div>' +
-          '<p class="mt-2 text-right font-semibold">&yen;' + item.price + '</p>' +
-        '</div>' +
-      '</div>';
+        '</div>';
     });
+  }
+
+  // Filter buttons
+  document.querySelectorAll('.en-filter-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.en-filter-btn').forEach(function(b) { b.classList.remove('bg-red-300'); });
+      btn.classList.add('bg-red-300');
+      renderEnMenu(btn.getAttribute('data-category'));
+    });
+  });
+
+  // Initial render
+  renderEnMenu('all');
+
+  // Modal functions
+  window.openEnModal = function(src) {
+    var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    if (isMobile) return;
+    modal.classList.add('show');
+    modalImg.src = src;
+    modalImg.style.transform = 'scale(1.5)';
+    modalClose.focus();
+    document.body.style.overflow = 'hidden';
+  };
+
+  function closeEnModal() {
+    modal.classList.remove('show');
+    modalImg.style.transform = 'scale(1)';
+    document.body.style.overflow = '';
+  }
+
+  modalClose.onclick = closeEnModal;
+
+  window.addEventListener('click', function(e) {
+    if (e.target === modal) closeEnModal();
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (!modal.classList.contains('show')) return;
+    if (e.key === 'Escape') { closeEnModal(); return; }
+    if (e.key === 'Tab') { e.preventDefault(); modalClose.focus(); }
   });
 })();
 </script>
