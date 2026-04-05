@@ -196,13 +196,43 @@ function initLazyMaps() {
 }
 
 /* ----------------------------------------------------------
-   6. 初期化
+   6. アクションベース conversion トラッキング
+   電話タップ・地図クリック等の実際のユーザー行動を計測
+   ---------------------------------------------------------- */
+function initActionConversionTracking() {
+  if (typeof gtag !== 'function') return;
+
+  // 電話タップ計測
+  document.querySelectorAll('a[data-track="tel"]').forEach(function(el) {
+    el.addEventListener('click', function() {
+      gtag('event', 'conversion', {
+        'send_to': 'AW-17680654611/DPdnCK-p07QbEJPC5e5B',
+        'event_category': 'contact',
+        'event_label': 'phone_tap'
+      });
+    });
+  });
+
+  // Googleマップクリック計測（iframe内のクリックは検知不可のため、focus で代替）
+  document.querySelectorAll('#access iframe').forEach(function(iframe) {
+    iframe.addEventListener('mouseenter', function() {
+      gtag('event', 'map_interaction', {
+        'event_category': 'engagement',
+        'event_label': 'map_click'
+      });
+    }, { once: true });
+  });
+}
+
+/* ----------------------------------------------------------
+   7. 初期化
    ---------------------------------------------------------- */
 (function() {
   function init() {
     initSectionToggle();
     initHeroSlider();
     initConversionTracking();
+    initActionConversionTracking();
     initLazyMaps();
   }
 
