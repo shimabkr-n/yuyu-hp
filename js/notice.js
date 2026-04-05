@@ -14,25 +14,12 @@ var noticeData = {
   // お知らせ一覧（複数件OK）
   // 空配列 [] にするとモーダルは表示されません
   notices: [
-    // ---- ここから編集 ----
-
-    // 例1: 臨時休業
-    // {
-    //   title: "臨時休業のお知らせ",
-    //   body: "4月10日（木）は設備点検のため臨時休業いたします。\nご迷惑をおかけしますが、よろしくお願いいたします。",
-    //   titleEn: "Temporary Closure",
-    //   bodyEn: "We will be closed on April 10 (Thu) for maintenance.\nWe apologize for the inconvenience."
-    // },
-
-    // 例2: GW営業案内
-    // {
-    //   title: "ゴールデンウィーク営業のご案内",
-    //   body: "4/29〜5/6は休まず営業いたします。\n営業時間：11:00〜16:00（L.O. 15:30）\n※混雑が予想されますので、お早めのご来店をおすすめします。",
-    //   titleEn: "Golden Week Hours",
-    //   bodyEn: "We are open every day from Apr 29 to May 6.\nHours: 11:00-16:00 (Last order 15:30)\nExpect crowds during this period."
-    // },
-
-    // ---- ここまで編集 ----
+    {
+      title: "ゴールデンウィーク期間中の営業日のお知らせ",
+      body: "日頃よりご愛顧いただき誠にありがとうございます。\nGW期間中は下記日程で営業いたします。\n\n■営業日\n4/29（水） 〜 5/4（月）\n　GW期間中は5/3（日）も営業いたします。\n\n■休業日\n5/5（火） 〜 5/7（木）\n　5/8（金）より通常営業となります。\n　5/10（日）を含め、以降は通常通り日曜日は定休日となります。\n\n皆さまのご来店をスタッフ一同、心よりお待ちしております。",
+      titleEn: "Golden Week Opening Hours",
+      bodyEn: "Thank you for your continued support.\nPlease see our schedule during the Golden Week holiday period.\n\n■ Open\nApr 29 (Wed) – May 4 (Mon)\n　We will also be open on Sun, May 3 (normally closed on Sundays).\n\n■ Closed\nMay 5 (Tue) – May 7 (Thu)\n　Regular hours resume from Fri, May 8.\n　Sundays will be our regular closing day again from May 10 onward.\n\nWe look forward to welcoming you."
+    }
   ]
 
 };
