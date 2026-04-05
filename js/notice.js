@@ -16,9 +16,9 @@ var noticeData = {
   notices: [
     {
       title: "ゴールデンウィーク期間中の営業日のお知らせ",
-      body: "日頃よりご愛顧いただき誠にありがとうございます。\nGW期間中は下記日程で営業いたします。\n\n<span style=\"font-weight:bold; font-size:1.125em;\">■営業日\n4/29（水） 〜 5/4（月）\n　GW期間中は5/3（日）も営業いたします。\n\n■休業日\n5/5（火） 〜 5/7（木）\n　5/8（金）より通常営業となります。\n　5/10（日）を含め、以降は通常通り日曜日は定休日となります。</span>\n\n皆さまのご来店をスタッフ一同、心よりお待ちしております。",
+      body: "日頃よりご愛顧いただき誠にありがとうございます。\nGW期間中は下記日程で営業いたします。\n\n<span style=\"font-weight:bold; font-size:1.125em;\">■営業日\n4/29（水） 〜 5/4（月）\n　GW期間中は5/3（日）も営業いたします。\n\n■休業日\n5/5（火） 〜 5/7（木）\n　5/8（金）より通常営業となります。\n　5/10（日）以降は、通常通り毎週日曜日を定休日とさせていただきます。</span>\n\n皆さまのご来店をスタッフ一同、心よりお待ちしております。",
       titleEn: "Golden Week Opening Hours",
-      bodyEn: "Thank you for your continued support.\nPlease see our schedule during the Golden Week holiday period.\n\n<span style=\"font-weight:bold; font-size:1.125em;\">■ Open\nApr 29 (Wed) – May 4 (Mon)\n　We will also be open on Sun, May 3 (normally closed on Sundays).\n\n■ Closed\nMay 5 (Tue) – May 7 (Thu)\n　Regular hours resume from Fri, May 8.\n　Sundays will be our regular closing day again from May 10 onward.</span>\n\nWe look forward to welcoming you."
+      bodyEn: "Thank you for your continued support.\nPlease see our schedule during the Golden Week holiday period.\n\n<span style=\"font-weight:bold; font-size:1.125em;\">■ Open\nApr 29 (Wed) – May 4 (Mon)\n　We will also be open on Sun, May 3 (normally closed on Sundays).\n\n■ Closed\nMay 5 (Tue) – May 7 (Thu)\n　Regular hours resume from Fri, May 8.\n　From May 10 onward, we will be closed every Sunday as usual.</span>\n\nWe look forward to welcoming you."
     }
   ]
 
