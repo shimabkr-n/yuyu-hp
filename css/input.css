@@ -1,12 +1,6 @@
-@import "tailwindcss";
-
-@source "../index.html";
-@source "../en/index.html";
-@source "../js/**/*.js";
-
-@theme {
-  --font-mincho: "Sawarabi Mincho", serif;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* === Body Background === */
 body {
