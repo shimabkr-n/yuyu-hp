@@ -5,7 +5,8 @@
   "main": "tailwind.config.js",
   "scripts": {
     "build:css": "npx tailwindcss -i ./css/input.css -o ./css/style.css --minify",
-    "watch:css": "npx tailwindcss -i ./css/input.css -o ./css/style.css --watch"
+    "watch:css": "npx tailwindcss -i ./css/input.css -o ./css/style.css --watch",
+    "validate:notice": "node scripts/validate-notice.js"
   },
   "repository": {
     "type": "git",

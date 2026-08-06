@@ -202,6 +202,7 @@
 
 <!-- Notice & Menu -->
 <script src="/js/notice.js"></script>
+<script src="/js/notice-modal.js" defer></script>
 <script src="/js/menu.js"></script>
 <script>
 (function() {
@@ -245,29 +246,7 @@
   // Initial render
   renderEnMenu('all');
 
-  // Notice modal (reuse initNoticeModal from app.js pattern)
-  if (typeof noticeData !== 'undefined' && noticeData.notices && noticeData.notices.length > 0) {
-    var nModal = document.getElementById('noticeModal');
-    var nTitle = document.getElementById('noticeModalTitle');
-    var nBody = document.getElementById('noticeModalBody');
-    var html = '';
-    noticeData.notices.forEach(function(n) {
-      var body = (n.bodyEn || n.body).replace(/\n/g, '<br>');
-      html += '<div class="mb-4 last:mb-0">';
-      html += '<h3 class="font-bold text-red-700 text-base mb-2">' + (n.titleEn || n.title) + '</h3>';
-      html += '<p class="text-sm text-gray-700 leading-relaxed">' + body + '</p>';
-      html += '</div>';
-    });
-    nTitle.textContent = 'Notice';
-    nBody.innerHTML = html;
-    nModal.classList.remove('hidden');
-    document.body.style.overflow = 'hidden';
-    function closeNotice() { nModal.classList.add('hidden'); document.body.style.overflow = ''; }
-    document.getElementById('noticeClose').addEventListener('click', closeNotice);
-    document.getElementById('noticeCloseBtn').addEventListener('click', closeNotice);
-    document.getElementById('noticeOverlay').addEventListener('click', closeNotice);
-    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && !nModal.classList.contains('hidden')) closeNotice(); });
-  }
+  // Notice modal is handled by /js/notice-modal.js (shared with the Japanese page, with display period support)
 
   // Modal functions
   window.openEnModal = function(src) {

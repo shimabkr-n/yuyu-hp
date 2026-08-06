@@ -1,0 +1,30 @@
+# お知らせ設定（js/notice.js）の書き方を自動でチェックする。
+#
+# ・お知らせに関わるファイルを変更した Pull Request でだけ動きます。
+# ・書き方に誤りがあると PR の画面に赤い × が出ます。
+#   マージを止める設定（必須チェック）にはしていないので、
+#   これまでどおりの手順でマージできます。判断は人がします。
+# ・依存パッケージが無いので npm install は不要です。
+
+name: お知らせ設定チェック
+
+on:
+  pull_request:
+    paths:
+      - 'js/notice.js'
+      - 'js/notice-modal.js'
+      - 'scripts/validate-notice.js'
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: お知らせの書き方をチェック
+        run: node scripts/validate-notice.js
