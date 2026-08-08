@@ -45,23 +45,30 @@ var noticeData = {
   notices: [
     {
       endAt: '2026-08-08 15:00',
-      title: '本日8月8日（土）は通常どおり営業いたします',
+      title: '本日8月8日（土）は通常どおり営業いたします（沖縄そばとじゅーしーのみのご提供）',
       body:
         'いつも悠愉樹庵をご利用いただき、誠にありがとうございます。\n\n' +
         '台風13号の影響により8月7日（金）は臨時休業とさせていただきましたが、' +
         '本日<strong>8月8日（土）は通常どおり営業</strong>いたします。\n\n' +
+        'なお、<strong>本日は沖縄そばとじゅーしーのみのご提供</strong>となります。' +
+        '定食・チャンプルー・デザートなど、そのほかのお料理はご用意がございません。\n\n' +
         '・営業時間：<strong>11:00 〜 15:00</strong>\n' +
         '・8月9日（日）は<strong>通常どおり定休日</strong>です\n\n' +
-        'お待たせしてしまい申し訳ございませんでした。\n\n' +
+        '提供メニューを限らせていただくことになり申し訳ございません。\n\n' +
         'スタッフ一同、皆さまのご来店を心よりお待ちしております。',
-      titleEn: 'Open as Usual Today — Saturday, August 8',
+      titleEn: 'Open Today (Saturday, August 8) — Okinawa Soba & Jushii Only',
       bodyEn:
         'Thank you very much for your continued patronage of Yuyu-Juan.\n\n' +
         'We were closed on Friday, August 7 due to Typhoon No. 13. ' +
         'Today, <strong>Saturday, August 8, we are open as usual</strong>.\n\n' +
+        'Please note that <strong>today we are serving only Okinawa Soba and ' +
+        'Jushii (Okinawan mixed rice)</strong>. Set meals, champuru stir-fries, ' +
+        'side sets and desserts are not available.\n\n' +
+        'Both our soba and our jushii are prepared with pork and pork-bone broth, ' +
+        'so <strong>we have no vegetarian options today</strong>. We sincerely apologize.\n\n' +
         '• Hours: <strong>11:00 - 15:00</strong>\n' +
         '• We are closed on Sunday, August 9, as usual\n\n' +
-        'Thank you for your patience. We look forward to welcoming you.'
+        'Thank you for your understanding. We look forward to welcoming you.'
     }
   ]
 
