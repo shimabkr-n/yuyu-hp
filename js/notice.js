@@ -44,31 +44,53 @@ var noticeData = {
   // 空配列 [] にするとモーダルは表示されません
   notices: [
     {
-      endAt: '2026-08-08 15:00',
-      title: '本日8月8日（土）は通常どおり営業いたします（沖縄そばとじゅーしーのみのご提供）',
+      endAt: '2026-08-21 16:00',
+      title: '8月21日（金）・8月27日（木）は臨時休業とさせていただきます',
       body:
         'いつも悠愉樹庵をご利用いただき、誠にありがとうございます。\n\n' +
-        '台風13号の影響により8月7日（金）は臨時休業とさせていただきましたが、' +
-        '本日<strong>8月8日（土）は通常どおり営業</strong>いたします。\n\n' +
-        'なお、<strong>本日は沖縄そばとじゅーしーのみのご提供</strong>となります。' +
-        '定食・チャンプルー・デザートなど、そのほかのお料理はご用意がございません。\n\n' +
-        '・営業時間：<strong>11:00 〜 15:00</strong>\n' +
-        '・8月9日（日）は<strong>通常どおり定休日</strong>です\n\n' +
-        '提供メニューを限らせていただくことになり申し訳ございません。\n\n' +
-        'スタッフ一同、皆さまのご来店を心よりお待ちしております。',
-      titleEn: 'Open Today (Saturday, August 8) — Okinawa Soba & Jushii Only',
+        '誠に勝手ながら、店舗の都合により下記の2日間を' +
+        '<strong>臨時休業</strong>とさせていただきます。\n\n' +
+        '・<strong>8月21日（金）</strong> 終日休業\n' +
+        '・<strong>8月27日（木）</strong> 終日休業\n\n' +
+        '上記以外の日は、通常どおり営業いたしております' +
+        '（<strong>11:00〜15:00</strong>／日曜定休）。\n\n' +
+        'お客様にはご不便をおかけいたしますが、' +
+        '何卒ご了承くださいますようお願い申し上げます。\n\n' +
+        'スタッフ一同、またのご来店を心よりお待ちしております。',
+      titleEn: 'Closed on Friday, August 21 and Thursday, August 27',
       bodyEn:
         'Thank you very much for your continued patronage of Yuyu-Juan.\n\n' +
-        'We were closed on Friday, August 7 due to Typhoon No. 13. ' +
-        'Today, <strong>Saturday, August 8, we are open as usual</strong>.\n\n' +
-        'Please note that <strong>today we are serving only Okinawa Soba and ' +
-        'Jushii (Okinawan mixed rice)</strong>. Set meals, champuru stir-fries, ' +
-        'side sets and desserts are not available.\n\n' +
-        'Both our soba and our jushii are prepared with pork and pork-bone broth, ' +
-        'so <strong>we have no vegetarian options today</strong>. We sincerely apologize.\n\n' +
-        '• Hours: <strong>11:00 - 15:00</strong>\n' +
-        '• We are closed on Sunday, August 9, as usual\n\n' +
-        'Thank you for your understanding. We look forward to welcoming you.'
+        'Please note that we will be <strong>closed on the following two days</strong>:\n\n' +
+        '• <strong>Friday, August 21</strong> — closed all day\n' +
+        '• <strong>Thursday, August 27</strong> — closed all day\n\n' +
+        'On all other days we are open as usual ' +
+        '(<strong>11:00 - 15:00</strong>, closed on Sundays).\n\n' +
+        'We apologize for any inconvenience, and thank you for your understanding.\n\n' +
+        'We look forward to welcoming you.'
+    },
+    {
+      startAt: '2026-08-21 16:00',
+      endAt:   '2026-08-27 16:00',
+      title: '8月27日（木）は臨時休業とさせていただきます',
+      body:
+        'いつも悠愉樹庵をご利用いただき、誠にありがとうございます。\n\n' +
+        '誠に勝手ながら、店舗の都合により下記のとおり' +
+        '<strong>臨時休業</strong>とさせていただきます。\n\n' +
+        '・<strong>8月27日（木）</strong> 終日休業\n\n' +
+        '上記以外の日は、通常どおり営業いたしております' +
+        '（<strong>11:00〜15:00</strong>／日曜定休）。\n\n' +
+        'お客様にはご不便をおかけいたしますが、' +
+        '何卒ご了承くださいますようお願い申し上げます。\n\n' +
+        'スタッフ一同、またのご来店を心よりお待ちしております。',
+      titleEn: 'Closed on Thursday, August 27',
+      bodyEn:
+        'Thank you very much for your continued patronage of Yuyu-Juan.\n\n' +
+        'Please note that we will be <strong>closed on the following day</strong>:\n\n' +
+        '• <strong>Thursday, August 27</strong> — closed all day\n\n' +
+        'On all other days we are open as usual ' +
+        '(<strong>11:00 - 15:00</strong>, closed on Sundays).\n\n' +
+        'We apologize for any inconvenience, and thank you for your understanding.\n\n' +
+        'We look forward to welcoming you.'
     }
   ]
 
