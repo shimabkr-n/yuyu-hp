@@ -44,32 +44,41 @@ var noticeData = {
   // 空配列 [] にするとモーダルは表示されません
   notices: [
     {
-      endAt: '2026-08-21 16:00',
-      title: '8月21日（金）・8月27日（木）は臨時休業とさせていただきます',
+      endAt: '2026-08-26 16:00',
+      title: '8月26日（水）・8月27日（木）は臨時休業とさせていただきます',
       body:
         'いつも悠愉樹庵をご利用いただき、誠にありがとうございます。\n\n' +
-        '誠に勝手ながら、店舗の都合により下記の2日間を' +
+        '誠に勝手ながら、下記の2日間を' +
         '<strong>臨時休業</strong>とさせていただきます。\n\n' +
-        '・<strong>8月21日（金）</strong> 終日休業\n' +
-        '・<strong>8月27日（木）</strong> 終日休業\n\n' +
-        '上記以外の日は、通常どおり営業いたしております' +
-        '（<strong>11:00〜15:00</strong>／日曜定休）。\n\n' +
+        '・<strong>8月26日（水）</strong> 終日休業' +
+        '（<strong>台風18号の影響</strong>のため）\n' +
+        '・<strong>8月27日（木）</strong> 終日休業（店舗の都合により）\n\n' +
+        '<strong>8月28日（金）</strong>より通常どおり営業を予定しております' +
+        '（<strong>11:00〜15:00</strong>／日曜定休）。\n' +
+        'ただし、台風の状況により変更となる場合がございます。\n' +
+        '最新の営業状況は、公式ホームページおよび Google の店舗情報にて' +
+        'お知らせいたします。\n\n' +
         'お客様にはご不便をおかけいたしますが、' +
         '何卒ご了承くださいますようお願い申し上げます。\n\n' +
         'スタッフ一同、またのご来店を心よりお待ちしております。',
-      titleEn: 'Closed on Friday, August 21 and Thursday, August 27',
+      titleEn: 'Closed on Wednesday, August 26 and Thursday, August 27',
       bodyEn:
         'Thank you very much for your continued patronage of Yuyu-Juan.\n\n' +
         'Please note that we will be <strong>closed on the following two days</strong>:\n\n' +
-        '• <strong>Friday, August 21</strong> — closed all day\n' +
-        '• <strong>Thursday, August 27</strong> — closed all day\n\n' +
-        'On all other days we are open as usual ' +
-        '(<strong>11:00 - 15:00</strong>, closed on Sundays).\n\n' +
+        '• <strong>Wednesday, August 26</strong> — closed all day, ' +
+        'due to <strong>Typhoon No. 18</strong>\n' +
+        '• <strong>Thursday, August 27</strong> — closed all day ' +
+        '(previously scheduled closure)\n\n' +
+        'We plan to reopen as usual on <strong>Friday, August 28</strong> ' +
+        '(<strong>11:00 - 15:00</strong>, closed on Sundays).\n' +
+        'Please note that this may change depending on the typhoon.\n' +
+        'The latest information will be posted on our official website ' +
+        'and our Google listing.\n\n' +
         'We apologize for any inconvenience, and thank you for your understanding.\n\n' +
         'We look forward to welcoming you.'
     },
     {
-      startAt: '2026-08-21 16:00',
+      startAt: '2026-08-26 16:00',
       endAt:   '2026-08-27 16:00',
       title: '8月27日（木）は臨時休業とさせていただきます',
       body:
@@ -77,8 +86,11 @@ var noticeData = {
         '誠に勝手ながら、店舗の都合により下記のとおり' +
         '<strong>臨時休業</strong>とさせていただきます。\n\n' +
         '・<strong>8月27日（木）</strong> 終日休業\n\n' +
-        '上記以外の日は、通常どおり営業いたしております' +
-        '（<strong>11:00〜15:00</strong>／日曜定休）。\n\n' +
+        '<strong>8月28日（金）</strong>より通常どおり営業を予定しております' +
+        '（<strong>11:00〜15:00</strong>／日曜定休）。\n' +
+        'ただし、台風の状況により変更となる場合がございます。\n' +
+        '最新の営業状況は、公式ホームページおよび Google の店舗情報にて' +
+        'お知らせいたします。\n\n' +
         'お客様にはご不便をおかけいたしますが、' +
         '何卒ご了承くださいますようお願い申し上げます。\n\n' +
         'スタッフ一同、またのご来店を心よりお待ちしております。',
@@ -87,8 +99,11 @@ var noticeData = {
         'Thank you very much for your continued patronage of Yuyu-Juan.\n\n' +
         'Please note that we will be <strong>closed on the following day</strong>:\n\n' +
         '• <strong>Thursday, August 27</strong> — closed all day\n\n' +
-        'On all other days we are open as usual ' +
-        '(<strong>11:00 - 15:00</strong>, closed on Sundays).\n\n' +
+        'We plan to reopen as usual on <strong>Friday, August 28</strong> ' +
+        '(<strong>11:00 - 15:00</strong>, closed on Sundays).\n' +
+        'Please note that this may change depending on the typhoon.\n' +
+        'The latest information will be posted on our official website ' +
+        'and our Google listing.\n\n' +
         'We apologize for any inconvenience, and thank you for your understanding.\n\n' +
         'We look forward to welcoming you.'
     }
