@@ -28,7 +28,7 @@ const menuData = [
     {
       name: "悠愉（ゆうゆ）そば",
       nameEn: "Yuyu Soba (House Special)",
-      image: "images/yuyu-soba.jpg",
+      image: "images/menu/yuyu-soba.jpg",
       desc: "厳選された沖縄県産豚肉を丁寧に煮込んだ軟骨ソーキ／三枚肉／かまぼこを贅沢にのせた、当店イチオシの沖縄そばです。\nじっくりと時間をかけて仕上げた透明感のある出汁は、あっさりしながらも深いコクがあり、中城村の風土が育んだ伝統の味をぜひご賞味ください。",
       descEn: "Our signature Okinawa soba topped with soft-bone soki ribs, pork belly, and kamaboko fish cake in a light yet deeply flavorful pork & bonito broth. No MSG.",
       price: "1,200",
@@ -40,7 +40,7 @@ const menuData = [
     {
       name: "軟骨ソーキそば",
       nameEn: "Soft-Bone Soki Soba",
-      image: "images/nankotsu-soba.jpg",
+      image: "images/menu/nankotsu-soba.jpg",
       desc: "沖縄県産の軟骨ソーキをとろけるような柔らかさに煮込んだ絶妙な一杯です。\n自家製出汁と絡み合い、口の中でとろける食感が特徴です。\n余すことなく食べられる程に柔らかく煮込んだ特大ボリュームの軟骨ソーキを乗せた、当店ならではの一杯をぜひご賞味ください。",
       descEn: "Okinawa soba with melt-in-your-mouth soft-bone pork ribs, slowly simmered for hours. Generous portion.",
       price: "1,250",
@@ -62,7 +62,7 @@ const menuData = [
     {
       name: "三枚肉そば",
       nameEn: "Pork Belly Soba",
-      image: "images/sanmai-soba.jpg",
+      image: "images/menu/sanmainiku-soba.jpg",
       desc: "厳選された沖縄県産豚肉を丁寧に煮込んだ三枚肉とかまぼこをのせた王道の沖縄そばです。\nじっくりと時間をかけて仕上げたあっさりしながらも深いコクの出汁と三枚肉の旨味が溶け込んだ一杯をぜひご賞味ください。",
       descEn: "Classic Okinawa soba with simmered pork belly and fish cake in our signature broth.",
       price: "900",
@@ -73,10 +73,10 @@ const menuData = [
     {
       name: "お子様そば",
       nameEn: "Kids' Soba Set",
-      image: "images/okosama-soba.JPG",
-      desc: "小さなお子様も安心して楽しめる、ミニサイズの三枚肉そばとじゅーしーのセットです。\nミニジュースとミニゼリー付きです。\n※ 小学生までご注文可能です。",
-      descEn: "Mini pork belly soba with jushii rice, juice, and jelly. For elementary school children and under.",
-      price: "550",
+      image: "images/menu/okosama-soba.jpg",
+      desc: "沖縄そばにごはん、ミニジュース、ミニゼリーがついたお子様セットです。\n※ 小学生以下のお子様専用メニューです。",
+      descEn: "Okinawa soba with rice, mini juice, and mini jelly. For elementary school children and under.",
+      price: "500",
       category: "soba",
       allergens: ["小麦"],
 
@@ -84,7 +84,7 @@ const menuData = [
     {
       name: "テビチ定食",
       nameEn: "Tebichi Set Meal (Pig's Feet)",
-      image: "images/tebichi-tei.JPG",
+      image: "images/menu/tebichi-tei.jpg",
       desc: "お箸で切れる程トロトロの柔らかさに煮込んだテビチ（豚足）に、大根と昆布、豆腐などを加え、優しい味わいに仕上げました。\nプルプルのテビチと野菜も楽しめるバランスの良いボリューム満点の定食です。",
       descEn: "Braised pig's feet set meal with daikon, kelp, and tofu. Comes with rice and side dishes.",
       price: "1,600",
@@ -95,7 +95,7 @@ const menuData = [
     {
       name: "軟骨ソーキ定食",
       nameEn: "Soft-Bone Soki Set Meal",
-      image: "images/nankotsu-tei.JPG",
+      image: "images/menu/nankotsu-tei.jpg",
       desc: "余すことなく食べられる程に柔らかく煮込んだ特大ボリュームの軟骨ソーキに、大根と昆布、豆腐などを加え、優しい味わいに仕上げました。\nスタミナと滋養を兼ね備えたボリューム満点の定食です。",
       descEn: "Generous soft-bone pork ribs set meal with daikon, kelp, and tofu. Hearty and satisfying.",
       price: "1,600",
@@ -106,7 +106,7 @@ const menuData = [
     {
       name: "イナムドゥチ定食",
       nameEn: "Inamuduchi Set Meal (Miso Pork Soup)",
-      image: "images/inamu-tei.JPG",
+      image: "images/menu/inamu-tei.jpg",
       desc: "「イナムドゥチ」は豚肉／こんにゃく／しいたけ／かまぼこなどを入れて味噌で煮込んだ、沖縄ではお祝いの席によく出される、ちょっと特別な一品です。\n自家製のイナムドゥチは、心と体に染み渡るような優しい味わいが特徴です。\nジューシーと小鉢が付き、沖縄の家庭料理の温かさを感じられるセットです",
       descEn: "Traditional Okinawan celebration soup: pork, konjac, shiitake, and kamaboko (fish cake) simmered in white miso. With jushii rice.",
       price: "1,600",
@@ -117,7 +117,7 @@ const menuData = [
     {
       name: "ゆし豆腐定食",
       nameEn: "Yushi Tofu Set Meal (Soft Tofu)",
-      image: "images/yushi-tei.JPG",
+      image: "images/menu/youshi-tei.jpg",
       desc: "たっぷりのニラと自家製味噌で仕上げた、優しい味わいのゆし豆腐です。\nふわふわとした食感のゆし豆腐は、消化にも優しく、健康的な一品です。\n沖縄のソウルフードであるジューシーと季節の小鉢が付き、バランスの取れた定食です。沖縄県産大豆の旨味が詰まった、心と体に染み渡る味わいです。",
       descEn: "Fluffy soft tofu with chives in homemade miso broth. A light and healthy Okinawan comfort food. With jushii rice.",
       price: "1,000",
@@ -126,20 +126,23 @@ const menuData = [
 
     },
     {
-      name: "へちま定食",
+      // 品切れが終わったら badge と badgeEn の2行を消す（index.html のヘチマ定食の行は , "availability": "https://schema.org/OutOfStock" の部分だけ消す。行ごと消さない）
+      name: "ヘチマ定食",
       nameEn: "Hechima Set Meal (Loofah Gourd)",
-      image: "images/hechima-tei.JPG",
-      desc: "沖縄の島野菜、へちま（なーべーらー）が主役の一品です。\nたっぷりのへちまを自家製味噌でシンプルに優しく丁寧に煮込んだ、沖縄の家庭料理の代表格です。\n落とし玉子で仕上げたまろやかな出汁は最後まで飲み干せる美味しさです。",
+      image: "images/menu/hechima-tei.jpg",
+      desc: "沖縄の島野菜、ヘチマ（なーべーらー）が主役の一品です。\nたっぷりのへちまを自家製味噌でシンプルに優しく丁寧に煮込んだ、沖縄の家庭料理の代表格です。\n落とし玉子で仕上げたまろやかな出汁は最後まで飲み干せる美味しさです。",
       descEn: "Loofah gourd simmered in homemade miso with a poached egg. A classic Okinawan home-style dish.",
       price: "1,200",
       category: "set",
       allergens: ["小麦", "落花生"],
+      badge: "品切れ",
+      badgeEn: "Sold out",
 
     },
     {
       name: "豆腐チャンプルー",
       nameEn: "Tofu Champuru (Stir-Fry)",
-      image: "images/tofu-chan.JPG",
+      image: "images/menu/toufu-chan.jpg",
       desc: "たんぱく質豊富な島豆腐と県産の彩り野菜とともに炒め合わせた沖縄の家庭料理です。\n素材の持ち味を大切に、シンプルながら奥深い味わいに仕上げました。\n島豆腐と旬の彩り野菜が織りなす、心あたたまるひと皿です。",
       descEn: "Island tofu stir-fried with egg, seasonal Okinawan vegetables, and luncheon meat. A protein-rich traditional dish.",
       price: "1,000",
@@ -150,7 +153,7 @@ const menuData = [
     {
       name: "ゴーヤーチャンプルー",
       nameEn: "Goya Champuru (Bitter Melon Stir-Fry)",
-      image: "images/goya-chan.JPG",
+      image: "images/menu/goya-chan.jpg",
       desc: "ゴーヤーは沖縄の夏を象徴する食材です。\nビタミンC豊富なゴーヤーとたんぱく質豊富な島豆腐、ポークの旨みが絶妙に調和した栄養バランス抜群のチャンプルーです。\n食べごたえがありながら体にやさしい、健康志向なひと皿です。",
       descEn: "Okinawa's iconic bitter melon stir-fried with island tofu, egg, and luncheon meat. Rich in vitamin C.",
       price: "1,000",
@@ -161,7 +164,7 @@ const menuData = [
     {
       name: "フーチャンプルー",
       nameEn: "Fu Champuru (Wheat Gluten Stir-Fry)",
-      image: "images/fu-chan.JPG",
+      image: "images/menu/fu-chan.jpg",
       desc: "沖縄県産の車麩を出汁でふっくら戻し、県産の彩り野菜と一緒に炒めた沖縄の家庭料理です。\nやさしい味わいと出汁の香りが広がる、どこかほっとする一品です。",
       descEn: "Okinawan ring-shaped wheat gluten (kuruma-fu) soaked in dashi broth, stir-fried with egg and seasonal vegetables.",
       price: "1,000",
@@ -172,7 +175,7 @@ const menuData = [
     {
       name: "Aセット",
       nameEn: "Side Set A",
-      image: "images/A-set.jpg",
+      image: "images/menu/a-set.jpg",
       desc: "お得な付け合せセットです。\n 白米、じゅーしー、玄米のいずれかと、ジーマミ豆腐（中）／もずく酢をお付けしたセットになります。\n※付け合せセットのみのご注文はできません。",
       descEn: "Rice (white/jushii/brown) + jimami tofu + mozuku seaweed vinegar. Add-on only.",
       price: "300",
@@ -183,7 +186,7 @@ const menuData = [
     {
       name: "Bセット",
       nameEn: "Side Set B",
-      image: "images/B-set.jpg",
+      image: "images/menu/b-set.jpg",
       desc: "お得な付け合せセットです。\n 白米、じゅーしー、玄米のいずれかと、もずく天ぷら／ジーマミ豆腐（中）／もずく酢をお付けしたセットになります。\n※付け合せセットのみのご注文はできません。",
       descEn: "Rice + mozuku tempura + jimami tofu + mozuku seaweed vinegar. Add-on only.",
       price: "400",
@@ -194,7 +197,7 @@ const menuData = [
     {
       name: "Cセット",
       nameEn: "Side Set C",
-      image: "images/C-set.jpg",
+      image: "images/menu/c-set.jpg",
       desc: "お得な付け合せセットです。\n 白米、じゅーしー、玄米のいずれかと、いりちゃー／もずく天ぷら／ジーマミ豆腐（中）／もずく酢をお付けしたセットになります。\n※付け合せセットのみのご注文はできません。",
       descEn: "Rice + iricha braised vegetables + mozuku tempura + jimami tofu + mozuku seaweed vinegar. Add-on only.",
       price: "500",
@@ -227,7 +230,7 @@ const menuData = [
     {
       name: "玄米",
       nameEn: "Brown Rice with Black Beans",
-      image: "images/genmai-tan.JPG",
+      image: "images/menu/genmai-tanpin.jpg",
       desc: "黒豆入り玄米ごはんをふっくら炊き上げました。\n やさしい香りと豊かな風味が、どこか懐かしい味わいを感じさせます。",
       descEn: "Brown rice with black beans. Nutty flavor and rich aroma.",
       price: "250",
@@ -249,7 +252,7 @@ const menuData = [
     {
       name: "テビチ（豚足）",
       nameEn: "Tebichi (Braised Pig's Feet)",
-      image: "images/tebichi-tan.JPG",
+      image: "images/menu/tebichi-tanpin.jpg",
       desc: "ひとつひとつ丁寧に下処理を施したテビチ（豚足）を、数時間かけてじっくり煮込みました。\n見た目よりあっさりしていて、ぷるぷる食感の中にコラーゲンがたっぷり含まれ、美容と健康にも嬉しい一皿です。",
       descEn: "Braised pig's feet simmered for hours. Collagen-rich, lighter than it looks.",
       price: "400",
@@ -263,7 +266,7 @@ const menuData = [
       image: "images/nankotsu-tan.JPG",
       desc: "沖縄県産の軟骨ソーキを丁寧に下処理し、余分な脂を落としてからじっくり煮込みました。\nお箸で持ち上げるのが難しいほど、とろとろに仕上げた当店自慢の一品です。",
       descEn: "Slow-braised soft-bone pork spare ribs. So tender they fall apart with chopsticks.",
-      price: "400",
+      price: "450",
       category: "just",
       allergens: ["小麦"],
 
@@ -274,7 +277,7 @@ const menuData = [
       image: "images/mozuku-tan.JPG",
       desc: "沖縄産の新鮮なもずくに、ポーク／大葉／玉ねぎを合わせてカラっと揚げた天ぷらです。\n創業者こだわりの味を受け継ぐ、悠愉樹庵（ゆうゆじゅあん）の新メニューです。",
       descEn: "Crispy fritters with Okinawan mozuku seaweed, luncheon meat, shiso leaf, and onion.",
-      price: "60",
+      price: "100",
       category: "just",
       allergens: ["小麦", "卵"],
       badge: "NEW",
@@ -373,7 +376,7 @@ const renderMenu = (category = 'all') => {
       container.innerHTML += `
         <div class="bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full md:w-[620px]">
           ${item.badge ? `<div class="badge">${item.badge}</div>` : ''}
-          <img src="${item.image}" alt="${item.name}" class="w-full md:w-[53%] h-auto object-cover cursor-pointer" onclick="openModal('${item.image}')">
+          <img src="${item.image}" alt="${item.name}" class="w-full md:w-[53%] h-auto object-contain cursor-pointer" onclick="openModal('${item.image}')">
           <div class="p-4 flex flex-col justify-between w-auto md:w-[400px]">
             <div>
               <h3 class="text-xl font-bold text-red-700 mb-2">${item.name}</h3>
