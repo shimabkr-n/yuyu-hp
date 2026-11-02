@@ -395,10 +395,10 @@ const renderMenu = (category = 'all') => {
       const formattedDesc = item.desc.replace(/\n/g, '<br>');
 
       container.innerHTML += `
-        <div class="bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full md:w-[620px]">
+        <div class="bg-white shadow rounded-lg overflow-hidden flex flex-col lg:flex-row relative w-full">
           ${item.badge ? `<div class="badge">${item.badge}</div>` : ''}
-          <img src="${item.image}" alt="${item.name}" class="w-full md:w-[53%] h-auto object-contain cursor-pointer" onclick="openModal('${item.image}')">
-          <div class="p-4 flex flex-col justify-between w-auto md:w-[400px]">
+          <img src="${item.image}" alt="${item.name}" class="w-full lg:w-[53%] h-auto object-contain cursor-pointer" onclick="openModal('${item.image}')">
+          <div class="p-4 flex flex-col justify-between flex-1 min-w-0">
             <div>
               <h3 class="text-xl font-bold text-red-700 mb-2">${item.name}</h3>
               <p class="text-sm text-gray-600 mb-2 text-left">${formattedDesc}</p>
