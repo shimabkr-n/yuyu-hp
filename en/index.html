@@ -123,11 +123,21 @@
           },
           {
             "@type": "MenuItem",
-            "name": "Kids' Soba Set",
-            "description": "Mini pork belly soba with jushii rice, juice, and jelly. For elementary school children and under.",
+            "name": "Yushi Tofu Soba (Soft Tofu & Mozuku)",
+            "description": "Okinawa soba with fluffy soft tofu and mineral-rich mozuku seaweed. A light, healthy bowl.",
             "offers": {
               "@type": "Offer",
-              "price": "550",
+              "price": "900",
+              "priceCurrency": "JPY"
+            }
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Kids' Soba Set",
+            "description": "Okinawa soba with rice, mini juice, and mini jelly. For elementary school children and under.",
+            "offers": {
+              "@type": "Offer",
+              "price": "500",
               "priceCurrency": "JPY"
             }
           }
@@ -184,6 +194,16 @@
             "offers": {
               "@type": "Offer",
               "price": "1200",
+              "priceCurrency": "JPY"
+            }
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Boroboro Jushii Set Meal (Rice Porridge)",
+            "description": "Porridge-style mugwort (fuchiba) jushii rice simmered with homemade miso and dashi, with handama and other island greens and a poached egg.",
+            "offers": {
+              "@type": "Offer",
+              "price": "1000",
               "priceCurrency": "JPY"
             }
           }
@@ -321,7 +341,7 @@
             "description": "Slow-braised soft-bone pork spare ribs. So tender they fall apart with chopsticks.",
             "offers": {
               "@type": "Offer",
-              "price": "400",
+              "price": "450",
               "priceCurrency": "JPY"
             }
           },
@@ -331,7 +351,7 @@
             "description": "Crispy fritters with Okinawan mozuku seaweed, luncheon meat, shiso leaf, and onion.",
             "offers": {
               "@type": "Offer",
-              "price": "60",
+              "price": "100",
               "priceCurrency": "JPY"
             }
           },
@@ -503,20 +523,20 @@
     <div id="i18n-menu" class="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full">
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="soba">
         <div class="badge">NEW</div>
-        <img src="/images/yuyu-soba.jpg" alt="Yuyu Soba (House Special)" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/yuyu-soba.jpg">
+        <img src="/images/menu/yuyu-soba.jpg" alt="Yuyu Soba (House Special)" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/menu/yuyu-soba.jpg">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">Yuyu Soba (House Special)</h3>
             <p class="text-xs text-gray-600 mb-2" lang="ja">悠愉（ゆうゆ）そば</p>
             <p class="text-sm text-gray-700 mb-2">Our signature Okinawa soba topped with soft-bone soki ribs, pork belly, and kamaboko fish cake in a light yet deeply flavorful pork &amp; bonito broth. No MSG.</p>
-            <div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-700 text-left"><span class="font-bold mr-1">Contains:</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">Wheat</span></div>
+            <div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-700 text-left"><span class="font-bold mr-1">Contains:</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">Wheat</span><span class="block mt-1 font-bold text-red-800">For other allergens, please ask our staff.</span></div>
           </div>
           <div class="mt-4 text-right font-semibold text-gray-800">&yen;1,200</div>
         </div>
       </article>
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="soba">
         
-        <img src="/images/nankotsu-soba.jpg" alt="Soft-Bone Soki Soba" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/nankotsu-soba.jpg">
+        <img src="/images/menu/nankotsu-soba.jpg" alt="Soft-Bone Soki Soba" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/menu/nankotsu-soba.jpg">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">Soft-Bone Soki Soba</h3>
@@ -529,7 +549,7 @@
       </article>
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="soba">
         
-        <img src="/images/tebichi-soba.jpeg" alt="Tebichi Soba (Pig's Feet)" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/tebichi-soba.jpeg">
+        <img src="/images/tebichi-soba.jpeg" alt="Tebichi Soba (Pig's Feet)" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/tebichi-soba.jpeg">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">Tebichi Soba (Pig's Feet)</h3>
@@ -542,12 +562,25 @@
       </article>
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="soba">
         
-        <img src="/images/sanmai-soba.jpg" alt="Pork Belly Soba" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/sanmai-soba.jpg">
+        <img src="/images/menu/sanmainiku-soba.jpg" alt="Pork Belly Soba" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/menu/sanmainiku-soba.jpg">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">Pork Belly Soba</h3>
             <p class="text-xs text-gray-600 mb-2" lang="ja">三枚肉そば</p>
             <p class="text-sm text-gray-700 mb-2">Classic Okinawa soba with simmered pork belly and fish cake in our signature broth.</p>
+            <div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-700 text-left"><span class="font-bold mr-1">Contains:</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">Wheat</span><span class="block mt-1 font-bold text-red-800">For other allergens, please ask our staff.</span></div>
+          </div>
+          <div class="mt-4 text-right font-semibold text-gray-800">&yen;900</div>
+        </div>
+      </article>
+      <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="soba">
+        <div class="badge">NEW</div>
+        <img src="/images/menu/yushi-soba.jpg" alt="Yushi Tofu Soba (Soft Tofu &amp; Mozuku)" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/menu/yushi-soba.jpg">
+        <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
+          <div>
+            <h3 class="text-xl font-bold text-red-700 mb-1">Yushi Tofu Soba (Soft Tofu &amp; Mozuku)</h3>
+            <p class="text-xs text-gray-600 mb-2" lang="ja">ゆし豆腐そば</p>
+            <p class="text-sm text-gray-700 mb-2">Okinawa soba with fluffy soft tofu and mineral-rich mozuku seaweed. A light, healthy bowl.</p>
             <div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-700 text-left"><span class="font-bold mr-1">Contains:</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">Wheat</span></div>
           </div>
           <div class="mt-4 text-right font-semibold text-gray-800">&yen;900</div>
@@ -555,98 +588,111 @@
       </article>
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="soba">
         
-        <img src="/images/okosama-soba.JPG" alt="Kids' Soba Set" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/okosama-soba.JPG">
+        <img src="/images/menu/okosama-soba.jpg" alt="Kids' Soba Set" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/menu/okosama-soba.jpg">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">Kids' Soba Set</h3>
             <p class="text-xs text-gray-600 mb-2" lang="ja">お子様そば</p>
-            <p class="text-sm text-gray-700 mb-2">Mini pork belly soba with jushii rice, juice, and jelly. For elementary school children and under.</p>
-            <div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-700 text-left"><span class="font-bold mr-1">Contains:</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">Wheat</span></div>
+            <p class="text-sm text-gray-700 mb-2">Okinawa soba with rice, mini juice, and mini jelly. For elementary school children and under.</p>
+            <div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-700 text-left"><span class="font-bold mr-1">Contains:</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">Wheat</span><span class="block mt-1 font-bold text-red-800">For other allergens, please ask our staff.</span></div>
           </div>
-          <div class="mt-4 text-right font-semibold text-gray-800">&yen;550</div>
+          <div class="mt-4 text-right font-semibold text-gray-800">&yen;500</div>
         </div>
       </article>
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="set">
         
-        <img src="/images/tebichi-tei.JPG" alt="Tebichi Set Meal (Pig's Feet)" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/tebichi-tei.JPG">
+        <img src="/images/menu/tebichi-tei.jpg" alt="Tebichi Set Meal (Pig's Feet)" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/menu/tebichi-tei.jpg">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">Tebichi Set Meal (Pig's Feet)</h3>
             <p class="text-xs text-gray-600 mb-2" lang="ja">テビチ定食</p>
             <p class="text-sm text-gray-700 mb-2">Braised pig's feet set meal with daikon, kelp, and tofu. Comes with rice and side dishes.</p>
-            <div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-700 text-left"><span class="font-bold mr-1">Contains:</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">Wheat</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">Peanut</span></div>
+            <div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-700 text-left"><span class="font-bold mr-1">Contains:</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">Wheat</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">Peanut</span><span class="block mt-1 font-bold text-red-800">For other allergens, please ask our staff.</span></div>
           </div>
           <div class="mt-4 text-right font-semibold text-gray-800">&yen;1,600</div>
         </div>
       </article>
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="set">
         
-        <img src="/images/nankotsu-tei.JPG" alt="Soft-Bone Soki Set Meal" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/nankotsu-tei.JPG">
+        <img src="/images/menu/nankotsu-tei.jpg" alt="Soft-Bone Soki Set Meal" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/menu/nankotsu-tei.jpg">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">Soft-Bone Soki Set Meal</h3>
             <p class="text-xs text-gray-600 mb-2" lang="ja">軟骨ソーキ定食</p>
             <p class="text-sm text-gray-700 mb-2">Generous soft-bone pork ribs set meal with daikon, kelp, and tofu. Hearty and satisfying.</p>
-            <div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-700 text-left"><span class="font-bold mr-1">Contains:</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">Wheat</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">Peanut</span></div>
+            <div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-700 text-left"><span class="font-bold mr-1">Contains:</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">Wheat</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">Peanut</span><span class="block mt-1 font-bold text-red-800">For other allergens, please ask our staff.</span></div>
           </div>
           <div class="mt-4 text-right font-semibold text-gray-800">&yen;1,600</div>
         </div>
       </article>
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="set">
         
-        <img src="/images/inamu-tei.JPG" alt="Inamuduchi Set Meal (Miso Pork Soup)" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/inamu-tei.JPG">
+        <img src="/images/menu/inamu-tei.jpg" alt="Inamuduchi Set Meal (Miso Pork Soup)" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/menu/inamu-tei.jpg">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">Inamuduchi Set Meal (Miso Pork Soup)</h3>
             <p class="text-xs text-gray-600 mb-2" lang="ja">イナムドゥチ定食</p>
             <p class="text-sm text-gray-700 mb-2">Traditional Okinawan celebration soup: pork, konjac, shiitake, and kamaboko (fish cake) simmered in white miso. With jushii rice.</p>
-            <div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-700 text-left"><span class="font-bold mr-1">Contains:</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">Wheat</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">Peanut</span></div>
+            <div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-700 text-left"><span class="font-bold mr-1">Contains:</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">Wheat</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">Peanut</span><span class="block mt-1 font-bold text-red-800">For other allergens, please ask our staff.</span></div>
           </div>
           <div class="mt-4 text-right font-semibold text-gray-800">&yen;1,600</div>
         </div>
       </article>
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="set">
         
-        <img src="/images/yushi-tei.JPG" alt="Yushi Tofu Set Meal (Soft Tofu)" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/yushi-tei.JPG">
+        <img src="/images/menu/youshi-tei.jpg" alt="Yushi Tofu Set Meal (Soft Tofu)" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/menu/youshi-tei.jpg">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">Yushi Tofu Set Meal (Soft Tofu)</h3>
             <p class="text-xs text-gray-600 mb-2" lang="ja">ゆし豆腐定食</p>
             <p class="text-sm text-gray-700 mb-2">Fluffy soft tofu with chives in homemade miso broth. A light and healthy Okinawan comfort food. With jushii rice.</p>
-            <div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-700 text-left"><span class="font-bold mr-1">Contains:</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">Wheat</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">Peanut</span></div>
+            <div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-700 text-left"><span class="font-bold mr-1">Contains:</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">Wheat</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">Peanut</span><span class="block mt-1 font-bold text-red-800">For other allergens, please ask our staff.</span></div>
           </div>
           <div class="mt-4 text-right font-semibold text-gray-800">&yen;1,000</div>
         </div>
       </article>
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="set">
         
-        <img src="/images/hechima-tei.JPG" alt="Hechima Set Meal (Loofah Gourd)" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/hechima-tei.JPG">
+        <img src="/images/menu/hechima-tei.jpg" alt="Hechima Set Meal (Loofah Gourd)" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/menu/hechima-tei.jpg">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">Hechima Set Meal (Loofah Gourd)</h3>
-            <p class="text-xs text-gray-600 mb-2" lang="ja">へちま定食</p>
+            <p class="text-xs text-gray-600 mb-2" lang="ja">ヘチマ定食</p>
             <p class="text-sm text-gray-700 mb-2">Loofah gourd simmered in homemade miso with a poached egg. A classic Okinawan home-style dish.</p>
-            <div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-700 text-left"><span class="font-bold mr-1">Contains:</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">Wheat</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">Peanut</span></div>
+            <div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-700 text-left"><span class="font-bold mr-1">Contains:</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">Wheat</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">Egg</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">Peanut</span></div>
           </div>
           <div class="mt-4 text-right font-semibold text-gray-800">&yen;1,200</div>
         </div>
       </article>
-      <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="chanple">
-        
-        <img src="/images/tofu-chan.JPG" alt="Tofu Champuru (Stir-Fry)" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/tofu-chan.JPG">
+      <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="set">
+        <div class="badge">NEW</div>
+        <img src="/images/menu/boroboro-jyushi.jpg" alt="Boroboro Jushii Set Meal (Rice Porridge)" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/menu/boroboro-jyushi.jpg">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
-            <h3 class="text-xl font-bold text-red-700 mb-1">Tofu Champuru (Stir-Fry)</h3>
-            <p class="text-xs text-gray-600 mb-2" lang="ja">豆腐チャンプルー</p>
-            <p class="text-sm text-gray-700 mb-2">Island tofu stir-fried with egg, seasonal Okinawan vegetables, and luncheon meat. A protein-rich traditional dish.</p>
-            <div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-700 text-left"><span class="font-bold mr-1">Contains:</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">Wheat</span></div>
+            <h3 class="text-xl font-bold text-red-700 mb-1">Boroboro Jushii Set Meal (Rice Porridge)</h3>
+            <p class="text-xs text-gray-600 mb-2" lang="ja">ぼろぼろジューシー定食</p>
+            <p class="text-sm text-gray-700 mb-2">Porridge-style mugwort (fuchiba) jushii rice simmered with homemade miso and dashi, with handama and other island greens and a poached egg.</p>
+            <div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-700 text-left"><span class="font-bold mr-1">Contains:</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">Wheat</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">Egg</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">Peanut</span></div>
           </div>
           <div class="mt-4 text-right font-semibold text-gray-800">&yen;1,000</div>
         </div>
       </article>
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="chanple">
         
-        <img src="/images/goya-chan.JPG" alt="Goya Champuru (Bitter Melon Stir-Fry)" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/goya-chan.JPG">
+        <img src="/images/menu/toufu-chan.jpg" alt="Tofu Champuru (Stir-Fry)" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/menu/toufu-chan.jpg">
+        <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
+          <div>
+            <h3 class="text-xl font-bold text-red-700 mb-1">Tofu Champuru (Stir-Fry)</h3>
+            <p class="text-xs text-gray-600 mb-2" lang="ja">豆腐チャンプルー</p>
+            <p class="text-sm text-gray-700 mb-2">Island tofu stir-fried with egg, seasonal Okinawan vegetables, and luncheon meat. A protein-rich traditional dish.</p>
+            <div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-700 text-left"><span class="font-bold mr-1">Contains:</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">Wheat</span><span class="block mt-1 font-bold text-red-800">For other allergens, please ask our staff.</span></div>
+          </div>
+          <div class="mt-4 text-right font-semibold text-gray-800">&yen;1,000</div>
+        </div>
+      </article>
+      <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="chanple">
+        
+        <img src="/images/menu/goya-chan.jpg" alt="Goya Champuru (Bitter Melon Stir-Fry)" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/menu/goya-chan.jpg">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">Goya Champuru (Bitter Melon Stir-Fry)</h3>
@@ -659,7 +705,7 @@
       </article>
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="chanple">
         
-        <img src="/images/fu-chan.JPG" alt="Fu Champuru (Wheat Gluten Stir-Fry)" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/fu-chan.JPG">
+        <img src="/images/menu/fu-chan.jpg" alt="Fu Champuru (Wheat Gluten Stir-Fry)" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/menu/fu-chan.jpg">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">Fu Champuru (Wheat Gluten Stir-Fry)</h3>
@@ -672,7 +718,7 @@
       </article>
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="topping">
         
-        <img src="/images/A-set.jpg" alt="Side Set A" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/A-set.jpg">
+        <img src="/images/menu/a-set.jpg" alt="Side Set A" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/menu/a-set.jpg">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">Side Set A</h3>
@@ -685,33 +731,33 @@
       </article>
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="topping">
         
-        <img src="/images/B-set.jpg" alt="Side Set B" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/B-set.jpg">
+        <img src="/images/menu/b-set.jpg" alt="Side Set B" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/menu/b-set.jpg">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">Side Set B</h3>
             <p class="text-xs text-gray-600 mb-2" lang="ja">Bセット</p>
             <p class="text-sm text-gray-700 mb-2">Rice + mozuku tempura + jimami tofu + mozuku seaweed vinegar. Add-on only.</p>
-            <div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-700 text-left"><span class="font-bold mr-1">Contains:</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">Wheat</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">Peanut</span></div>
+            <div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-700 text-left"><span class="font-bold mr-1">Contains:</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">Wheat</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">Peanut</span><span class="block mt-1 font-bold text-red-800">For other allergens, please ask our staff.</span></div>
           </div>
           <div class="mt-4 text-right font-semibold text-gray-800">&yen;400</div>
         </div>
       </article>
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="topping">
         
-        <img src="/images/C-set.jpg" alt="Side Set C" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/C-set.jpg">
+        <img src="/images/menu/c-set.jpg" alt="Side Set C" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/menu/c-set.jpg">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">Side Set C</h3>
             <p class="text-xs text-gray-600 mb-2" lang="ja">Cセット</p>
             <p class="text-sm text-gray-700 mb-2">Rice + iricha braised vegetables + mozuku tempura + jimami tofu + mozuku seaweed vinegar. Add-on only.</p>
-            <div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-700 text-left"><span class="font-bold mr-1">Contains:</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">Wheat</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">Peanut</span></div>
+            <div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-700 text-left"><span class="font-bold mr-1">Contains:</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">Wheat</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">Peanut</span><span class="block mt-1 font-bold text-red-800">For other allergens, please ask our staff.</span></div>
           </div>
           <div class="mt-4 text-right font-semibold text-gray-800">&yen;500</div>
         </div>
       </article>
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="just">
         
-        <img src="/images/jyushi-tanpin.jpeg" alt="Jushii (Okinawan Mixed Rice)" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/jyushi-tanpin.jpeg">
+        <img src="/images/jyushi-tanpin.jpeg" alt="Jushii (Okinawan Mixed Rice)" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/jyushi-tanpin.jpeg">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">Jushii (Okinawan Mixed Rice)</h3>
@@ -724,7 +770,7 @@
       </article>
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="just">
         
-        <img src="/images/hakumai-tan.png" alt="White Rice" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/hakumai-tan.png">
+        <img src="/images/hakumai-tan.png" alt="White Rice" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/hakumai-tan.png">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">White Rice</h3>
@@ -737,7 +783,7 @@
       </article>
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="just">
         
-        <img src="/images/genmai-tan.JPG" alt="Brown Rice with Black Beans" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/genmai-tan.JPG">
+        <img src="/images/menu/genmai-tanpin.jpg" alt="Brown Rice with Black Beans" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/menu/genmai-tanpin.jpg">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">Brown Rice with Black Beans</h3>
@@ -750,7 +796,7 @@
       </article>
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="just">
         
-        <img src="/images/jimami-tan.png" alt="Jimami Tofu (PEANUT Tofu)" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/jimami-tan.png">
+        <img src="/images/jimami-tan.png" alt="Jimami Tofu (PEANUT Tofu)" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/jimami-tan.png">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">Jimami Tofu (PEANUT Tofu)</h3>
@@ -763,7 +809,7 @@
       </article>
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="just">
         
-        <img src="/images/tebichi-tan.JPG" alt="Tebichi (Braised Pig's Feet)" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/tebichi-tan.JPG">
+        <img src="/images/menu/tebichi-tanpin.jpg" alt="Tebichi (Braised Pig's Feet)" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/menu/tebichi-tanpin.jpg">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">Tebichi (Braised Pig's Feet)</h3>
@@ -776,7 +822,7 @@
       </article>
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="just">
         
-        <img src="/images/nankotsu-tan.JPG" alt="Soft-Bone Soki (Pork Ribs)" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/nankotsu-tan.JPG">
+        <img src="/images/nankotsu-tan.JPG" alt="Soft-Bone Soki (Pork Ribs)" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/nankotsu-tan.JPG">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">Soft-Bone Soki (Pork Ribs)</h3>
@@ -784,12 +830,12 @@
             <p class="text-sm text-gray-700 mb-2">Slow-braised soft-bone pork spare ribs. So tender they fall apart with chopsticks.</p>
             <div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-700 text-left"><span class="font-bold mr-1">Contains:</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">Wheat</span></div>
           </div>
-          <div class="mt-4 text-right font-semibold text-gray-800">&yen;400</div>
+          <div class="mt-4 text-right font-semibold text-gray-800">&yen;450</div>
         </div>
       </article>
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="just">
         <div class="badge">NEW</div>
-        <img src="/images/mozuku-tan.JPG" alt="Mozuku Tempura (Seaweed Fritters)" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/mozuku-tan.JPG">
+        <img src="/images/mozuku-tan.JPG" alt="Mozuku Tempura (Seaweed Fritters)" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/mozuku-tan.JPG">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">Mozuku Tempura (Seaweed Fritters)</h3>
@@ -797,12 +843,12 @@
             <p class="text-sm text-gray-700 mb-2">Crispy fritters with Okinawan mozuku seaweed, luncheon meat, shiso leaf, and onion.</p>
             <div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-700 text-left"><span class="font-bold mr-1">Contains:</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">Wheat</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">Egg</span></div>
           </div>
-          <div class="mt-4 text-right font-semibold text-gray-800">&yen;60</div>
+          <div class="mt-4 text-right font-semibold text-gray-800">&yen;100</div>
         </div>
       </article>
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="just">
         
-        <img src="/images/iricha-tan.JPG" alt="Iricha (Braised Vegetables)" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/iricha-tan.JPG">
+        <img src="/images/iricha-tan.JPG" alt="Iricha (Braised Vegetables)" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/iricha-tan.JPG">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">Iricha (Braised Vegetables)</h3>
@@ -815,7 +861,7 @@
       </article>
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="sweet">
         
-        <img src="/images/cake.png" alt="Homemade Cheesecake" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/cake.png">
+        <img src="/images/cake.png" alt="Homemade Cheesecake" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/cake.png">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">Homemade Cheesecake</h3>
@@ -828,7 +874,7 @@
       </article>
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="sweet">
         
-        <img src="/images/cake-coffee.png" alt="Cake &amp; Drink Set" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/cake-coffee.png">
+        <img src="/images/cake-coffee.png" alt="Cake &amp; Drink Set" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/cake-coffee.png">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">Cake &amp; Drink Set</h3>
@@ -841,7 +887,7 @@
       </article>
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="sweet">
         
-        <img src="/images/hotzenzai.png" alt="Hot Zenzai (Brown Sugar Dessert Soup)" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/hotzenzai.png">
+        <img src="/images/hotzenzai.png" alt="Hot Zenzai (Brown Sugar Dessert Soup)" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/hotzenzai.png">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">Hot Zenzai (Brown Sugar Dessert Soup)</h3>
@@ -854,26 +900,26 @@
       </article>
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="sweet">
         
-        <img src="/images/ice-zenzai2.png" alt="Brown Sugar Shaved Ice Zenzai" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/ice-zenzai2.png">
+        <img src="/images/ice-zenzai2.png" alt="Brown Sugar Shaved Ice Zenzai" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/ice-zenzai2.png">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">Brown Sugar Shaved Ice Zenzai</h3>
             <p class="text-xs text-gray-600 mb-2" lang="ja">黒糖ぜんざい</p>
             <p class="text-sm text-gray-700 mb-2">Shaved ice with brown sugar zenzai. Free matcha topping. Condensed milk +¥50 (contains milk).</p>
-            <div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-600 text-left">Does not contain the 8 mandatory allergens</div>
+            <div class="mt-3 pt-2 border-t border-gray-200 text-xs font-bold text-red-800 text-left">Allergens: please ask our staff.</div>
           </div>
           <div class="mt-4 text-right font-semibold text-gray-800">&yen;500</div>
         </div>
       </article>
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="sweet">
         
-        <img src="/images/ice-ichigo.png" alt="Shaved Ice (Kakigori)" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/ice-ichigo.png">
+        <img src="/images/ice-ichigo.png" alt="Shaved Ice (Kakigori)" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/ice-ichigo.png">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">Shaved Ice (Kakigori)</h3>
             <p class="text-xs text-gray-600 mb-2" lang="ja">かき氷</p>
             <p class="text-sm text-gray-700 mb-2">Shaved ice: strawberry / melon / grape / blue Hawaii / matcha. Condensed milk +¥50 (contains milk).</p>
-            <div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-600 text-left">Does not contain the 8 mandatory allergens</div>
+            <div class="mt-3 pt-2 border-t border-gray-200 text-xs font-bold text-red-800 text-left">Allergens: please ask our staff.</div>
           </div>
           <div class="mt-4 text-right font-semibold text-gray-800">&yen;250</div>
         </div>
@@ -900,7 +946,7 @@
       </div>
       <div>
         <h3 class="font-bold text-lg mb-1">Do you have vegetarian, vegan, halal or gluten-free options?</h3>
-        <p class="leading-relaxed">Vegetarian: limited options (for example, Yushi Tofu and Fu Champuru). Please ask our staff. Vegan and halal: not available, because we use pork and pork-bone broth. Gluten-free: not available, because the noodles are wheat and soy sauce containing wheat is widely used.</p>
+        <p class="leading-relaxed">Vegetarian: our broth uses pork bones, chicken and bonito flakes, so please ask our staff which dishes you can eat. Vegan and halal: not available, because we use pork and pork-bone broth. Gluten-free: not available, because the noodles are wheat and soy sauce containing wheat is widely used.</p>
       </div>
       <div>
         <h3 class="font-bold text-lg mb-1">Is there parking?</h3>

@@ -68,13 +68,18 @@ function allergenLabel(labels, key, allergen) {
 }
 
 function renderAllergens(item, key, t, labels) {
-  if (!item.allergens || item.allergens.length === 0) {
+  const none = !item.allergens || item.allergens.length === 0;
+  if (none && !item.allergensAsk) {
     return `<div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-600 text-left">${esc(t.menu.none)}</div>`;
+  }
+  if (none) {
+    return `<div class="mt-3 pt-2 border-t border-gray-200 text-xs font-bold text-red-800 text-left">${esc(t.menu.askAll)}</div>`;
   }
   const chips = item.allergens
     .map((a) => `<span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">${esc(allergenLabel(labels, key, a))}</span>`)
     .join('');
-  return `<div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-700 text-left"><span class="font-bold mr-1">${esc(t.menu.contains)}</span>${chips}</div>`;
+  const others = item.allergensAsk ? `<span class="block mt-1 font-bold text-red-800">${esc(t.menu.askOthers)}</span>` : '';
+  return `<div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-700 text-left"><span class="font-bold mr-1">${esc(t.menu.contains)}</span>${chips}${others}</div>`;
 }
 
 function renderCard(item, key, t, labels) {
@@ -82,7 +87,7 @@ function renderCard(item, key, t, labels) {
   const src = '/' + item.image;
   return `      <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="${esc(item.category)}">
         ${item.badge ? `<div class="badge">${esc(item.badge)}</div>` : ''}
-        <img src="${esc(src)}" alt="${esc(name)}" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="${esc(src)}">
+        <img src="${esc(src)}" alt="${esc(name)}" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="${esc(src)}">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">${esc(name)}</h3>

@@ -122,11 +122,21 @@
           },
           {
             "@type": "MenuItem",
-            "name": "어린이 소바 세트",
-            "description": "미니 삼겹살 소바, 주시(오키나와식 영양밥), 주스, 젤리. 초등학생 이하만 주문할 수 있습니다.",
+            "name": "유시 두부 소바(순두부와 모즈쿠)",
+            "description": "부드러운 순두부와 미네랄이 풍부한 모즈쿠를 올린 담백하고 건강한 오키나와 소바입니다.",
             "offers": {
               "@type": "Offer",
-              "price": "550",
+              "price": "900",
+              "priceCurrency": "JPY"
+            }
+          },
+          {
+            "@type": "MenuItem",
+            "name": "어린이 소바 세트",
+            "description": "오키나와 소바에 밥, 미니 주스, 미니 젤리가 함께 나오는 어린이 세트입니다. 초등학생 이하 전용 메뉴입니다.",
+            "offers": {
+              "@type": "Offer",
+              "price": "500",
               "priceCurrency": "JPY"
             }
           }
@@ -183,6 +193,16 @@
             "offers": {
               "@type": "Offer",
               "price": "1200",
+              "priceCurrency": "JPY"
+            }
+          },
+          {
+            "@type": "MenuItem",
+            "name": "보로보로 주시 정식(죽)",
+            "description": "직접 만든 미소와 육수로 끓인 쑥(후치바) 주시 죽에 한다마 등 섬 채소와 수란을 곁들였습니다.",
+            "offers": {
+              "@type": "Offer",
+              "price": "1000",
               "priceCurrency": "JPY"
             }
           }
@@ -320,7 +340,7 @@
             "description": "오랫동안 조린 돼지 연골 갈비. 젓가락으로 집으면 풀어질 만큼 부드럽습니다.",
             "offers": {
               "@type": "Offer",
-              "price": "400",
+              "price": "450",
               "priceCurrency": "JPY"
             }
           },
@@ -330,7 +350,7 @@
             "description": "오키나와산 모즈쿠(해조류)에 런천미트, 차조기, 양파를 넣어 바삭하게 튀겼습니다.",
             "offers": {
               "@type": "Offer",
-              "price": "60",
+              "price": "100",
               "priceCurrency": "JPY"
             }
           },
@@ -502,20 +522,20 @@
     <div id="i18n-menu" class="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full">
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="soba">
         <div class="badge">NEW</div>
-        <img src="/images/yuyu-soba.jpg" alt="유유 소바(대표 메뉴)" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/yuyu-soba.jpg">
+        <img src="/images/menu/yuyu-soba.jpg" alt="유유 소바(대표 메뉴)" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/menu/yuyu-soba.jpg">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">유유 소바(대표 메뉴)</h3>
             <p class="text-xs text-gray-600 mb-2" lang="ja">悠愉（ゆうゆ）そば</p>
             <p class="text-sm text-gray-700 mb-2">연골 소키(돼지갈비), 삼겹살, 어묵을 올린 대표 오키나와 소바. 돼지 뼈와 가쓰오부시로 우린 담백하고 깊은 국물이며 MSG를 쓰지 않습니다.</p>
-            <div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-700 text-left"><span class="font-bold mr-1">포함:</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">밀</span></div>
+            <div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-700 text-left"><span class="font-bold mr-1">포함:</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">밀</span><span class="block mt-1 font-bold text-red-800">그 외 알레르기 성분은 직원에게 문의해 주세요.</span></div>
           </div>
           <div class="mt-4 text-right font-semibold text-gray-800">&yen;1,200</div>
         </div>
       </article>
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="soba">
         
-        <img src="/images/nankotsu-soba.jpg" alt="연골 소키 소바" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/nankotsu-soba.jpg">
+        <img src="/images/menu/nankotsu-soba.jpg" alt="연골 소키 소바" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/menu/nankotsu-soba.jpg">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">연골 소키 소바</h3>
@@ -528,7 +548,7 @@
       </article>
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="soba">
         
-        <img src="/images/tebichi-soba.jpeg" alt="테비치 소바(돼지 족발)" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/tebichi-soba.jpeg">
+        <img src="/images/tebichi-soba.jpeg" alt="테비치 소바(돼지 족발)" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/tebichi-soba.jpeg">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">테비치 소바(돼지 족발)</h3>
@@ -541,12 +561,25 @@
       </article>
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="soba">
         
-        <img src="/images/sanmai-soba.jpg" alt="삼겹살 소바" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/sanmai-soba.jpg">
+        <img src="/images/menu/sanmainiku-soba.jpg" alt="삼겹살 소바" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/menu/sanmainiku-soba.jpg">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">삼겹살 소바</h3>
             <p class="text-xs text-gray-600 mb-2" lang="ja">三枚肉そば</p>
             <p class="text-sm text-gray-700 mb-2">푹 끓인 삼겹살과 어묵을 올린 기본 오키나와 소바입니다.</p>
+            <div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-700 text-left"><span class="font-bold mr-1">포함:</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">밀</span><span class="block mt-1 font-bold text-red-800">그 외 알레르기 성분은 직원에게 문의해 주세요.</span></div>
+          </div>
+          <div class="mt-4 text-right font-semibold text-gray-800">&yen;900</div>
+        </div>
+      </article>
+      <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="soba">
+        <div class="badge">NEW</div>
+        <img src="/images/menu/yushi-soba.jpg" alt="유시 두부 소바(순두부와 모즈쿠)" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/menu/yushi-soba.jpg">
+        <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
+          <div>
+            <h3 class="text-xl font-bold text-red-700 mb-1">유시 두부 소바(순두부와 모즈쿠)</h3>
+            <p class="text-xs text-gray-600 mb-2" lang="ja">ゆし豆腐そば</p>
+            <p class="text-sm text-gray-700 mb-2">부드러운 순두부와 미네랄이 풍부한 모즈쿠를 올린 담백하고 건강한 오키나와 소바입니다.</p>
             <div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-700 text-left"><span class="font-bold mr-1">포함:</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">밀</span></div>
           </div>
           <div class="mt-4 text-right font-semibold text-gray-800">&yen;900</div>
@@ -554,98 +587,111 @@
       </article>
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="soba">
         
-        <img src="/images/okosama-soba.JPG" alt="어린이 소바 세트" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/okosama-soba.JPG">
+        <img src="/images/menu/okosama-soba.jpg" alt="어린이 소바 세트" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/menu/okosama-soba.jpg">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">어린이 소바 세트</h3>
             <p class="text-xs text-gray-600 mb-2" lang="ja">お子様そば</p>
-            <p class="text-sm text-gray-700 mb-2">미니 삼겹살 소바, 주시(오키나와식 영양밥), 주스, 젤리. 초등학생 이하만 주문할 수 있습니다.</p>
-            <div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-700 text-left"><span class="font-bold mr-1">포함:</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">밀</span></div>
+            <p class="text-sm text-gray-700 mb-2">오키나와 소바에 밥, 미니 주스, 미니 젤리가 함께 나오는 어린이 세트입니다. 초등학생 이하 전용 메뉴입니다.</p>
+            <div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-700 text-left"><span class="font-bold mr-1">포함:</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">밀</span><span class="block mt-1 font-bold text-red-800">그 외 알레르기 성분은 직원에게 문의해 주세요.</span></div>
           </div>
-          <div class="mt-4 text-right font-semibold text-gray-800">&yen;550</div>
+          <div class="mt-4 text-right font-semibold text-gray-800">&yen;500</div>
         </div>
       </article>
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="set">
         
-        <img src="/images/tebichi-tei.JPG" alt="테비치 정식(돼지 족발)" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/tebichi-tei.JPG">
+        <img src="/images/menu/tebichi-tei.jpg" alt="테비치 정식(돼지 족발)" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/menu/tebichi-tei.jpg">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">테비치 정식(돼지 족발)</h3>
             <p class="text-xs text-gray-600 mb-2" lang="ja">テビチ定食</p>
             <p class="text-sm text-gray-700 mb-2">돼지 족발을 무, 다시마, 두부와 함께 조린 정식. 밥과 반찬이 함께 나옵니다.</p>
-            <div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-700 text-left"><span class="font-bold mr-1">포함:</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">밀</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">땅콩</span></div>
+            <div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-700 text-left"><span class="font-bold mr-1">포함:</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">밀</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">땅콩</span><span class="block mt-1 font-bold text-red-800">그 외 알레르기 성분은 직원에게 문의해 주세요.</span></div>
           </div>
           <div class="mt-4 text-right font-semibold text-gray-800">&yen;1,600</div>
         </div>
       </article>
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="set">
         
-        <img src="/images/nankotsu-tei.JPG" alt="연골 소키 정식" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/nankotsu-tei.JPG">
+        <img src="/images/menu/nankotsu-tei.jpg" alt="연골 소키 정식" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/menu/nankotsu-tei.jpg">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">연골 소키 정식</h3>
             <p class="text-xs text-gray-600 mb-2" lang="ja">軟骨ソーキ定食</p>
             <p class="text-sm text-gray-700 mb-2">넉넉한 돼지 연골 갈비에 무, 다시마, 두부를 곁들인 든든한 정식입니다.</p>
-            <div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-700 text-left"><span class="font-bold mr-1">포함:</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">밀</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">땅콩</span></div>
+            <div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-700 text-left"><span class="font-bold mr-1">포함:</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">밀</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">땅콩</span><span class="block mt-1 font-bold text-red-800">그 외 알레르기 성분은 직원에게 문의해 주세요.</span></div>
           </div>
           <div class="mt-4 text-right font-semibold text-gray-800">&yen;1,600</div>
         </div>
       </article>
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="set">
         
-        <img src="/images/inamu-tei.JPG" alt="이나무두치 정식(돼지고기 미소국)" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/inamu-tei.JPG">
+        <img src="/images/menu/inamu-tei.jpg" alt="이나무두치 정식(돼지고기 미소국)" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/menu/inamu-tei.jpg">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">이나무두치 정식(돼지고기 미소국)</h3>
             <p class="text-xs text-gray-600 mb-2" lang="ja">イナムドゥチ定食</p>
             <p class="text-sm text-gray-700 mb-2">오키나와의 전통 잔치 음식. 돼지고기, 곤약, 표고버섯, 어묵을 흰 미소로 끓였습니다. 주시가 함께 나옵니다.</p>
-            <div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-700 text-left"><span class="font-bold mr-1">포함:</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">밀</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">땅콩</span></div>
+            <div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-700 text-left"><span class="font-bold mr-1">포함:</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">밀</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">땅콩</span><span class="block mt-1 font-bold text-red-800">그 외 알레르기 성분은 직원에게 문의해 주세요.</span></div>
           </div>
           <div class="mt-4 text-right font-semibold text-gray-800">&yen;1,600</div>
         </div>
       </article>
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="set">
         
-        <img src="/images/yushi-tei.JPG" alt="유시 두부 정식(순두부)" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/yushi-tei.JPG">
+        <img src="/images/menu/youshi-tei.jpg" alt="유시 두부 정식(순두부)" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/menu/youshi-tei.jpg">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">유시 두부 정식(순두부)</h3>
             <p class="text-xs text-gray-600 mb-2" lang="ja">ゆし豆腐定食</p>
             <p class="text-sm text-gray-700 mb-2">부드러운 순두부에 부추를 넣어 직접 만든 미소 국물로 끓인 담백한 오키나와 가정식. 주시가 함께 나옵니다.</p>
-            <div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-700 text-left"><span class="font-bold mr-1">포함:</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">밀</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">땅콩</span></div>
+            <div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-700 text-left"><span class="font-bold mr-1">포함:</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">밀</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">땅콩</span><span class="block mt-1 font-bold text-red-800">그 외 알레르기 성분은 직원에게 문의해 주세요.</span></div>
           </div>
           <div class="mt-4 text-right font-semibold text-gray-800">&yen;1,000</div>
         </div>
       </article>
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="set">
         
-        <img src="/images/hechima-tei.JPG" alt="헤치마 정식(수세미)" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/hechima-tei.JPG">
+        <img src="/images/menu/hechima-tei.jpg" alt="헤치마 정식(수세미)" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/menu/hechima-tei.jpg">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">헤치마 정식(수세미)</h3>
-            <p class="text-xs text-gray-600 mb-2" lang="ja">へちま定食</p>
+            <p class="text-xs text-gray-600 mb-2" lang="ja">ヘチマ定食</p>
             <p class="text-sm text-gray-700 mb-2">수세미(헤치마)를 직접 만든 미소로 조리고 수란을 올린 오키나와 가정식입니다.</p>
-            <div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-700 text-left"><span class="font-bold mr-1">포함:</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">밀</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">땅콩</span></div>
+            <div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-700 text-left"><span class="font-bold mr-1">포함:</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">밀</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">달걀</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">땅콩</span></div>
           </div>
           <div class="mt-4 text-right font-semibold text-gray-800">&yen;1,200</div>
         </div>
       </article>
-      <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="chanple">
-        
-        <img src="/images/tofu-chan.JPG" alt="두부 참푸루(볶음)" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/tofu-chan.JPG">
+      <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="set">
+        <div class="badge">NEW</div>
+        <img src="/images/menu/boroboro-jyushi.jpg" alt="보로보로 주시 정식(죽)" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/menu/boroboro-jyushi.jpg">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
-            <h3 class="text-xl font-bold text-red-700 mb-1">두부 참푸루(볶음)</h3>
-            <p class="text-xs text-gray-600 mb-2" lang="ja">豆腐チャンプルー</p>
-            <p class="text-sm text-gray-700 mb-2">시마 두부를 달걀, 제철 오키나와 채소, 런천미트와 함께 볶은 단백질이 풍부한 전통 요리입니다.</p>
-            <div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-700 text-left"><span class="font-bold mr-1">포함:</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">밀</span></div>
+            <h3 class="text-xl font-bold text-red-700 mb-1">보로보로 주시 정식(죽)</h3>
+            <p class="text-xs text-gray-600 mb-2" lang="ja">ぼろぼろジューシー定食</p>
+            <p class="text-sm text-gray-700 mb-2">직접 만든 미소와 육수로 끓인 쑥(후치바) 주시 죽에 한다마 등 섬 채소와 수란을 곁들였습니다.</p>
+            <div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-700 text-left"><span class="font-bold mr-1">포함:</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">밀</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">달걀</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">땅콩</span></div>
           </div>
           <div class="mt-4 text-right font-semibold text-gray-800">&yen;1,000</div>
         </div>
       </article>
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="chanple">
         
-        <img src="/images/goya-chan.JPG" alt="고야 참푸루(여주 볶음)" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/goya-chan.JPG">
+        <img src="/images/menu/toufu-chan.jpg" alt="두부 참푸루(볶음)" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/menu/toufu-chan.jpg">
+        <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
+          <div>
+            <h3 class="text-xl font-bold text-red-700 mb-1">두부 참푸루(볶음)</h3>
+            <p class="text-xs text-gray-600 mb-2" lang="ja">豆腐チャンプルー</p>
+            <p class="text-sm text-gray-700 mb-2">시마 두부를 달걀, 제철 오키나와 채소, 런천미트와 함께 볶은 단백질이 풍부한 전통 요리입니다.</p>
+            <div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-700 text-left"><span class="font-bold mr-1">포함:</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">밀</span><span class="block mt-1 font-bold text-red-800">그 외 알레르기 성분은 직원에게 문의해 주세요.</span></div>
+          </div>
+          <div class="mt-4 text-right font-semibold text-gray-800">&yen;1,000</div>
+        </div>
+      </article>
+      <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="chanple">
+        
+        <img src="/images/menu/goya-chan.jpg" alt="고야 참푸루(여주 볶음)" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/menu/goya-chan.jpg">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">고야 참푸루(여주 볶음)</h3>
@@ -658,7 +704,7 @@
       </article>
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="chanple">
         
-        <img src="/images/fu-chan.JPG" alt="후 참푸루(밀 글루텐 볶음)" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/fu-chan.JPG">
+        <img src="/images/menu/fu-chan.jpg" alt="후 참푸루(밀 글루텐 볶음)" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/menu/fu-chan.jpg">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">후 참푸루(밀 글루텐 볶음)</h3>
@@ -671,7 +717,7 @@
       </article>
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="topping">
         
-        <img src="/images/A-set.jpg" alt="곁들임 세트 A" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/A-set.jpg">
+        <img src="/images/menu/a-set.jpg" alt="곁들임 세트 A" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/menu/a-set.jpg">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">곁들임 세트 A</h3>
@@ -684,33 +730,33 @@
       </article>
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="topping">
         
-        <img src="/images/B-set.jpg" alt="곁들임 세트 B" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/B-set.jpg">
+        <img src="/images/menu/b-set.jpg" alt="곁들임 세트 B" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/menu/b-set.jpg">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">곁들임 세트 B</h3>
             <p class="text-xs text-gray-600 mb-2" lang="ja">Bセット</p>
             <p class="text-sm text-gray-700 mb-2">밥 + 모즈쿠 튀김 + 땅콩 두부 + 모즈쿠 초무침. 추가 주문 전용이며 세트만 주문할 수 없습니다.</p>
-            <div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-700 text-left"><span class="font-bold mr-1">포함:</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">밀</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">땅콩</span></div>
+            <div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-700 text-left"><span class="font-bold mr-1">포함:</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">밀</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">땅콩</span><span class="block mt-1 font-bold text-red-800">그 외 알레르기 성분은 직원에게 문의해 주세요.</span></div>
           </div>
           <div class="mt-4 text-right font-semibold text-gray-800">&yen;400</div>
         </div>
       </article>
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="topping">
         
-        <img src="/images/C-set.jpg" alt="곁들임 세트 C" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/C-set.jpg">
+        <img src="/images/menu/c-set.jpg" alt="곁들임 세트 C" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/menu/c-set.jpg">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">곁들임 세트 C</h3>
             <p class="text-xs text-gray-600 mb-2" lang="ja">Cセット</p>
             <p class="text-sm text-gray-700 mb-2">밥 + 이리차(채소 조림) + 모즈쿠 튀김 + 땅콩 두부 + 모즈쿠 초무침. 추가 주문 전용이며 세트만 주문할 수 없습니다.</p>
-            <div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-700 text-left"><span class="font-bold mr-1">포함:</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">밀</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">땅콩</span></div>
+            <div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-700 text-left"><span class="font-bold mr-1">포함:</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">밀</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">땅콩</span><span class="block mt-1 font-bold text-red-800">그 외 알레르기 성분은 직원에게 문의해 주세요.</span></div>
           </div>
           <div class="mt-4 text-right font-semibold text-gray-800">&yen;500</div>
         </div>
       </article>
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="just">
         
-        <img src="/images/jyushi-tanpin.jpeg" alt="주시(오키나와식 영양밥)" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/jyushi-tanpin.jpeg">
+        <img src="/images/jyushi-tanpin.jpeg" alt="주시(오키나와식 영양밥)" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/jyushi-tanpin.jpeg">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">주시(오키나와식 영양밥)</h3>
@@ -723,7 +769,7 @@
       </article>
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="just">
         
-        <img src="/images/hakumai-tan.png" alt="흰밥" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/hakumai-tan.png">
+        <img src="/images/hakumai-tan.png" alt="흰밥" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/hakumai-tan.png">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">흰밥</h3>
@@ -736,7 +782,7 @@
       </article>
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="just">
         
-        <img src="/images/genmai-tan.JPG" alt="검은콩 현미밥" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/genmai-tan.JPG">
+        <img src="/images/menu/genmai-tanpin.jpg" alt="검은콩 현미밥" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/menu/genmai-tanpin.jpg">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">검은콩 현미밥</h3>
@@ -749,7 +795,7 @@
       </article>
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="just">
         
-        <img src="/images/jimami-tan.png" alt="지마미 두부(땅콩 두부)" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/jimami-tan.png">
+        <img src="/images/jimami-tan.png" alt="지마미 두부(땅콩 두부)" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/jimami-tan.png">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">지마미 두부(땅콩 두부)</h3>
@@ -762,7 +808,7 @@
       </article>
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="just">
         
-        <img src="/images/tebichi-tan.JPG" alt="테비치(돼지 족발 조림)" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/tebichi-tan.JPG">
+        <img src="/images/menu/tebichi-tanpin.jpg" alt="테비치(돼지 족발 조림)" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/menu/tebichi-tanpin.jpg">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">테비치(돼지 족발 조림)</h3>
@@ -775,7 +821,7 @@
       </article>
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="just">
         
-        <img src="/images/nankotsu-tan.JPG" alt="연골 소키(돼지갈비)" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/nankotsu-tan.JPG">
+        <img src="/images/nankotsu-tan.JPG" alt="연골 소키(돼지갈비)" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/nankotsu-tan.JPG">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">연골 소키(돼지갈비)</h3>
@@ -783,12 +829,12 @@
             <p class="text-sm text-gray-700 mb-2">오랫동안 조린 돼지 연골 갈비. 젓가락으로 집으면 풀어질 만큼 부드럽습니다.</p>
             <div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-700 text-left"><span class="font-bold mr-1">포함:</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">밀</span></div>
           </div>
-          <div class="mt-4 text-right font-semibold text-gray-800">&yen;400</div>
+          <div class="mt-4 text-right font-semibold text-gray-800">&yen;450</div>
         </div>
       </article>
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="just">
         <div class="badge">NEW</div>
-        <img src="/images/mozuku-tan.JPG" alt="모즈쿠 튀김" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/mozuku-tan.JPG">
+        <img src="/images/mozuku-tan.JPG" alt="모즈쿠 튀김" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/mozuku-tan.JPG">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">모즈쿠 튀김</h3>
@@ -796,12 +842,12 @@
             <p class="text-sm text-gray-700 mb-2">오키나와산 모즈쿠(해조류)에 런천미트, 차조기, 양파를 넣어 바삭하게 튀겼습니다.</p>
             <div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-700 text-left"><span class="font-bold mr-1">포함:</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">밀</span><span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">달걀</span></div>
           </div>
-          <div class="mt-4 text-right font-semibold text-gray-800">&yen;60</div>
+          <div class="mt-4 text-right font-semibold text-gray-800">&yen;100</div>
         </div>
       </article>
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="just">
         
-        <img src="/images/iricha-tan.JPG" alt="이리차(채소 조림)" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/iricha-tan.JPG">
+        <img src="/images/iricha-tan.JPG" alt="이리차(채소 조림)" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/iricha-tan.JPG">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">이리차(채소 조림)</h3>
@@ -814,7 +860,7 @@
       </article>
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="sweet">
         
-        <img src="/images/cake.png" alt="수제 치즈케이크" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/cake.png">
+        <img src="/images/cake.png" alt="수제 치즈케이크" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/cake.png">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">수제 치즈케이크</h3>
@@ -827,7 +873,7 @@
       </article>
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="sweet">
         
-        <img src="/images/cake-coffee.png" alt="케이크 세트" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/cake-coffee.png">
+        <img src="/images/cake-coffee.png" alt="케이크 세트" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/cake-coffee.png">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">케이크 세트</h3>
@@ -840,7 +886,7 @@
       </article>
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="sweet">
         
-        <img src="/images/hotzenzai.png" alt="핫 젠자이(흑설탕 단콩 디저트)" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/hotzenzai.png">
+        <img src="/images/hotzenzai.png" alt="핫 젠자이(흑설탕 단콩 디저트)" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/hotzenzai.png">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">핫 젠자이(흑설탕 단콩 디저트)</h3>
@@ -853,26 +899,26 @@
       </article>
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="sweet">
         
-        <img src="/images/ice-zenzai2.png" alt="흑설탕 젠자이 빙수" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/ice-zenzai2.png">
+        <img src="/images/ice-zenzai2.png" alt="흑설탕 젠자이 빙수" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/ice-zenzai2.png">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">흑설탕 젠자이 빙수</h3>
             <p class="text-xs text-gray-600 mb-2" lang="ja">黒糖ぜんざい</p>
             <p class="text-sm text-gray-700 mb-2">빙수에 흑설탕 젠자이를 올렸습니다. 말차 토핑은 무료, 연유 추가는 ¥50입니다(연유에는 우유가 들어 있습니다).</p>
-            <div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-600 text-left">위 8가지 특정 원재료 해당 없음</div>
+            <div class="mt-3 pt-2 border-t border-gray-200 text-xs font-bold text-red-800 text-left">알레르기 정보: 직원에게 문의해 주세요.</div>
           </div>
           <div class="mt-4 text-right font-semibold text-gray-800">&yen;500</div>
         </div>
       </article>
       <article class="i18n-card bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full" data-category="sweet">
         
-        <img src="/images/ice-ichigo.png" alt="빙수(가키고리)" class="w-full md:w-1/2 h-auto object-cover cursor-pointer" loading="lazy" data-full="/images/ice-ichigo.png">
+        <img src="/images/ice-ichigo.png" alt="빙수(가키고리)" class="w-full md:w-1/2 h-auto object-contain cursor-pointer" loading="lazy" data-full="/images/ice-ichigo.png">
         <div class="p-4 flex flex-col justify-between md:w-1/2 text-left">
           <div>
             <h3 class="text-xl font-bold text-red-700 mb-1">빙수(가키고리)</h3>
             <p class="text-xs text-gray-600 mb-2" lang="ja">かき氷</p>
             <p class="text-sm text-gray-700 mb-2">딸기 / 멜론 / 포도 / 블루 하와이 / 말차. 연유 추가는 ¥50입니다(연유에는 우유가 들어 있습니다).</p>
-            <div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-600 text-left">위 8가지 특정 원재료 해당 없음</div>
+            <div class="mt-3 pt-2 border-t border-gray-200 text-xs font-bold text-red-800 text-left">알레르기 정보: 직원에게 문의해 주세요.</div>
           </div>
           <div class="mt-4 text-right font-semibold text-gray-800">&yen;250</div>
         </div>
@@ -899,7 +945,7 @@
       </div>
       <div>
         <h3 class="font-bold text-lg mb-1">채식, 비건, 할랄, 글루텐 프리 메뉴가 있나요?</h3>
-        <p class="leading-relaxed">채식: 선택지가 적습니다(예: 유시 두부 정식, 후 참푸루). 직원에게 문의해 주세요. 비건과 할랄: 돼지고기와 돼지 뼈 국물을 사용하므로 제공할 수 없습니다. 글루텐 프리: 면이 밀로 만들어지고 밀이 들어간 간장을 널리 사용하므로 제공할 수 없습니다.</p>
+        <p class="leading-relaxed">채식: 국물에 돼지 뼈, 닭고기, 가쓰오부시를 사용하므로 드실 수 있는 메뉴는 직원에게 문의해 주세요. 비건과 할랄: 돼지고기와 돼지 뼈 국물을 사용하므로 제공할 수 없습니다. 글루텐 프리: 면이 밀로 만들어지고 밀이 들어간 간장을 널리 사용하므로 제공할 수 없습니다.</p>
       </div>
       <div>
         <h3 class="font-bold text-lg mb-1">주차장이 있나요?</h3>
