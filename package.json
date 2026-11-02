@@ -6,7 +6,9 @@
   "scripts": {
     "build:css": "npx tailwindcss -i ./css/input.css -o ./css/style.css --minify",
     "watch:css": "npx tailwindcss -i ./css/input.css -o ./css/style.css --watch",
-    "validate:notice": "node scripts/validate-notice.js"
+    "validate:notice": "node scripts/validate-notice.js",
+    "build:i18n": "node scripts/build-i18n.js",
+    "check:i18n": "node scripts/build-i18n.js --check"
   },
   "repository": {
     "type": "git",

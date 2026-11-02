@@ -44,68 +44,50 @@ var noticeData = {
   // 空配列 [] にするとモーダルは表示されません
   notices: [
     {
-      endAt: '2026-08-26 16:00',
-      title: '8月26日（水）・8月27日（木）は臨時休業とさせていただきます',
+      endAt: '2026-11-09 16:00',
+      title: '11月6日（金）〜9日（月）は臨時休業いたします（中城護佐丸まつりに出店します）',
       body:
         'いつも悠愉樹庵をご利用いただき、誠にありがとうございます。\n\n' +
-        '誠に勝手ながら、下記の2日間を' +
-        '<strong>臨時休業</strong>とさせていただきます。\n\n' +
-        '・<strong>8月26日（水）</strong> 終日休業' +
-        '（<strong>台風18号の影響</strong>のため）\n' +
-        '・<strong>8月27日（木）</strong> 終日休業（店舗の都合により）\n\n' +
-        '<strong>8月28日（金）</strong>より通常どおり営業を予定しております' +
-        '（<strong>11:00〜15:00</strong>／日曜定休）。\n' +
-        'ただし、台風の状況により変更となる場合がございます。\n' +
-        '最新の営業状況は、公式ホームページおよび Google の店舗情報にて' +
-        'お知らせいたします。\n\n' +
+        '悠愉樹庵は、11月7日（土）・8日（日）に開催される' +
+        '「<strong>第15回中城護佐丸まつり</strong>」に出店いたします。\n' +
+        '誠に勝手ながら、11月6日（金）から9日（月）までの4日間、店舗を臨時休業いたします。\n\n' +
+        '・<strong>11月6日（金）</strong> テレビ取材とまつり出店の仕込みのため\n' +
+        '・<strong>11月7日（土）・8日（日）</strong> まつり出店のため\n' +
+        '・<strong>11月9日（月）</strong> 代休\n\n' +
+        '<strong>11月10日（火）</strong>より通常どおり営業いたします' +
+        '（<strong>11:00〜15:00</strong>／日曜定休）。\n\n' +
+        '【中城護佐丸まつりのご案内】\n' +
+        '・日時：11月7日（土）・8日（日） 14:00〜20:00\n' +
+        '・会場：中城村公共駐車場（中城村役場のそば）\n' +
+        '・入場無料\n' +
+        '・来場者用の駐車場はございません。' +
+        '特別運行の循環バス（村内4ルート・13:00からおよそ30分おき）をご利用ください。\n' +
+        '・くわしくは<a href="https://www.vill.nakagusuku.okinawa.jp/kanko/culture/festival/gosamarumatsuri/" ' +
+        'target="_blank" rel="noopener" class="underline">中城村の案内ページ</a>をご覧ください。\n\n' +
         'お客様にはご不便をおかけいたしますが、' +
         '何卒ご了承くださいますようお願い申し上げます。\n\n' +
-        'スタッフ一同、またのご来店を心よりお待ちしております。',
-      titleEn: 'Closed on Wednesday, August 26 and Thursday, August 27',
+        '会場で皆さまにお会いできますことを、スタッフ一同楽しみにしております。',
+      titleEn: 'Closed from Friday, November 6 to Monday, November 9 (We Will Be at the Nakagusuku Gosamaru Festival)',
       bodyEn:
         'Thank you very much for your continued patronage of Yuyu-Juan.\n\n' +
-        'Please note that we will be <strong>closed on the following two days</strong>:\n\n' +
-        '• <strong>Wednesday, August 26</strong> — closed all day, ' +
-        'due to <strong>Typhoon No. 18</strong>\n' +
-        '• <strong>Thursday, August 27</strong> — closed all day ' +
-        '(previously scheduled closure)\n\n' +
-        'We plan to reopen as usual on <strong>Friday, August 28</strong> ' +
-        '(<strong>11:00 - 15:00</strong>, closed on Sundays).\n' +
-        'Please note that this may change depending on the typhoon.\n' +
-        'The latest information will be posted on our official website ' +
-        'and our Google listing.\n\n' +
+        'We will have a booth at the <strong>15th Nakagusuku Gosamaru Festival</strong> ' +
+        'on Saturday, November 7 and Sunday, November 8.\n' +
+        'Our restaurant will be closed for four days, from Friday, November 6 to Monday, November 9:\n\n' +
+        '• <strong>Friday, November 6</strong>: TV filming and food preparation for the festival\n' +
+        '• <strong>Saturday, November 7 and Sunday, November 8</strong>: at the festival\n' +
+        '• <strong>Monday, November 9</strong>: day off for our staff\n\n' +
+        'We will reopen as usual on <strong>Tuesday, November 10</strong> ' +
+        '(<strong>11:00 - 15:00</strong>, closed on Sundays).\n\n' +
+        'About the festival:\n' +
+        '• Date and time: Saturday, November 7 and Sunday, November 8, 14:00 - 20:00\n' +
+        '• Venue: Nakagusuku Village Public Parking Lot (near the Village Office)\n' +
+        '• Admission: free\n' +
+        '• There is no parking for visitors. ' +
+        'Please use the special loop buses (4 routes within the village, about every 30 minutes from 13:00).\n' +
+        '• For details, please see the <a href="https://www.vill.nakagusuku.okinawa.jp/kanko/culture/festival/gosamarumatsuri/" ' +
+        'target="_blank" rel="noopener" class="underline">Nakagusuku Village website</a> (in Japanese).\n\n' +
         'We apologize for any inconvenience, and thank you for your understanding.\n\n' +
-        'We look forward to welcoming you.'
-    },
-    {
-      startAt: '2026-08-26 16:00',
-      endAt:   '2026-08-27 16:00',
-      title: '8月27日（木）は臨時休業とさせていただきます',
-      body:
-        'いつも悠愉樹庵をご利用いただき、誠にありがとうございます。\n\n' +
-        '誠に勝手ながら、店舗の都合により下記のとおり' +
-        '<strong>臨時休業</strong>とさせていただきます。\n\n' +
-        '・<strong>8月27日（木）</strong> 終日休業\n\n' +
-        '<strong>8月28日（金）</strong>より通常どおり営業を予定しております' +
-        '（<strong>11:00〜15:00</strong>／日曜定休）。\n' +
-        'ただし、台風の状況により変更となる場合がございます。\n' +
-        '最新の営業状況は、公式ホームページおよび Google の店舗情報にて' +
-        'お知らせいたします。\n\n' +
-        'お客様にはご不便をおかけいたしますが、' +
-        '何卒ご了承くださいますようお願い申し上げます。\n\n' +
-        'スタッフ一同、またのご来店を心よりお待ちしております。',
-      titleEn: 'Closed on Thursday, August 27',
-      bodyEn:
-        'Thank you very much for your continued patronage of Yuyu-Juan.\n\n' +
-        'Please note that we will be <strong>closed on the following day</strong>:\n\n' +
-        '• <strong>Thursday, August 27</strong> — closed all day\n\n' +
-        'We plan to reopen as usual on <strong>Friday, August 28</strong> ' +
-        '(<strong>11:00 - 15:00</strong>, closed on Sundays).\n' +
-        'Please note that this may change depending on the typhoon.\n' +
-        'The latest information will be posted on our official website ' +
-        'and our Google listing.\n\n' +
-        'We apologize for any inconvenience, and thank you for your understanding.\n\n' +
-        'We look forward to welcoming you.'
+        'We look forward to seeing you at the festival.'
     }
   ]
 

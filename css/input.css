@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* === 固定ヘッダーの下に見出しが隠れないようにする === */
+section[id] {
+  scroll-margin-top: 5.5rem;
+}
+
 /* === Body Background === */
 body {
   font-family: "Sawarabi Mincho", serif;

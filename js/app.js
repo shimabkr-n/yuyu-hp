@@ -107,6 +107,9 @@ function initHeroSlider() {
   if (!heroImages.length) return;
 
   var currentHero = 0;
+  var heroSwitching = false;
+  // css/input.css の #heroSlider img の opacity 1s に合わせる
+  var HERO_FADE_MS = 1000;
 
   heroImages.forEach(function(img, i) {
     img.classList.toggle('opacity-100', i === 0);
@@ -115,13 +118,33 @@ function initHeroSlider() {
   });
 
   window.setInterval(function() {
-    heroImages[currentHero].classList.remove('opacity-100', 'scale-105');
-    heroImages[currentHero].classList.add('opacity-0');
+    if (heroSwitching) return;
 
-    currentHero = (currentHero + 1) % heroImages.length;
+    // 読み込みが済んだ次の写真を探す（読み込み前の写真には切り替えない）
+    var nextIndex = -1;
+    for (var step = 1; step < heroImages.length; step++) {
+      var candidate = (currentHero + step) % heroImages.length;
+      if (heroImages[candidate].complete && heroImages[candidate].naturalWidth > 0) {
+        nextIndex = candidate;
+        break;
+      }
+    }
+    if (nextIndex === -1) return;
 
-    heroImages[currentHero].classList.remove('opacity-0');
-    heroImages[currentHero].classList.add('opacity-100', 'scale-105');
+    var previous = heroImages[currentHero];
+    var next = heroImages[nextIndex];
+    currentHero = nextIndex;
+    heroSwitching = true;
+
+    // 新しい写真が映り切るまで前の写真を消さない（同時に薄くすると裏の壁紙が透ける）
+    next.classList.remove('opacity-0');
+    next.classList.add('opacity-100', 'scale-105');
+
+    window.setTimeout(function() {
+      previous.classList.remove('opacity-100', 'scale-105');
+      previous.classList.add('opacity-0');
+      heroSwitching = false;
+    }, HERO_FADE_MS + 50);
   }, 5000);
 }
 
@@ -210,6 +233,14 @@ function initActionConversionTracking() {
         'event_category': 'contact',
         'event_label': 'phone_tap'
       });
+      gtag('event', 'phone_tap');
+    });
+  });
+
+  // 地図ボタンの計測
+  document.querySelectorAll('a[data-track="map"]').forEach(function(el) {
+    el.addEventListener('click', function() {
+      gtag('event', 'map_open');
     });
   });
 
