@@ -156,7 +156,7 @@ const menuData = [
       descEn: "Porridge-style mugwort (fuchiba) jushii rice simmered with homemade miso and dashi, with handama and other island greens and a poached egg.",
       price: "1,000",
       category: "set",
-      allergens: ["小麦", "卵"],
+      allergens: ["小麦", "卵", "落花生"],
       badge: "NEW",
 
     },
