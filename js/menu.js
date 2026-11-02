@@ -10,22 +10,18 @@ const ALLERGEN_LABELS = {
   "落花生": { en: "Peanut"   },
 };
 
-// pending は店の確認待ちの品。空でも「該当なし」と出さず、お店に尋ねる案内を添える
-function renderAllergenBadges(allergens, lang, pending) {
+function renderAllergenBadges(allergens, lang) {
   const isEn = lang === 'en';
-  if (!pending && (!allergens || allergens.length === 0)) {
+  if (!allergens || allergens.length === 0) {
     const msg = isEn ? 'Does not contain the 8 mandatory allergens' : '特定原材料8品目：該当なし';
     return '<div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-500 text-left">' + msg + '</div>';
   }
   const heading = isEn ? 'Contains:' : '特定原材料8品目：';
-  const chips = (allergens || []).map(function(a) {
+  const chips = allergens.map(function(a) {
     const label = isEn ? ((ALLERGEN_LABELS[a] && ALLERGEN_LABELS[a].en) || a) : a;
     return '<span class="inline-block bg-red-100 text-red-800 px-2 py-0.5 rounded mr-1 mb-1">' + label + '</span>';
   }).join('');
-  const note = pending
-    ? '<p class="mt-2 text-gray-600">' + (isEn ? 'Being confirmed. If you have an allergy, please ask our staff before ordering.' : '※確認中です。アレルギーのある方は、ご注文前にお店へお尋ねください。') + '</p>'
-    : '';
-  return '<div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-700 text-left"><span class="font-bold mr-1">' + heading + '</span>' + chips + note + '</div>';
+  return '<div class="mt-3 pt-2 border-t border-gray-200 text-xs text-gray-700 text-left"><span class="font-bold mr-1">' + heading + '</span>' + chips + '</div>';
 }
 
 const menuData = [
@@ -82,9 +78,7 @@ const menuData = [
       descEn: "Okinawa soba with fluffy soft tofu and mineral-rich mozuku seaweed. A light, healthy bowl.",
       price: "900",
       category: "soba",
-      // お店の確認が済んだら allergens を直し、allergensPending の行を消す
       allergens: ["小麦"],
-      allergensPending: true,
       badge: "NEW",
 
     },
@@ -144,7 +138,6 @@ const menuData = [
 
     },
     {
-      // 品切れが終わったら badge と badgeEn の2行を消す（index.html のヘチマ定食の行は , "availability": "https://schema.org/OutOfStock" の部分だけ消す。行ごと消さない）
       name: "ヘチマ定食",
       nameEn: "Hechima Set Meal (Loofah Gourd)",
       image: "images/menu/hechima-tei.jpg",
@@ -152,9 +145,7 @@ const menuData = [
       descEn: "Loofah gourd simmered in homemade miso with a poached egg. A classic Okinawan home-style dish.",
       price: "1,200",
       category: "set",
-      allergens: ["小麦", "落花生"],
-      badge: "品切れ",
-      badgeEn: "Sold out",
+      allergens: ["小麦", "卵", "落花生"],
 
     },
     {
@@ -165,9 +156,7 @@ const menuData = [
       descEn: "Porridge-style mugwort (fuchiba) jushii rice simmered with homemade miso and dashi, with handama and other island greens and a poached egg.",
       price: "1,000",
       category: "set",
-      // お店の確認が済んだら allergens を直し、allergensPending の行を消す
-      allergens: ["小麦", "卵", "落花生"],
-      allergensPending: true,
+      allergens: ["小麦", "卵"],
       badge: "NEW",
 
     },
@@ -413,7 +402,7 @@ const renderMenu = (category = 'all') => {
             <div>
               <h3 class="text-xl font-bold text-red-700 mb-2">${item.name}</h3>
               <p class="text-sm text-gray-600 mb-2 text-left">${formattedDesc}</p>
-              ${renderAllergenBadges(item.allergens, 'ja', item.allergensPending)}
+              ${renderAllergenBadges(item.allergens, 'ja')}
             </div>
             <!-- [Phase4] BUG-06: toLocaleString() 除去（priceは既にカンマ付き文字列） -->
             <div class="mt-4 text-right font-semibold text-gray-800">${item.price}円（税込）</div>

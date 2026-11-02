@@ -219,14 +219,14 @@
       var descHtml = (item.descEn || '').replace(/\n/g, '<br>');
       container.innerHTML +=
         '<div class="bg-white shadow rounded-lg overflow-hidden flex flex-col md:flex-row relative w-full md:w-[620px]">' +
-          (item.badge ? '<div class="badge">' + (item.badgeEn || item.badge) + '</div>' : '') +
+          (item.badge ? '<div class="badge">' + item.badge + '</div>' : '') +
           '<img src="/' + item.image + '" alt="' + (item.nameEn || item.name) + '" class="w-full md:w-[53%] h-auto object-contain cursor-pointer" loading="lazy" onclick="openEnModal(\'/' + item.image + '\')">' +
           '<div class="p-4 flex flex-col justify-between w-auto md:w-[400px]">' +
             '<div>' +
               '<h3 class="text-xl font-bold text-red-700 mb-1">' + (item.nameEn || item.name) + '</h3>' +
               '<p class="text-xs text-gray-400 mb-2">' + item.name + '</p>' +
               '<p class="text-sm text-gray-600 mb-2 text-left">' + descHtml + '</p>' +
-              renderAllergenBadges(item.allergens, 'en', item.allergensPending) +
+              renderAllergenBadges(item.allergens, 'en') +
             '</div>' +
             '<div class="mt-4 text-right font-semibold text-gray-800">&yen;' + item.price + '</div>' +
           '</div>' +
