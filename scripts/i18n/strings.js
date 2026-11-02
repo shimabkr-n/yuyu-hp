@@ -68,7 +68,7 @@ module.exports = {
     about: {
       heading: 'About Yuyu-Juan',
       paragraphs: [
-        'Yuyu-Juan is a family-run restaurant serving Okinawa soba and traditional local dishes in a traditional Okinawan house surrounded by trees in Nakagusuku Village.',
+        'Yuyu-Juan is a family-run restaurant serving Okinawa soba and local dishes in a traditional Okinawan house surrounded by trees in Nakagusuku Village.',
         'Our broth is made from pork bones, chicken and bonito flakes, with no MSG or artificial seasonings. Our pork belly, pig\'s feet and soft-bone ribs are slowly simmered in a homemade sauce.',
         'The name 悠愉 means taking your time to enjoy a meal and feel at ease. 樹庵 means a place surrounded by trees.',
         'We were featured on TV Asahi\'s "Jinsei no Rakuen" in 2010, and in the Okinawa Times and Ryukyu Shimpo newspapers. We reopened after a renovation on October 1, 2025.',
