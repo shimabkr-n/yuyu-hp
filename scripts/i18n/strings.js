@@ -15,10 +15,10 @@ module.exports = {
     mapLang: 'en',
     fontStack: '"Sawarabi Mincho", serif',
     loadSawarabi: true,
-    title: 'Yuyu-Juan (悠愉樹庵) | Okinawa Soba in a Historic House, Nakagusuku',
-    description: 'Okinawa soba and local dishes in a historic Okinawan house, about 7 minutes by car from Nakagusuku Castle Ruins (World Heritage site). No MSG in our broth. Open 11:00-15:00, closed Sundays, cash only, parking available.',
+    title: 'Yuyu-Juan (悠愉樹庵) | Okinawa Soba in a Traditional House, Nakagusuku',
+    description: 'Okinawa soba and local dishes in a traditional Okinawan house, about 7 minutes by car from Nakagusuku Castle Ruins (World Heritage site). No MSG in our broth. Open 11:00-15:00, closed Sundays, cash only, parking available.',
     ogTitle: 'Yuyu-Juan (悠愉樹庵) | Okinawa Soba in Nakagusuku',
-    ogDescription: 'Okinawa soba in a historic Okinawan house, about 7 minutes by car from Nakagusuku Castle Ruins. No MSG in our broth. Cash only.',
+    ogDescription: 'Okinawa soba in a traditional Okinawan house, about 7 minutes by car from Nakagusuku Castle Ruins. No MSG in our broth. Cash only.',
     brand: 'Yuyu-Juan',
     brandSub: '悠愉樹庵',
     jsonName: 'Yuyu-Juan',
@@ -29,7 +29,7 @@ module.exports = {
     hero: {
       imageAlt: 'Yuyu-Juan entrance - a red-tiled Okinawan house with the sign 悠愉樹庵',
       title: 'Yuyu-Juan',
-      lead: 'Okinawa soba and local dishes in a historic Okinawan house',
+      lead: 'Okinawa soba and local dishes in a traditional Okinawan house',
       sub: 'About 7 minutes by car from Nakagusuku Castle Ruins (World Heritage site)',
     },
     facts: {
@@ -68,7 +68,7 @@ module.exports = {
     about: {
       heading: 'About Yuyu-Juan',
       paragraphs: [
-        'Yuyu-Juan is a family-run restaurant serving Okinawa soba and traditional local dishes in a historic Okinawan house surrounded by trees in Nakagusuku Village.',
+        'Yuyu-Juan is a family-run restaurant serving Okinawa soba and traditional local dishes in a traditional Okinawan house surrounded by trees in Nakagusuku Village.',
         'Our broth is made from pork bones, chicken and bonito flakes, with no MSG or artificial seasonings. Our pork belly, pig\'s feet and soft-bone ribs are slowly simmered in a homemade sauce.',
         'The name 悠愉 means taking your time to enjoy a meal and feel at ease. 樹庵 means a place surrounded by trees.',
         'We were featured on TV Asahi\'s "Jinsei no Rakuen" in 2010, and in the Okinawa Times and Ryukyu Shimpo newspapers. We reopened after a renovation on October 1, 2025.',

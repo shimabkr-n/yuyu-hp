@@ -50,7 +50,7 @@ const menuData = [
       nameEn: "Yuyu Soba (House Special)",
       image: "images/menu/yuyu-soba.jpg",
       desc: "厳選された沖縄県産豚肉を丁寧に煮込んだ軟骨ソーキ／三枚肉／かまぼこを贅沢にのせた、当店イチオシの沖縄そばです。\nじっくりと時間をかけて仕上げた透明感のある出汁は、あっさりしながらも深いコクがあり、中城村の風土が育んだ伝統の味をぜひご賞味ください。",
-      descEn: "Our signature Okinawa soba topped with soft-bone soki ribs, pork belly, and kamaboko fish cake in a light yet deeply flavorful pork & bonito broth. No MSG.",
+      descEn: "Our signature Okinawa soba topped with soft-bone soki ribs, pork belly, and kamaboko fish cake in a light yet deeply flavorful pork, chicken & bonito broth. No MSG.",
       nameZh: "悠愉麵（本店招牌）",
       descZh: "本店招牌沖繩麵，鋪上軟骨排骨（Soki）、三層肉和魚板。以豬骨和柴魚熬製，湯頭清爽而有深度，不使用味精。",
       nameKo: "유유 소바(대표 메뉴)",
@@ -90,6 +90,7 @@ const menuData = [
       price: "1,200",
       category: "soba",
       allergens: ["小麦"],
+      allergensAsk: true,
 
     },
     {
@@ -208,7 +209,7 @@ const menuData = [
       name: "ヘチマ定食",
       nameEn: "Hechima Set Meal (Loofah Gourd)",
       image: "images/menu/hechima-tei.jpg",
-      desc: "沖縄の島野菜、ヘチマ（なーべーらー）が主役の一品です。\nたっぷりのへちまを自家製味噌でシンプルに優しく丁寧に煮込んだ、沖縄の家庭料理の代表格です。\n落とし玉子で仕上げたまろやかな出汁は最後まで飲み干せる美味しさです。",
+      desc: "沖縄の島野菜、ヘチマ（なーべーらー）が主役の一品です。\nたっぷりのヘチマを自家製味噌でシンプルに優しく丁寧に煮込んだ、沖縄の家庭料理の代表格です。\n落とし玉子で仕上げたまろやかな出汁は最後まで飲み干せる美味しさです。",
       descEn: "Loofah gourd simmered in homemade miso with a poached egg. A classic Okinawan home-style dish.",
       nameZh: "絲瓜定食（Hechima）",
       descZh: "絲瓜以自製味噌燉煮，再加上水波蛋的沖繩家常料理。",
@@ -240,11 +241,11 @@ const menuData = [
       nameEn: "Tofu Champuru (Stir-Fry)",
       image: "images/menu/toufu-chan.jpg",
       desc: "たんぱく質豊富な島豆腐と県産の彩り野菜とともに炒め合わせた沖縄の家庭料理です。\n素材の持ち味を大切に、シンプルながら奥深い味わいに仕上げました。\n島豆腐と旬の彩り野菜が織りなす、心あたたまるひと皿です。",
-      descEn: "Island tofu stir-fried with egg, seasonal Okinawan vegetables, and luncheon meat. A protein-rich traditional dish.",
+      descEn: "Island tofu stir-fried with seasonal Okinawan vegetables and luncheon meat. A protein-rich traditional dish.",
       nameZh: "豆腐炒什錦（Champuru）",
-      descZh: "島豆腐與雞蛋、當季沖繩蔬菜、午餐肉同炒的傳統料理，富含蛋白質。",
+      descZh: "島豆腐與當季沖繩蔬菜、午餐肉同炒的傳統料理，富含蛋白質。",
       nameKo: "두부 참푸루(볶음)",
-      descKo: "시마 두부를 달걀, 제철 오키나와 채소, 런천미트와 함께 볶은 단백질이 풍부한 전통 요리입니다.",
+      descKo: "시마 두부를 제철 오키나와 채소, 런천미트와 함께 볶은 단백질이 풍부한 전통 요리입니다.",
       price: "1,000",
       category: "chanple",
       allergens: ["小麦"],
@@ -294,6 +295,7 @@ const menuData = [
       price: "300",
       category: "topping",
       allergens: ["小麦", "落花生"],
+      allergensAsk: true,
 
     },
     {
@@ -317,7 +319,7 @@ const menuData = [
       nameEn: "Side Set C",
       image: "images/menu/c-set.jpg",
       desc: "お得な付け合せセットです。\n 白米、じゅーしー、玄米のいずれかと、いりちゃー／もずく天ぷら／ジーマミ豆腐（中）／もずく酢をお付けしたセットになります。\n※付け合せセットのみのご注文はできません。",
-      descEn: "Rice + iricha braised vegetables + mozuku tempura + jimami tofu + mozuku seaweed vinegar. Add-on only.",
+      descEn: "Rice + iricha (braised vegetables with pork) + mozuku tempura + jimami tofu + mozuku seaweed vinegar. Add-on only.",
       nameZh: "配菜套餐C",
       descZh: "飯＋炒煮蔬菜（Iricha）＋海蘊天婦羅＋花生豆腐＋海蘊醋。僅限加點，不可單獨點用。",
       nameKo: "곁들임 세트 C",
@@ -436,7 +438,7 @@ const menuData = [
     },
     {
       name: "イリチャー",
-      nameEn: "Iricha (Braised Vegetables)",
+      nameEn: "Iricha (Braised Vegetables with Pork)",
       image: "images/iricha-tan.JPG",
       desc: "切り干し大根／昆布／こんにゃく／椎茸／三枚肉をじっくり炒め煮にした沖縄の家庭料理です。\n鰹と豚だしの旨みが染みた、しっとり優しい味わいです。",
       descEn: "Dried daikon, kelp, konjac, shiitake, and pork belly braised in bonito & pork broth.",
@@ -447,6 +449,7 @@ const menuData = [
       price: "400",
       category: "just",
       allergens: ["小麦"],
+      allergensAsk: true,
 
     },
     {
@@ -477,6 +480,7 @@ const menuData = [
       price: "700",
       category: "sweet",
       allergens: ["小麦", "卵", "乳"],
+      allergensAsk: true,
 
     },
     {

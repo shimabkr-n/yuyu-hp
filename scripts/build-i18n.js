@@ -218,7 +218,7 @@ function renderPage(key, t, menu, labels) {
 ${hreflangLinks}
 
   <link rel="preload" as="image" href="/images/exterior1.jpg" fetchpriority="high">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/style.css?v=20261102">
 ${fontLinks}
 
   <script type="application/ld+json">
@@ -387,9 +387,9 @@ ${busItems}
   </div>
 </footer>
 
-<script src="/js/notice.js"></script>
-<script src="/js/notice-modal.js" defer></script>
-<script src="/js/i18n-page.js" defer></script>
+<script src="/js/notice.js?v=20261102"></script>
+<script src="/js/notice-modal.js?v=20261102" defer></script>
+<script src="/js/i18n-page.js?v=20261102" defer></script>
 
 </body>
 </html>
