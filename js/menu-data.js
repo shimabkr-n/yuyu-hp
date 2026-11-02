@@ -333,7 +333,7 @@ const menuData = [
     {
       name: "じゅーしー",
       nameEn: "Jushii (Okinawan Mixed Rice)",
-      image: "images/jyushi-tanpin.jpeg",
+      image: "images/menu/jyushi-tanpin.jpg",
       desc: "国産生姜をたっぷり使ったフーチバー（よもぎ）じゅーしーです。\nよもぎの爽やかな香りと生姜のアクセントが食欲をそそる、沖縄の炊き込みご飯です。\n沖縄そばとの相性も抜群で、セットで召し上がっていただくのがおすすめです。\n単品よりお得な付け合せもございます。（Aセット、Bセット、Cセット）",
       descEn: "Okinawan mixed rice cooked with mugwort (fuchiba) and ginger. Perfect with soba.",
       nameZh: "沖繩什錦飯（Jushii）",
@@ -348,7 +348,7 @@ const menuData = [
     {
       name: "白米",
       nameEn: "White Rice",
-      image: "images/hakumai-tan.png",
+      image: "images/menu/hakumai-tanpin.jpg",
       desc: "国産米をふっくら炊き上げました。\n おかずの味を引き立てるやさしい甘みと香りの白米です。",
       descEn: "Fluffy steamed Japanese white rice.",
       nameZh: "白飯",
