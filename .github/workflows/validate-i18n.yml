@@ -1,0 +1,19 @@
+# js/menu-data.js や strings.js を直したのに、外国語ページを作り直していないときに知らせる
+name: 外国語ページの確認
+
+on:
+  pull_request:
+    paths:
+      - 'js/menu-data.js'
+      - 'scripts/build-i18n.js'
+      - 'scripts/i18n/**'
+      - 'en/**'
+      - 'zh-hant/**'
+      - 'ko/**'
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node scripts/build-i18n.js --check

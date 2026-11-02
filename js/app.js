@@ -210,6 +210,14 @@ function initActionConversionTracking() {
         'event_category': 'contact',
         'event_label': 'phone_tap'
       });
+      gtag('event', 'phone_tap');
+    });
+  });
+
+  // 地図ボタンの計測
+  document.querySelectorAll('a[data-track="map"]').forEach(function(el) {
+    el.addEventListener('click', function() {
+      gtag('event', 'map_open');
     });
   });
 

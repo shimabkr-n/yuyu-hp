@@ -5,7 +5,10 @@
     <loc>https://jyuan.jp/</loc>
     <xhtml:link rel="alternate" hreflang="ja" href="https://jyuan.jp/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://jyuan.jp/en/"/>
-    <lastmod>2026-04-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://jyuan.jp/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://jyuan.jp/ko/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jyuan.jp/en/"/>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -13,7 +16,32 @@
     <loc>https://jyuan.jp/en/</loc>
     <xhtml:link rel="alternate" hreflang="ja" href="https://jyuan.jp/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://jyuan.jp/en/"/>
-    <lastmod>2026-04-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://jyuan.jp/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://jyuan.jp/ko/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jyuan.jp/en/"/>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jyuan.jp/zh-hant/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://jyuan.jp/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jyuan.jp/en/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://jyuan.jp/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://jyuan.jp/ko/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jyuan.jp/en/"/>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jyuan.jp/ko/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://jyuan.jp/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jyuan.jp/en/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://jyuan.jp/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://jyuan.jp/ko/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jyuan.jp/en/"/>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

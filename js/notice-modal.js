@@ -1,5 +1,5 @@
 /* ============================================================
-   notice-modal.js — お知らせモーダル（日本語ページ・英語ページ共通）
+   notice-modal.js — お知らせモーダル（日本語・英語・繁体字・韓国語ページ共通）
    ============================================================
    ・お知らせの中身は js/notice.js に書きます。
      このファイルは仕組み側なので、普段は触りません。
@@ -199,22 +199,26 @@ function initNoticeModal() {
 
   var titleEl = document.getElementById('noticeModalTitle');
   var bodyEl = document.getElementById('noticeModalBody');
-  var isEn = document.documentElement.lang === 'en';
+  var lang = document.documentElement.lang;
+  var isJa = (lang === 'ja');
+  // 言語ごとの項目名の末尾。訳が無いお知らせは英語、英語も無ければ日本語を出す
+  var suffix = (lang === 'zh-Hant') ? 'Zh' : (lang === 'ko') ? 'Ko' : 'En';
+  var labels = { en: 'Notice', 'zh-Hant': '公告', ko: '공지' };
 
   // お知らせ内容を組み立て
   var html = '';
   notices.forEach(function(n) {
     // title や body の書き忘れがあっても、
     // 他のお知らせまで道連れにしないよう空文字で受ける
-    var title = (isEn ? (n.titleEn || n.title) : n.title) || '';
-    var body = ((isEn ? (n.bodyEn || n.body) : n.body) || '').replace(/\n/g, '<br>');
+    var title = (isJa ? n.title : (n['title' + suffix] || n.titleEn || n.title)) || '';
+    var body = ((isJa ? n.body : (n['body' + suffix] || n.bodyEn || n.body)) || '').replace(/\n/g, '<br>');
     html += '<div class="mb-4 last:mb-0">';
     html += '<h3 class="font-bold text-red-700 text-base mb-2">' + title + '</h3>';
     html += '<p class="text-sm text-gray-700 leading-relaxed">' + body + '</p>';
     html += '</div>';
   });
 
-  titleEl.textContent = isEn ? 'Notice' : 'お知らせ';
+  titleEl.textContent = isJa ? 'お知らせ' : (labels[lang] || 'Notice');
   bodyEl.innerHTML = html;
 
   // モーダルを表示
