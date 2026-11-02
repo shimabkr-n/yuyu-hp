@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 /* ============================================================
-   build-i18n.js — 英語・繁体字・韓国語ページを作る
+   build-i18n.js — 外国語ページを作る（今は英語のみ公開。下の ALL_LANGUAGES を参照）
    ============================================================
    使い方:  npm run build:i18n
 
    入力:  scripts/i18n/strings.js（文言） ／ js/menu-data.js（お品書き）
-   出力:  en/index.html ／ zh-hant/index.html ／ ko/index.html
+   出力:  en/index.html（published: true の言語だけ）
 
    出力した HTML を直接直さないでください（次の実行で消えます）。
    ============================================================ */
@@ -25,12 +25,15 @@ const MAPS_URL = 'https://maps.app.goo.gl/viwUGsYm7mVw3dFz6';
 const BUS_URL = 'https://toyo-bus.com/time_table/';
 const JA_ADDRESS = '〒901-2405 沖縄県中城村屋宜824-1';
 
-const LANGUAGES = [
-  { hreflang: 'ja', path: '/', label: '日本語' },
-  { hreflang: 'en', path: '/en/', label: 'English' },
-  { hreflang: 'zh-Hant', path: '/zh-hant/', label: '繁體中文' },
-  { hreflang: 'ko', path: '/ko/', label: '한국어' },
+/* published: false の言語はページを作らず、言語の切り替えにも出しません。
+   繁体字と韓国語は、母語話者の確認が済むまで出しません（このコミットを戻すと全言語に戻ります）。 */
+const ALL_LANGUAGES = [
+  { hreflang: 'ja', path: '/', label: '日本語', published: true },
+  { hreflang: 'en', path: '/en/', label: 'English', published: true },
+  { hreflang: 'zh-Hant', path: '/zh-hant/', label: '繁體中文', published: false },
+  { hreflang: 'ko', path: '/ko/', label: '한국어', published: false },
 ];
+const LANGUAGES = ALL_LANGUAGES.filter((l) => l.published);
 
 /* 表の並び順 */
 const FILTER_ORDER = ['all', 'soba', 'topping', 'chanple', 'set', 'just', 'sweet'];
@@ -416,7 +419,7 @@ function main() {
   const { menu, labels } = loadMenu();
   checkCategories(menu);
   let stale = 0;
-  Object.keys(strings).forEach((key) => {
+  Object.keys(strings).filter((key) => LANGUAGES.some((l) => l.path === strings[key].path)).forEach((key) => {
     const t = strings[key];
     const dir = path.join(ROOT, t.path.replace(/^\//, ''));
     const out = path.join(dir, 'index.html');
