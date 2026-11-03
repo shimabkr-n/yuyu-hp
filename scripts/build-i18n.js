@@ -387,7 +387,7 @@ ${busItems}
   </div>
 </footer>
 
-<script src="/js/notice.js?v=20261102"></script>
+<script src="/js/notice.js?v=20261103"></script>
 <script src="/js/notice-modal.js?v=20261102" defer></script>
 <script src="/js/i18n-page.js?v=20261102" defer></script>
 
