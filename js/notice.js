@@ -51,7 +51,7 @@ var noticeData = {
         '悠愉樹庵は、11月7日（土）・8日（日）に開催される' +
         '「<strong>第15回中城護佐丸まつり</strong>」に出店いたします。\n' +
         '誠に勝手ながら、11月6日（金）から9日（月）までの4日間、店舗を臨時休業いたします。\n\n' +
-        '・<strong>11月6日（金）</strong> テレビ取材とまつり出店の仕込みのため\n' +
+        '・<strong>11月6日（金）</strong> まつり出店の仕込みのため\n' +
         '・<strong>11月7日（土）・8日（日）</strong> まつり出店のため\n' +
         '・<strong>11月9日（月）</strong> 代休\n\n' +
         '<strong>11月10日（火）</strong>より通常どおり営業いたします' +
@@ -73,7 +73,7 @@ var noticeData = {
         'We will have a booth at the <strong>15th Nakagusuku Gosamaru Festival</strong> ' +
         'on Saturday, November 7 and Sunday, November 8.\n' +
         'Our restaurant will be closed for four days, from Friday, November 6 to Monday, November 9:\n\n' +
-        '• <strong>Friday, November 6</strong>: TV filming and food preparation for the festival\n' +
+        '• <strong>Friday, November 6</strong>: food preparation for the festival\n' +
         '• <strong>Saturday, November 7 and Sunday, November 8</strong>: at the festival\n' +
         '• <strong>Monday, November 9</strong>: day off for our staff\n\n' +
         'We will reopen as usual on <strong>Tuesday, November 10</strong> ' +
