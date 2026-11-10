@@ -23,6 +23,8 @@ const PHONE_E164 = '+81988952280';
 const PHONE_INTL = '+81-98-895-2280';
 const MAPS_URL = 'https://maps.app.goo.gl/viwUGsYm7mVw3dFz6';
 const BUS_URL = 'https://toyo-bus.com/time_table/';
+/* 口コミの欄が読む先（Google Apps Script「悠愉樹庵HP 口コミ取り込み」の Web アプリ。日本語ページの index.html と同じ URL） */
+const REVIEWS_SRC = 'https://script.google.com/macros/s/AKfycbwRctMz1RzK9Tm__jUuOoGNCMTuvxL5j9tQGwFfq-jMfB6SU8IjJtqHY23uX0KfvuCE/exec';
 const JA_ADDRESS = '〒901-2405 沖縄県中城村屋宜824-1';
 
 /* published: false の言語はページを作らず、言語の切り替えにも出しません。
@@ -174,6 +176,22 @@ function renderPage(key, t, menu, labels) {
 
   const cards = menu.map((item) => renderCard(item, key, t, labels)).join('\n');
 
+  /* 口コミの欄（文言がある言語だけ。中身は js/reviews.js が読み込み、読めないときはリンクだけ出る） */
+  const reviewsSection = t.reviews ? `
+<section id="reviews" class="bg-gray-100/95 py-12 px-4" data-reviews data-reviews-lang="${esc(key)}"
+  data-reviews-src="${REVIEWS_SRC}">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-4">${esc(t.reviews.heading)}</h2>
+    <p class="text-gray-700 mb-1 hidden" data-reviews-summary></p>
+    <p class="text-sm text-gray-600 mb-6 hidden" data-reviews-note>${esc(t.reviews.note)}</p>
+    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6 hidden" data-reviews-list></ul>
+    <a href="${MAPS_URL}" target="_blank" rel="noopener"
+      class="inline-block bg-gray-700 hover:bg-gray-800 text-white px-6 py-3 rounded">${esc(t.reviews.link)}</a>
+  </div>
+</section>
+` : '';
+  const reviewsScript = t.reviews ? '\n<script src="/js/reviews.js?v=20261110" defer></script>' : '';
+
   const faqItems = t.faq.items
     .map(([q, a]) => `      <div>\n        <h3 class="font-bold text-lg mb-1">${esc(q)}</h3>\n        <p class="leading-relaxed">${esc(a)}</p>\n      </div>`)
     .join('\n');
@@ -218,7 +236,7 @@ function renderPage(key, t, menu, labels) {
 ${hreflangLinks}
 
   <link rel="preload" as="image" href="/images/exterior1.jpg" fetchpriority="high">
-  <link rel="stylesheet" href="/css/style.css?v=20261102">
+  <link rel="stylesheet" href="/css/style.css?v=20261110">
 ${fontLinks}
 
   <script type="application/ld+json">
@@ -288,7 +306,7 @@ ${cards}
     </div>
   </div>
 </section>
-
+${reviewsSection}
 <section id="faq" class="bg-white/95 py-12 px-4">
   <div class="max-w-4xl mx-auto">
     <h2 class="text-3xl font-bold mb-6">${esc(t.faq.heading)}</h2>
@@ -389,7 +407,7 @@ ${busItems}
 
 <script src="/js/notice.js?v=20261103"></script>
 <script src="/js/notice-modal.js?v=20261102" defer></script>
-<script src="/js/i18n-page.js?v=20261102" defer></script>
+<script src="/js/i18n-page.js?v=20261102" defer></script>${reviewsScript}
 
 </body>
 </html>

@@ -54,6 +54,11 @@ module.exports = {
       askOthers: 'For other allergens, please ask our staff.',
       askAll: 'Allergens: please ask our staff.',
     },
+    reviews: {
+      heading: 'Reviews',
+      link: 'See reviews on Google',
+      note: 'A selection of our reviews.',
+    },
     faq: {
       heading: 'Good to know',
       items: [
