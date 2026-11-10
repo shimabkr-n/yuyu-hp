@@ -29,7 +29,7 @@
       date: function (y, m, d) { return y + '年' + m + '月' + d + '日'; }
     },
     en: {
-      summary: function (avg, count) { return 'Google reviews: ' + avg + ' average (' + count + ' reviews)'; },
+      summary: function (avg, count) { return 'Rated ' + avg + ' on Google (' + count + ' reviews)'; },
       starsLabel: function (n) { return n + ' out of 5 stars'; },
       more: 'Read more',
       less: 'Show less',
