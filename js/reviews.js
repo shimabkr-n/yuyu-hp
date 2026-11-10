@@ -15,6 +15,7 @@
 
   var EXPIRE_DAYS = 25;
   var TIMEOUT_MS = 10000;
+  var MAX_TEXT = 5000;   // Google の口コミの上限より長い本文は来ない想定。来たら出さない
 
   var TEXTS = {
     ja: {
@@ -78,7 +79,7 @@
   function isUsable(feed) {
     if (!feed || feed.ok !== true || !feed.fetchedAt) return false;
     var t = new Date(feed.fetchedAt).getTime();
-    if (isNaN(t)) return false;
+    if (isNaN(t) || t > Date.now() + 86400000) return false;   // 読めない・未来の時刻は使わない
     return (Date.now() - t) < EXPIRE_DAYS * 86400000;
   }
 
@@ -102,7 +103,8 @@
     items.slice(0, 5).forEach(function (item) {
       var stars = Number(item && item.stars);
       var body = item && typeof item.text === 'string' ? item.text : '';
-      if (!(stars >= 1 && stars <= 5) || !body) return;
+      if (!(stars >= 1 && stars <= 5) || Math.floor(stars) !== stars) return;
+      if (!body || body.length > MAX_TEXT) return;
       listEl.appendChild(buildCard(stars, body, item.date, tx));
     });
 
