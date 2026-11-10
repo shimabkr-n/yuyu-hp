@@ -57,6 +57,7 @@ module.exports = {
     reviews: {
       heading: 'Reviews',
       link: 'See reviews on Google',
+      note: 'A selection of our reviews.',
     },
     faq: {
       heading: 'Good to know',

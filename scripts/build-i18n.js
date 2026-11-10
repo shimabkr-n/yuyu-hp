@@ -182,7 +182,8 @@ function renderPage(key, t, menu, labels) {
   data-reviews-src="${REVIEWS_SRC}">
   <div class="max-w-4xl mx-auto text-center">
     <h2 class="text-3xl font-bold mb-4">${esc(t.reviews.heading)}</h2>
-    <p class="text-gray-700 mb-6 hidden" data-reviews-summary></p>
+    <p class="text-gray-700 mb-1 hidden" data-reviews-summary></p>
+    <p class="text-sm text-gray-600 mb-6 hidden" data-reviews-note>${esc(t.reviews.note)}</p>
     <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6 hidden" data-reviews-list></ul>
     <a href="${MAPS_URL}" target="_blank" rel="noopener"
       class="inline-block bg-gray-700 hover:bg-gray-800 text-white px-6 py-3 rounded">${esc(t.reviews.link)}</a>

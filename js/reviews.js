@@ -113,6 +113,8 @@
 
     if (listEl.children.length > 0) {
       listEl.classList.remove('hidden');
+      var noteEl = section.querySelector('[data-reviews-note]');
+      if (noteEl) noteEl.classList.remove('hidden');   // 「口コミの一部をご紹介しています」（決定22）は一覧が出たときだけ
       watchMoreButtons(listEl);
     }
   }
