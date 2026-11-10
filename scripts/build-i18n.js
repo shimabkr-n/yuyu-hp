@@ -190,7 +190,7 @@ function renderPage(key, t, menu, labels) {
   </div>
 </section>
 ` : '';
-  const reviewsScript = t.reviews ? '\n<script src="/js/reviews.js?v=20261110b" defer></script>' : '';
+  const reviewsScript = t.reviews ? '\n<script src="/js/reviews.js?v=20261110c" defer></script>' : '';
 
   const faqItems = t.faq.items
     .map(([q, a]) => `      <div>\n        <h3 class="font-bold text-lg mb-1">${esc(q)}</h3>\n        <p class="leading-relaxed">${esc(a)}</p>\n      </div>`)
