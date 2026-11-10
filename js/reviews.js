@@ -106,11 +106,15 @@
     var items = Array.isArray(feed[lang]) ? feed[lang] : [];
     if (!listEl || items.length === 0) return;
 
-    items.slice(0, MAX_ITEMS).forEach(function (item) {
+    var shown = 0;
+    items.forEach(function (item) {   // 形のおかしい項目は飛ばし、出せたものだけを MAX_ITEMS 件まで数える
+      if (shown >= MAX_ITEMS) return;
       if (!item || typeof item.text !== 'string' || item.text.length > MAX_TEXT) return;
-      var stars = Number(item.stars);
-      if (!(stars >= 1 && stars <= 5) || Math.floor(stars) !== stars) return;
+      var stars = item.stars;
+      if (typeof stars !== 'number' || !(stars >= 1 && stars <= 5) || Math.floor(stars) !== stars) return;
+      if (!/\S/.test(item.text) && !formatDate(item.date, tx)) return;   // 本文も日付も無いカードは出さない
       listEl.appendChild(buildCard(stars, item.text, item.date, tx));   // text が空＝星だけの口コミ
+      shown++;
     });
 
     if (listEl.children.length > 0) {
@@ -186,9 +190,11 @@
   }
 
   function formatDate(value, tx) {
-    var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(String(value || ''));
+    var m = typeof value === 'string' ? /^(\d{4})-(\d{2})-(\d{2})$/.exec(value) : null;
     if (!m) return '';
-    return tx.date(Number(m[1]), Number(m[2]), Number(m[3]));
+    var month = Number(m[2]), day = Number(m[3]);
+    if (month < 1 || month > 12 || day < 1 || day > 31) return '';
+    return tx.date(Number(m[1]), month, day);
   }
 
   if (document.readyState === 'loading') {

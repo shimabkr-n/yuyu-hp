@@ -260,7 +260,7 @@ ${jsonLd(key, t, menu)}
     <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm">
       <nav class="hidden md:flex gap-4" aria-label="${esc(t.nav.menu)}">
         <a href="#visit" class="hover:text-red-600">${esc(t.nav.visit)}</a>
-        <a href="#menu" class="hover:text-red-600">${esc(t.nav.menu)}</a>${t.reviews ? `
+        <a href="#menu" class="hover:text-red-600">${esc(t.nav.menu)}</a>${t.reviews && t.nav.reviews ? `
         <a href="#reviews" class="hover:text-red-600">${esc(t.nav.reviews)}</a>` : ''}
         <a href="#access" class="hover:text-red-600">${esc(t.nav.access)}</a>
       </nav>
