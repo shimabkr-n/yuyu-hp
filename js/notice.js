@@ -42,53 +42,6 @@ var noticeData = {
 
   // お知らせ一覧（複数件OK）
   // 空配列 [] にするとモーダルは表示されません
-  notices: [
-    {
-      endAt: '2026-11-09 16:00',
-      title: '11月6日（金）〜9日（月）は臨時休業いたします（中城護佐丸まつりに出店します）',
-      body:
-        'いつも悠愉樹庵をご利用いただき、誠にありがとうございます。\n\n' +
-        '悠愉樹庵は、11月7日（土）・8日（日）に開催される' +
-        '「<strong>第15回中城護佐丸まつり</strong>」に出店いたします。\n' +
-        '誠に勝手ながら、11月6日（金）から9日（月）までの4日間、店舗を臨時休業いたします。\n\n' +
-        '・<strong>11月6日（金）</strong> まつり出店の仕込みのため\n' +
-        '・<strong>11月7日（土）・8日（日）</strong> まつり出店のため\n' +
-        '・<strong>11月9日（月）</strong> 代休\n\n' +
-        '<strong>11月10日（火）</strong>より通常どおり営業いたします' +
-        '（<strong>11:00〜15:00</strong>／日曜定休）。\n\n' +
-        '【中城護佐丸まつりのご案内】\n' +
-        '・日時：11月7日（土）・8日（日） 14:00〜20:00\n' +
-        '・会場：中城村公共駐車場（中城村役場のそば）\n' +
-        '・入場無料\n' +
-        '・来場者用の駐車場はございません。' +
-        '特別運行の循環バス（村内4ルート・13:00からおよそ30分おき）をご利用ください。\n' +
-        '・くわしくは<a href="https://www.vill.nakagusuku.okinawa.jp/kanko/culture/festival/gosamarumatsuri/" ' +
-        'target="_blank" rel="noopener" class="underline">中城村の案内ページ</a>をご覧ください。\n\n' +
-        'お客様にはご不便をおかけいたしますが、' +
-        '何卒ご了承くださいますようお願い申し上げます。\n\n' +
-        '会場で皆さまにお会いできますことを、スタッフ一同楽しみにしております。',
-      titleEn: 'Closed from Friday, November 6 to Monday, November 9 (We Will Be at the Nakagusuku Gosamaru Festival)',
-      bodyEn:
-        'Thank you very much for your continued patronage of Yuyu-Juan.\n\n' +
-        'We will have a booth at the <strong>15th Nakagusuku Gosamaru Festival</strong> ' +
-        'on Saturday, November 7 and Sunday, November 8.\n' +
-        'Our restaurant will be closed for four days, from Friday, November 6 to Monday, November 9:\n\n' +
-        '• <strong>Friday, November 6</strong>: food preparation for the festival\n' +
-        '• <strong>Saturday, November 7 and Sunday, November 8</strong>: at the festival\n' +
-        '• <strong>Monday, November 9</strong>: day off for our staff\n\n' +
-        'We will reopen as usual on <strong>Tuesday, November 10</strong> ' +
-        '(<strong>11:00 - 15:00</strong>, closed on Sundays).\n\n' +
-        'About the festival:\n' +
-        '• Date and time: Saturday, November 7 and Sunday, November 8, 14:00 - 20:00\n' +
-        '• Venue: Nakagusuku Village Public Parking Lot (near the Village Office)\n' +
-        '• Admission: free\n' +
-        '• There is no parking for visitors. ' +
-        'Please use the special loop buses (4 routes within the village, about every 30 minutes from 13:00).\n' +
-        '• For details, please see the <a href="https://www.vill.nakagusuku.okinawa.jp/kanko/culture/festival/gosamarumatsuri/" ' +
-        'target="_blank" rel="noopener" class="underline">Nakagusuku Village website</a> (in Japanese).\n\n' +
-        'We apologize for any inconvenience, and thank you for your understanding.\n\n' +
-        'We look forward to seeing you at the festival.'
-    }
-  ]
+  notices: []
 
 };
