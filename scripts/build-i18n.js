@@ -235,7 +235,7 @@ function renderPage(key, t, menu, labels) {
 ${hreflangLinks}
 
   <link rel="preload" as="image" href="/images/exterior1.jpg" fetchpriority="high">
-  <link rel="stylesheet" href="/css/style.css?v=20261102">
+  <link rel="stylesheet" href="/css/style.css?v=20261110">
 ${fontLinks}
 
   <script type="application/ld+json">

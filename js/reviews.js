@@ -7,15 +7,18 @@
    ・欄が画面に近づいてから読む（地図の遅延読み込みと同じ考え方）。
    ・読めない・25日より古い・中身が空のときは、平均と一覧を出さず、
      「Google で口コミを見る」のリンクだけを残す（HTML に最初から書いてある）。
+   ・文言が無い言語（data-reviews-lang が ja / en 以外）は、リンクだけを残す。
    ・文字はすべて textContent で入れる（HTML として解釈しない）。
    ・Tailwind のクラス名と同じ変数名を使わない（使うと本番の CSS に混ざる）。
    ============================================================ */
 (function () {
   'use strict';
 
-  var EXPIRE_DAYS = 25;
+  var EXPIRE_DAYS = 25;          // GAS 側（設定.js の EXPIRE_DAYS）と同じ値
+  var FUTURE_SLACK_MS = 3600000; // 未来の取得時刻は1時間まで許す（GAS 側と同じ）
   var TIMEOUT_MS = 10000;
-  var MAX_TEXT = 5000;   // Google の口コミの上限より長い本文は来ない想定。来たら出さない
+  var MAX_TEXT = 5000;           // Google の口コミの上限より長い本文は来ない想定。来たら出さない
+  var CLAMP = 'line-clamp-5';
 
   var TEXTS = {
     ja: {
@@ -41,8 +44,8 @@
     var section = document.querySelector('[data-reviews]');
     if (!section) return;
     var src = section.getAttribute('data-reviews-src');
-    var lang = section.getAttribute('data-reviews-lang') === 'en' ? 'en' : 'ja';
-    if (!src) return;
+    var lang = section.getAttribute('data-reviews-lang');
+    if (!src || !TEXTS.hasOwnProperty(lang)) return;
 
     var started = false;
     function start() {
@@ -79,7 +82,7 @@
   function isUsable(feed) {
     if (!feed || feed.ok !== true || !feed.fetchedAt) return false;
     var t = new Date(feed.fetchedAt).getTime();
-    if (isNaN(t) || t > Date.now() + 86400000) return false;   // 読めない・未来の時刻は使わない
+    if (isNaN(t) || t > Date.now() + FUTURE_SLACK_MS) return false;   // 読めない・未来の時刻は使わない
     return (Date.now() - t) < EXPIRE_DAYS * 86400000;
   }
 
@@ -110,7 +113,7 @@
 
     if (listEl.children.length > 0) {
       listEl.classList.remove('hidden');
-      Array.prototype.forEach.call(listEl.querySelectorAll('[data-review-text]'), addMoreButton);
+      watchMoreButtons(listEl);
     }
   }
 
@@ -126,10 +129,24 @@
     li.appendChild(starEl);
 
     var textEl = document.createElement('p');
-    textEl.className = 'text-gray-800 leading-relaxed whitespace-pre-line break-words line-clamp-5';
-    textEl.setAttribute('data-review-text', '');
+    textEl.className = 'text-gray-800 leading-relaxed whitespace-pre-line break-words ' + CLAMP;
     textEl.textContent = body;
     li.appendChild(textEl);
+
+    /* 「続きを読む」は全部のカードに作っておき、5行で切れているときだけ見せる */
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'text-sm text-blue-700 underline mt-1 hidden';
+    btn.setAttribute('aria-expanded', 'false');
+    btn.setAttribute('data-review-more', '');
+    btn.textContent = tx.more;
+    btn.addEventListener('click', function () {
+      var opened = btn.getAttribute('aria-expanded') === 'true';
+      textEl.classList.toggle(CLAMP, opened);
+      btn.setAttribute('aria-expanded', String(!opened));
+      btn.textContent = opened ? tx.more : tx.less;
+    });
+    li.appendChild(btn);
 
     var dateText = formatDate(date, tx);
     if (dateText) {
@@ -138,28 +155,28 @@
       dateEl.textContent = dateText;
       li.appendChild(dateEl);
     }
-
-    li.setAttribute('data-more-label', tx.more);
-    li.setAttribute('data-less-label', tx.less);
     return li;
   }
 
-  /* 5行で切れている本文にだけ「続きを読む」を付ける */
-  function addMoreButton(textEl) {
-    if (textEl.scrollHeight <= textEl.clientHeight + 1) return;
-    var card = textEl.parentNode;
-    var btn = document.createElement('button');
-    btn.type = 'button';
-    btn.className = 'text-sm text-blue-700 underline mt-1';
-    btn.setAttribute('aria-expanded', 'false');
-    btn.textContent = card.getAttribute('data-more-label');
-    btn.addEventListener('click', function () {
-      var opened = btn.getAttribute('aria-expanded') === 'true';
-      textEl.classList.toggle('line-clamp-5', opened);
-      btn.setAttribute('aria-expanded', String(!opened));
-      btn.textContent = card.getAttribute(opened ? 'data-more-label' : 'data-less-label');
-    });
-    textEl.parentNode.insertBefore(btn, textEl.nextSibling);
+  /* 切れているかを、描いた直後・字体の読み込み後・画面の幅が変わったときに測り直す */
+  function watchMoreButtons(listEl) {
+    function measure() {
+      Array.prototype.forEach.call(listEl.querySelectorAll('[data-review-more]'), function (btn) {
+        if (btn.getAttribute('aria-expanded') === 'true') return;   // 開いている間はそのまま
+        var textEl = btn.previousSibling;
+        var cut = textEl.scrollHeight > textEl.clientHeight + 1;
+        btn.classList.toggle('hidden', !cut);
+      });
+    }
+    measure();
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(measure);
+    if ('ResizeObserver' in window) {
+      var waiting = null;
+      new ResizeObserver(function () {
+        if (waiting) clearTimeout(waiting);
+        waiting = setTimeout(measure, 200);
+      }).observe(listEl);
+    }
   }
 
   function formatDate(value, tx) {
