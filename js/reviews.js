@@ -8,6 +8,8 @@
    ・読めない・25日より古い・中身が空のときは、平均と一覧を出さず、
      「Google で口コミを見る」のリンクだけを残す（HTML に最初から書いてある）。
    ・文言が無い言語（data-reviews-lang が ja / en 以外）は、リンクだけを残す。
+   ・並べるのは6件まで。本文の無い（星だけの）口コミは、星と日付だけのカードにする
+     （日本語ページは星だけの口コミも含める＝2026-11-10 本人決定23。選ぶのは GAS 側）。
    ・文字はすべて textContent で入れる（HTML として解釈しない）。
    ・Tailwind のクラス名と同じ変数名を使わない（使うと本番の CSS に混ざる）。
    ============================================================ */
@@ -17,6 +19,7 @@
   var EXPIRE_DAYS = 25;          // GAS 側（設定.js の EXPIRE_DAYS）と同じ値
   var FUTURE_SLACK_MS = 3600000; // 未来の取得時刻は1時間まで許す（GAS 側と同じ）
   var TIMEOUT_MS = 10000;
+  var MAX_ITEMS = 6;             // GAS 側（設定.js の MAX_ITEMS）と同じ値
   var MAX_TEXT = 5000;           // Google の口コミの上限より長い本文は来ない想定。来たら出さない
   var CLAMP = 'line-clamp-5';
 
@@ -103,12 +106,11 @@
     var items = Array.isArray(feed[lang]) ? feed[lang] : [];
     if (!listEl || items.length === 0) return;
 
-    items.slice(0, 5).forEach(function (item) {
-      var stars = Number(item && item.stars);
-      var body = item && typeof item.text === 'string' ? item.text : '';
+    items.slice(0, MAX_ITEMS).forEach(function (item) {
+      if (!item || typeof item.text !== 'string' || item.text.length > MAX_TEXT) return;
+      var stars = Number(item.stars);
       if (!(stars >= 1 && stars <= 5) || Math.floor(stars) !== stars) return;
-      if (!body || body.length > MAX_TEXT) return;
-      listEl.appendChild(buildCard(stars, body, item.date, tx));
+      listEl.appendChild(buildCard(stars, item.text, item.date, tx));   // text が空＝星だけの口コミ
     });
 
     if (listEl.children.length > 0) {
@@ -130,25 +132,27 @@
     starEl.textContent = '★★★★★'.slice(0, stars) + '☆☆☆☆☆'.slice(0, 5 - stars);
     li.appendChild(starEl);
 
-    var textEl = document.createElement('p');
-    textEl.className = 'text-gray-800 leading-relaxed whitespace-pre-line break-words ' + CLAMP;
-    textEl.textContent = body;
-    li.appendChild(textEl);
+    if (/\S/.test(body)) {   // 本文の無い（星だけの）口コミは、星と日付だけ
+      var textEl = document.createElement('p');
+      textEl.className = 'text-gray-800 leading-relaxed whitespace-pre-line break-words ' + CLAMP;
+      textEl.textContent = body;
+      li.appendChild(textEl);
 
-    /* 「続きを読む」は全部のカードに作っておき、5行で切れているときだけ見せる */
-    var btn = document.createElement('button');
-    btn.type = 'button';
-    btn.className = 'text-sm text-blue-700 underline mt-1 hidden';
-    btn.setAttribute('aria-expanded', 'false');
-    btn.setAttribute('data-review-more', '');
-    btn.textContent = tx.more;
-    btn.addEventListener('click', function () {
-      var opened = btn.getAttribute('aria-expanded') === 'true';
-      textEl.classList.toggle(CLAMP, opened);
-      btn.setAttribute('aria-expanded', String(!opened));
-      btn.textContent = opened ? tx.more : tx.less;
-    });
-    li.appendChild(btn);
+      /* 「続きを読む」は本文のあるカードに作っておき、5行で切れているときだけ見せる */
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'text-sm text-blue-700 underline mt-1 hidden';
+      btn.setAttribute('aria-expanded', 'false');
+      btn.setAttribute('data-review-more', '');
+      btn.textContent = tx.more;
+      btn.addEventListener('click', function () {
+        var opened = btn.getAttribute('aria-expanded') === 'true';
+        textEl.classList.toggle(CLAMP, opened);
+        btn.setAttribute('aria-expanded', String(!opened));
+        btn.textContent = opened ? tx.more : tx.less;
+      });
+      li.appendChild(btn);
+    }
 
     var dateText = formatDate(date, tx);
     if (dateText) {

@@ -34,7 +34,7 @@
   <link rel="preload" as="image" href="images/exterior1.jpg" fetchpriority="high">
 
   <!-- TailwindCSS (ビルド版) -->
-  <link rel="stylesheet" href="/css/style.css?v=20261110">
+  <link rel="stylesheet" href="/css/style.css?v=20261110b">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -169,8 +169,9 @@
         aria-expanded="false">
         &#9776;
     </button>
-    <nav id="main-nav" class="hidden md:flex space-x-4 text-sm items-center">
+    <nav id="main-nav" class="hidden md:flex space-x-2.5 xl:space-x-4 text-sm items-center">
       <a href="#menu" class="hover:text-red-600">お品書き</a>
+      <a href="#reviews" class="hover:text-red-600">お客様の声</a>
       <a href="#concept" class="hover:text-red-600">こだわり</a>
       <a href="#info" class="hover:text-red-600">店舗案内</a>
       <a href="#access" class="hover:text-red-600">アクセス</a>
@@ -186,6 +187,7 @@
   </nav>
   <div id="navMobile" class="md:hidden hidden px-4 pb-4">
     <a href="#menu" class="block py-2 border-b" onclick="closeMobileMenu()">お品書き</a>
+    <a href="#reviews" class="block py-2 border-b" onclick="closeMobileMenu()">お客様の声</a>
     <a href="#concept" class="block py-2 border-b" onclick="closeMobileMenu()">こだわり</a>
     <a href="#info" class="block py-2 border-b" onclick="closeMobileMenu()">店舗案内</a>
     <a href="#access" class="block py-2 border-b" onclick="closeMobileMenu()">アクセス</a>
@@ -428,7 +430,7 @@
 <script src="/js/menu-data.js?v=20261102b" defer></script>
 <script src="/js/menu.js?v=20261102" defer></script>
 <script src="/js/app.js?v=20261102" defer></script>
-<script src="/js/reviews.js?v=20261110" defer></script>
+<script src="/js/reviews.js?v=20261110b" defer></script>
 
 <!-- Mobile CTA Bar -->
 <div class="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-white border-t shadow-lg">

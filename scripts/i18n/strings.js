@@ -25,7 +25,7 @@ module.exports = {
     jsonAddress: { addressRegion: 'Okinawa', addressLocality: 'Nakagusuku Village', streetAddress: '824-1 Yagi' },
     jsonCuisine: ['Okinawa Soba', 'Okinawan Cuisine'],
     jsonSections: { soba: 'Okinawa Soba', set: 'Set Meals', chanple: 'Champuru', topping: 'Side Sets', just: 'A La Carte', sweet: 'Desserts' },
-    nav: { menu: 'Menu', visit: 'Before you visit', access: 'Access', languageLabel: 'Language' },
+    nav: { menu: 'Menu', visit: 'Before you visit', reviews: 'Reviews', access: 'Access', languageLabel: 'Language' },
     hero: {
       imageAlt: 'Yuyu-Juan entrance - a red-tiled Okinawan house with the sign 悠愉樹庵',
       title: 'Yuyu-Juan',

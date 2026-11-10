@@ -190,7 +190,7 @@ function renderPage(key, t, menu, labels) {
   </div>
 </section>
 ` : '';
-  const reviewsScript = t.reviews ? '\n<script src="/js/reviews.js?v=20261110" defer></script>' : '';
+  const reviewsScript = t.reviews ? '\n<script src="/js/reviews.js?v=20261110b" defer></script>' : '';
 
   const faqItems = t.faq.items
     .map(([q, a]) => `      <div>\n        <h3 class="font-bold text-lg mb-1">${esc(q)}</h3>\n        <p class="leading-relaxed">${esc(a)}</p>\n      </div>`)
@@ -236,7 +236,7 @@ function renderPage(key, t, menu, labels) {
 ${hreflangLinks}
 
   <link rel="preload" as="image" href="/images/exterior1.jpg" fetchpriority="high">
-  <link rel="stylesheet" href="/css/style.css?v=20261110">
+  <link rel="stylesheet" href="/css/style.css?v=20261110b">
 ${fontLinks}
 
   <script type="application/ld+json">
@@ -260,7 +260,8 @@ ${jsonLd(key, t, menu)}
     <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm">
       <nav class="hidden md:flex gap-4" aria-label="${esc(t.nav.menu)}">
         <a href="#visit" class="hover:text-red-600">${esc(t.nav.visit)}</a>
-        <a href="#menu" class="hover:text-red-600">${esc(t.nav.menu)}</a>
+        <a href="#menu" class="hover:text-red-600">${esc(t.nav.menu)}</a>${t.reviews ? `
+        <a href="#reviews" class="hover:text-red-600">${esc(t.nav.reviews)}</a>` : ''}
         <a href="#access" class="hover:text-red-600">${esc(t.nav.access)}</a>
       </nav>
       <nav class="flex gap-3 text-xs" aria-label="${esc(t.nav.languageLabel)}">
