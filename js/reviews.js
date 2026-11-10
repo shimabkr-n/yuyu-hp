@@ -25,14 +25,14 @@
 
   var TEXTS = {
     ja: {
-      summary: function (avg, count) { return 'Google の口コミ　平均 ' + avg + '（' + count + '件）'; },
+      summary: function (avg, count, asOf) { return 'Google の口コミ　平均 ' + avg + '（' + count + '件・' + asOf + '時点）'; },
       starsLabel: function (n) { return '星' + n + 'つ'; },
       more: '続きを読む',
       less: '閉じる',
       date: function (y, m, d) { return y + '年' + m + '月' + d + '日'; }
     },
     en: {
-      summary: function (avg, count) { return 'Rated ' + avg + ' on Google (' + count + ' reviews)'; },
+      summary: function (avg, count, asOf) { return 'Rated ' + avg + ' on Google (' + count + ' reviews, as of ' + asOf + ')'; },
       starsLabel: function (n) { return n + ' out of 5 stars'; },
       more: 'Read more',
       less: 'Show less',
@@ -98,7 +98,10 @@
     var avg = Number(s.average);
     var count = Number(s.count);
     if (summaryEl && isFinite(avg) && avg >= 1 && avg <= 5 && count >= 1 && Math.floor(count) === count) {
-      summaryEl.textContent = tx.summary(avg.toFixed(1), count);
+      /* 平均と件数には「いつ時点か」を付ける（Google の案内・11/10 本人決定25）。取り込んだ日を日本時間で出す */
+      var jst = new Date(new Date(feed.fetchedAt).getTime() + 9 * 3600000);
+      var asOf = tx.date(jst.getUTCFullYear(), jst.getUTCMonth() + 1, jst.getUTCDate());
+      summaryEl.textContent = tx.summary(avg.toFixed(1), count, asOf);
       summaryEl.classList.remove('hidden');
     }
 
